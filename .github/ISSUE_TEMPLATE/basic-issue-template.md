@@ -7,13 +7,16 @@ assignees: ''
 
 ---
 
-### Issue Description <!-- REQUIRED --!>
+<!-- REQUIRED --!>
+### Issue Description
 <!-- Enter issue description --!>
 
-### Acceptance Criteria <!-- REQUIRED--!>
+<!-- REQUIRED--!>
+### Acceptance Criteria 
 <!-- Enter acceptance criteria --!>
 
-### User Story <!-- OPTIONAL --!>
+<!-- OPTIONAL --!>
+### User Story 
 <!-- Enter user story if there is one otherwise delete this section --!>
 
 <!-- Delete invisible comments --!>
