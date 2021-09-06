@@ -2,7 +2,7 @@
 name: Epic issue template
 about: Epic issue template that nests child issues
 title: ''
-labels: epic
+labels: ''
 assignees: ''
 
 ---

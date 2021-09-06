@@ -1,15 +1,19 @@
 ---
 name: Basic issue template
-about: Describe this issue template's purpose here.
+about: Use this template to create new issues that are NOT epics.
 title: ''
-labels: enhancement
+labels: ''
 assignees: ''
 
 ---
 
-### Acceptance Criteria
-* sample text
-### User Story
-* sample text
-### Story Points
-* sample text
+### Issue Description <!-- REQUIRED --!>
+<!-- Enter issue description --!>
+
+### Acceptance Criteria <!-- REQUIRED--!>
+<!-- Enter acceptance criteria --!>
+
+### User Story <!-- OPTIONAL --!>
+<!-- Enter user story if there is one otherwise delete this section --!>
+
+<!-- Delete invisible comments --!>
