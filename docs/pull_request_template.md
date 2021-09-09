@@ -1,33 +1,26 @@
-## PR Title/Tagline
+### Description
 
-What does this PR change and why?
+Closes <!-- Link to Github issue this PR closes -->
+
+<!-- What does this PR change and why? -->
+
+### Type of change
+
+<!-- Choose one -->
+🤕 Bug Fix
+🆕 Feature
+🔁 Chore/Cleanup
+✨ Refactor
 
 ### How to Test
 
-1. Please add or build upon a testing card to the [Notion page](http://notion.so) and link it here
-
-### Important Changes
-
-- Database change / migration to run
-- Environment config change
-- Breaking API change
-
-### Related Github Issues
-
-- #[Number of Issue]
-- Or, remember to link to an issue on the sidebar
-
-### Related PRs
-
-- #PRNUMBER
+<!-- Usually this is just running the yarn command and checking the component on the storybook UI -->
 
 ### Checklist
 
-- [ ]  Database schema docs have been updated or are not necessary
 - [ ]  Code follows design and style guidelines
 - [ ]  Code is commented with doc blocks
-- [ ]  Tests have been written and executed or are not necessary
 - [ ]  Latest code has been rebased from base branch (usually `develop`)
 - [ ]  Commits follow guidelines (concise, squashed, etc)
 - [ ]  Github issues have been linked in relevant commits
-- [ ]  Relevant reviewers (Senior Dev/EM/Designers) have been assigned to this PR
+- [ ]  Relevant reviewers (EM) have been assigned to this PR
