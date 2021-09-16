@@ -1,0 +1,39 @@
+.navbar-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 5% 15px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+img {
+    height: 50px;
+    margin: 0 2% 0 2%;
+}
+
+ul {
+    list-style-type: none;
+    display: inherit;
+    align-items: inherit;
+    margin: auto;
+}
+
+li{
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-right: 45px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #f38d6a;
+    transition: color 0.2s;
+}

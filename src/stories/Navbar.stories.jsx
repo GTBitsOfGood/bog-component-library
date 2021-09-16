@@ -1,0 +1,17 @@
+import React from 'react';
+
+import { Navbar } from './components/Navbar';
+
+export default {
+    title: 'Components/Navbar',
+    component: Navbar,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+      },
+};
+
+const Template = (args) => <Navbar {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+};
