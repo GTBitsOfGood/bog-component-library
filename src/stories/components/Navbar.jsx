@@ -22,10 +22,29 @@ export const Navbar = ({menuItems, logo, backgroundColor, addButton, buttonLabel
 };
 
 Navbar.propTypes = {
+    /**
+     * MenuItems: array of objects formatted as:
+     * {
+     *    name: 'name of the menu item',
+     *    link: 'link of the menu item'
+     * }
+     */
     menuItems: PropTypes.array,
+    /**
+     * Logo: link to the logo picture
+     */
     logo: PropTypes.string,
+    /**
+     * Background color
+     */
     backgroundColor: PropTypes.string,
+    /**
+     * Boolean for optional button
+     */
     addButton: PropTypes.bool,
+    /**
+     * Label for optional button
+     */
     buttonLabel: PropTypes.string,
 }
 
