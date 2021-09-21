@@ -4,17 +4,25 @@ import '../css/navbar.css'
 import {Button} from './Button'
 
 export const Navbar = ({menuItems, logo, backgroundColor, addButton, buttonLabel, ...props}) => {
+
+    const displayMenuItems = () => {
+        if (typeof menuItems == "object") {
+            return null
+        }
+        return menuItems.map((item) => {
+            return (
+                <li>
+                    <a href={item.link}>{item.name}</a>
+                </li>
+            )
+        })
+    }
+
     return (
         <div class='navbar-container' style={backgroundColor && { backgroundColor }} {...props}>
             <img src={logo} alt='Company logo'></img>
             <ul>
-                {menuItems.map((item) => {
-                    return (
-                        <li>
-                            <a href={item.link}>{item.name}</a>
-                        </li>
-                    )
-                })}
+                {menuItems == null ? null : displayMenuItems()}
             </ul>
             {addButton && <Button primary='true' label={buttonLabel}/>}
         </div>
