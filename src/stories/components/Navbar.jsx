@@ -1,45 +1,45 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import '../css/navbar.css'
 import {Button} from './Button'
 
 export const Navbar = ({menuItems, logo, backgroundColor, addButton, buttonLabel, ...props}) => {
-
     const displayMenuItems = () => {
-        if (typeof menuItems == "object") {
-            return null
-        }
-        return menuItems.map((item) => {
+        return Object.values(menuItems).map((item, i) => {
             return (
-                <li>
-                    <a href={item.link}>{item.name}</a>
+                <li key={i}>
+                    <a href={item.link}><p>{item.name}</p></a>
                 </li>
             )
         })
     }
 
     return (
-        <div class='navbar-container' style={backgroundColor && { backgroundColor }} {...props}>
-            <img src={logo} alt='Company logo'></img>
+        <div className='navbar-container' style={backgroundColor && { backgroundColor }} {...props}>
+            <a href="/"><img src={logo} alt='Company logo'></img></a>
             <ul>
                 {menuItems == null ? null : displayMenuItems()}
             </ul>
-            {addButton && <Button primary='true' label={buttonLabel}/>}
+            {addButton && <Button primary={true} label={buttonLabel}/>}
         </div>
     );
 };
 
 Navbar.propTypes = {
     /**
-     * MenuItems: array of objects formatted as:
+     * An object formatted as:
      * {
-     *    name: 'name of the menu item',
-     *    link: 'link of the menu item'
+     *      0: {
+     *          name: "Tab Name"
+     *          link: "Tab link"
+     *      },
+     *      1: {...},
+     *      ...
      * }
      */
-    menuItems: PropTypes.array,
+    menuItems: PropTypes.object,
     /**
-     * Logo: link to the logo picture
+     * Link to the logo picture
      */
     logo: PropTypes.string,
     /**
@@ -57,7 +57,11 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-    menuItems: [{name: 'About Us', link: ''}, {name: 'Projects', link: ''}, {name: 'Blog', link: ''}],
+    menuItems: {
+        0: {name: 'About Us', link: ''},
+        1: {name: 'Projects', link: ''},
+        2: {name: 'Blog', link: ''}
+    },
     logo: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/orangutan_1f9a7.png',
     backgroundColor: '#0E1117',
     addButton: true,

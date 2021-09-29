@@ -7,16 +7,11 @@ export default {
     component: Navbar,
     argTypes: {
         backgroundColor: { control: 'color' },
-        menuItems: {
-          control: {type: "array", defaultValue: {menuItems: []}},
-          default: [{name: "Tab", link: ""}],
-        },
+        menuItems: { control: {type: "object"} },
       },
 };
 
 const Template = (args) => <Navbar {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  menuItems: [{name: 'About Us', link: ''}, {name: 'Projects', link: ''}, {name: 'Blog', link: ''}]
-};
+Primary.args = {};

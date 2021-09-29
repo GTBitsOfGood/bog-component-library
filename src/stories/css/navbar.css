@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-img {
+a img {
     height: 50px;
     margin: 0 2% 0 2%;
 }
@@ -21,7 +21,7 @@ ul {
     margin: auto;
 }
 
-li{
+li {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -31,6 +31,7 @@ li{
 li a {
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 li a:hover {
