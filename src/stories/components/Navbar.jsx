@@ -13,10 +13,19 @@ export const Navbar = ({menuItems, logo, backgroundColor, addButton, buttonLabel
             )
         })
     }
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.getElementById("navbar").style.boxShadow = "0px 5px 20px grey";
+        } else {
+            document.getElementById("navbar").style.boxShadow = "0px 0px 0px";
+        }
+    }
 
     return (
-        <div className='navbar-container' style={backgroundColor && { backgroundColor }} {...props}>
-            <a href="/"><img src={logo} alt='Company logo'></img></a>
+        <div id="navbar"className='navbar-container' style={backgroundColor && { backgroundColor }} {...props}>
+            <a href="/" id='logo' ><img src={logo} alt='Company logo'></img></a>
             <ul>
                 {menuItems == null ? null : displayMenuItems()}
             </ul>
