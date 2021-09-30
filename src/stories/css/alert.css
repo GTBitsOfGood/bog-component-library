@@ -1,0 +1,39 @@
+.storybook-alert {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+
+    /* display: inline-block; */
+    /* line-height: 1; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* right: 0; */
+    /* left: 0; */
+    /* padding: 15px 5% 15px 5%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.storybook-alert a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.storybook-alert a:hover {
+    /* color: #ffffff; */
+    opacity: 0.5;
+    transition: color 0.2s;
+}
+
+.storybook-alert button {
+    display: flex;
+    height: 50px;
+    align-self: flex-end;
+}
+
+.storybook-alert img {
+    height: 50px;
+    margin: 0 2% 0 2%;
+}
