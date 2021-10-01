@@ -14,9 +14,9 @@ const Template = (args) => <Alert {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  backgroundColor: "green",
-  alertText: 'This is an alert',
-  url: 'https://www.google.com'
+  backgroundColor: 'rgba(205, 242, 214, 1)',
+  alertText: 'Nice, you triggered this alert message!',
+  url: 'https://youtu.be/dQw4w9WgXcQ'
 };
 
 

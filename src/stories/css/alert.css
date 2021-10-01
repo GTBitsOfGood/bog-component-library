@@ -1,39 +1,40 @@
 .storybook-alert {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 345px;
     border: 0;
     cursor: pointer;
-
-    /* display: inline-block; */
-    /* line-height: 1; */
-    /* position: fixed; */
-    /* top: 0; */
-    /* right: 0; */
-    /* left: 0; */
-    /* padding: 15px 5% 15px 5%; */
+    border-radius: 0.4em;
+    line-height: 1;
+    padding: 20px 15px 20px 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    min-width: min-content;
   }
 
 .storybook-alert a {
-    color: rgb(0, 0, 0);
+    font-size: 18px;
+    color: rgb(112, 112, 112);
     text-decoration: none;
+
 }
 
 .storybook-alert a:hover {
-    /* color: #ffffff; */
     opacity: 0.5;
     transition: color 0.2s;
 }
 
 .storybook-alert button {
     display: flex;
-    height: 50px;
-    align-self: flex-end;
+    border: none;
+}
+
+.storybook-alert button:hover {
+    opacity: 0.5;
 }
 
 .storybook-alert img {
-    height: 50px;
+    height: 25px;
     margin: 0 2% 0 2%;
 }

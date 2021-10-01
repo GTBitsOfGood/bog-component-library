@@ -12,11 +12,11 @@ import '../css/alert.css';
         className={['storybook-alert', `storybook-alert--${url}`].join(' ')}
         style={backgroundColor && { backgroundColor }}
         {...props}
-        height={130}
+        // height={130}
         
       >
         <a href={url == null ? '':url}>{alertText}</a>
-        <button>
+        <button style={backgroundColor && { backgroundColor }}>
             <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/orangutan_1f9a7.png" alt='exit alert'></img>
         </button>
       </div>
@@ -39,7 +39,7 @@ import '../css/alert.css';
   };
   
   Alert.defaultProps = {
-    backgroundColor: 'green',
-    message: "this is an alert", 
-    url: "https://www.google.com",
+    backgroundColor: 'rgba(205, 242, 214, 1)',
+    message: 'Nice, you triggered this alert message!', 
+    url: 'https://youtu.be/dQw4w9WgXcQ',
   };
