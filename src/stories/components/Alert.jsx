@@ -12,8 +12,6 @@ import '../css/alert.css';
         className={['storybook-alert', `storybook-alert--${url}`].join(' ')}
         style={backgroundColor && { backgroundColor }}
         {...props}
-        // height={130}
-        
       >
         <a href={url == null ? '':url}>{alertText}</a>
         <button style={backgroundColor && { backgroundColor }}>
