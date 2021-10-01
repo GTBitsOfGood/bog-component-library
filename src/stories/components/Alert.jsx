@@ -13,7 +13,7 @@ import '../css/alert.css';
         style={backgroundColor && { backgroundColor }}
         {...props}
       >
-        <a href={url == null ? '':url}>{alertText}</a>
+        <a href={url}>{(alertText == null || alertText === '') ? url : alertText}</a>
         <button style={backgroundColor && { backgroundColor }}>
             <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/orangutan_1f9a7.png" alt='exit alert'></img>
         </button>
@@ -29,15 +29,15 @@ import '../css/alert.css';
     /**
      * Alert message
      */
-    alertText: PropTypes.string.isRequired,
+    alertText: PropTypes.string,
     /**
      * Alert link
      */
-    url: PropTypes.string,
+    url: PropTypes.string.isRequired,
   };
   
   Alert.defaultProps = {
     backgroundColor: 'rgba(205, 242, 214, 1)',
-    message: 'Nice, you triggered this alert message!', 
+    alertText: 'Nice, you triggered this alert message!', 
     url: 'https://youtu.be/dQw4w9WgXcQ',
   };
