@@ -1,40 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/WeatherCard.css';
-import raindrop from '../assets/raindrop.png';
-import info from '../assets/info.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTint, faWind, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
-export const WeatherCard = ({ temperature, updateTime, humidity, windspeed, ...props }) => {
+export const WeatherCard = ({ temperature, temperatureMeasure, updateTime, humidity, windspeed, ...props }) => {
 
     return (
         <div className="weatherCardContainer">
-            <div className="infoButton">
-                <img src={info} alt="" width="70px" height="70px"/>                    
-            </div>
-            <div className="tempAndTime">
+            <div className="infoButtonContainer">
 
+                <FontAwesomeIcon icon={faInfoCircle} className="infoButton"/>               
+            </div>
+
+            <div className="tempAndTime">
                 <div className="temp">
-                    <div className="degree">{temperature}</div>
-                    <div className="symbol">°C</div>
+                    <div className="degree">{temperature}  </div>
+                    <div className="symbol">°{temperatureMeasure}</div>
                 </div>
                 <div className="time"> 
                     Updated: {updateTime} 
                 </div>
             </div>
+
             <div className="humidityAndWind">
                 <div className="humidity">
-
-                    <div className="icon">
-                        <img src={raindrop} alt="" width="35px" height="50px"/>
-                    </div>
-                    
+                    <FontAwesomeIcon icon={faTint} className="icon"/>
                     {humidity} %
                 </div>
                 <div className="wind">
-
-                    <div className="icon">
-                        <img src={raindrop} alt="" width="35px" height="50px"/>
-                    </div>
+                    <FontAwesomeIcon icon={faWind} className="icon"/>
                     {windspeed} km/h 
                 </div>
             </div>
@@ -47,6 +42,8 @@ WeatherCard.propTypes = {
     /** Current Temperature */
     temperature: PropTypes.number.isRequired,
 
+    temperatureMeasure: PropTypes.string,
+
     updateTime: PropTypes.string,
 
     humidity: PropTypes.number,
@@ -57,6 +54,7 @@ WeatherCard.propTypes = {
 
 WeatherCard.defaultProps = {
     temperature: 0,
+    temperatureMeasure: "C",
     updateTime: "00:00",
     humidity: 0,
     windspeed: 0,

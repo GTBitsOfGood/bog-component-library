@@ -10,3 +10,8 @@ export default {
 const Template = (args) => <WeatherCard {...args} />;
 
 export const Primary = Template.bind({});
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  temperatureMeasure: "F"
+}
