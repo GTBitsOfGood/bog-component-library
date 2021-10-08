@@ -1,0 +1,92 @@
+.weatherCardContainer {
+    display: flex;
+    width: 20vw;
+    height: 60vh;
+    flex-direction: column;
+    background-image: url(../assets/clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.infoButtonContainer {
+    display: flex;
+    flex: 5%;
+    justify-content: right;
+    background-color: #2D3438;
+    opacity: 60%;
+}
+
+.infoButton {
+    padding: 30px 30px 0 0;
+    font-size: 5vh;
+}
+
+.tempAndTime {
+    flex: 65%;
+    align-items: center;
+    background-color: #2D3438;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 60%;
+    padding: 0px 0px 15px 0px;
+}
+
+.temp {
+    flex: 85%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+
+.degree {
+    font-size: 20vmin;
+}
+
+.symbol {
+    font-size: 10vmin;
+}
+
+.time {
+    flex: 15%;
+    font-size: 5vmin;
+    justify-content: center;
+    align-items: center;
+}
+
+.humidityAndWind {
+    flex: 30%;
+    align-items: center;
+    justify-content: center;
+    background-color: #D27A04;
+    display: flex;
+    flex-direction: row;
+    font-size: 5vmin;
+    font-weight: bold;
+    opacity: 80%;
+    text-align: center;
+}
+
+.humidity {
+    display: flex;
+    flex-direction: row;
+    flex: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind {
+    display: flex;
+    flex-direction: row;
+    flex: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    padding: 5px;
+}
