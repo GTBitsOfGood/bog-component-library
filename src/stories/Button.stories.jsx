@@ -14,23 +14,18 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  variant: "primary",
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  variant: "secondary",
   label: 'Button',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  variant: "tertiary",
   label: 'Button',
 };
