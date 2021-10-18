@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'VisbyCF-ExtraBold';
+  src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
   font-weight: 700;
+  font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
@@ -57,4 +67,22 @@
 }
 .storybook-button--tertiary:disabled {
   color: #D9D9D9;
+}
+
+.button-icon--left {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.button-icon--right {
+  height: 20px;
+  width: auto;
+  margin-left: 8px;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

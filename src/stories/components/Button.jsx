@@ -5,7 +5,7 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, backgroundColor, label, ...props }) => {
+export const Button = ({ variant, backgroundColor, label, icon, iconPosition, ...props }) => {
 
   return (
     <button
@@ -14,7 +14,11 @@ export const Button = ({ variant, backgroundColor, label, ...props }) => {
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
-      {label}
+      <div className='button-content'>
+        {icon && iconPosition == 'left' ? <img className='button-icon--left' src={icon}></img> : ''}
+        {label}
+        {icon && iconPosition == 'right' ? <img className='button-icon--right' src={icon}></img> : ''}
+      </div>
     </button>
   );
 };
@@ -32,6 +36,14 @@ Button.propTypes = {
    * Button contents
    */
   label: PropTypes.string.isRequired,
+  /*
+   * Icon file
+   */
+  icon: PropTypes.string,
+  /*
+   * Icon position
+   */
+  iconPosition: PropTypes.string,
   /**
    * Optional click handler
    */
@@ -41,5 +53,6 @@ Button.propTypes = {
 Button.defaultProps = {
   backgroundColor: null,
   variant: 'primary',
+  icon: 'https://img.icons8.com/material-sharp/50/000000/search.png',
   onClick: undefined,
 };
