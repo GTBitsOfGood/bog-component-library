@@ -53,6 +53,6 @@ Button.propTypes = {
 Button.defaultProps = {
   backgroundColor: null,
   variant: 'primary',
-  icon: 'https://img.icons8.com/material-sharp/50/000000/search.png',
+  icon: 'https://img.icons8.com/material-outlined/24/ffffff/search--v1.png',
   onClick: undefined,
 };

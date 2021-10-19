@@ -24,19 +24,18 @@ export const Primary = Template.bind({});
 Primary.args = {
   variant: "primary",
   label: 'Button',
-  // icon: '../assets/downArrow.svg',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary",
   label: 'Button',
-  // icon: '../assets/downArrow.svg',
+  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   variant: "tertiary",
   label: 'Button',
-  // icon: '../assets/downArrow.svg',
+  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };
