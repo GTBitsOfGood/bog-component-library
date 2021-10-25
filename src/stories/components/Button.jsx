@@ -5,13 +5,14 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, backgroundColor, label, icon, iconPosition, ...props }) => {
-
+export const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, ...props }) => {
+  const newLocal = isDisabled && 'disabled';
   return (
     <button
       type="button"
       className={['storybook-button', `storybook-button--${variant}`].join(' ')}
       style={backgroundColor && { backgroundColor }}
+      disabled={isDisabled}
       {...props}
     >
       <div className='button-content'>
@@ -44,6 +45,10 @@ Button.propTypes = {
    * Icon position
    */
   iconPosition: PropTypes.string,
+  /*
+   * Disable button
+   */
+  isDisabled: PropTypes.bool,
   /**
    * Optional click handler
    */
@@ -54,5 +59,6 @@ Button.defaultProps = {
   backgroundColor: null,
   variant: 'primary',
   icon: 'https://img.icons8.com/material-outlined/24/ffffff/search--v1.png',
+  isDisabled: false,
   onClick: undefined,
 };

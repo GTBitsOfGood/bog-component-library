@@ -14,6 +14,10 @@ export default {
     iconPosition: {
       options: ['left', 'right'],
       control: {type: 'radio'},
+    },
+    isDisabled: {
+      options: [true, false],
+      control: {type: 'radio'},
     }
   },
 };

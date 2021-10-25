@@ -57,6 +57,7 @@
   color: #2D285C;
   background-color: transparent;
   border: 0;
+  padding: 4px 8px;
 }
 .storybook-button--tertiary:hover {
   color: #5A50B3;
