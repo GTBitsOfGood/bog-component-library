@@ -7,6 +7,18 @@ export default {
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
+    variant: {
+      options: ['primary', 'secondary', 'tertiary'],
+      control: {type: 'radio'},
+    },
+    iconPosition: {
+      options: ['left', 'right'],
+      control: {type: 'radio'},
+    },
+    isDisabled: {
+      options: [true, false],
+      control: {type: 'radio'},
+    }
   },
 };
 
@@ -14,23 +26,20 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  variant: "primary",
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  variant: "secondary",
   label: 'Button',
+  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  variant: "tertiary",
   label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };
