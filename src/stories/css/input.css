@@ -6,41 +6,65 @@
 font-family: 'OpenSans';
 src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
+input{
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: none;
+}
+
+.input-icon--left{
+    width: 20px;
+    height: auto;
+    padding-right: 9px;
+}
+.input-icon--right{
+    width: 20px;
+    height: auto;
+    padding-right: 9px;
+}
 .storybook-input-div {
-font-family: 'OpenSans', sans-serif;
-display: flex;
-flex-direction: column;
-font-weight: 400;
+    font-family: 'OpenSans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    width: fit-content;
 }
 .storybook-input-label {
-padding-bottom: 8px;
+    padding-bottom: 8px;
 }
 .storybook-input {
-font-family: 'OpenSans', sans-serif;
-width: auto;
-padding: 12px 16px 12px 16px;
-border-radius: 4px;
-border: 1px solid rgba(217, 217, 217, 1);
+    font-family: 'OpenSans', sans-serif;
+    width: auto;
+    padding: 12px 16px 12px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    display: flex;
+    flex-direction: row;
 }
 .storybook-input:hover {
-border: 1px solid rgba(90, 80, 179, 1);
+    border: 1px solid rgba(90, 80, 179, 1);
 }
 .storybook-input:focus {
-outline: none;
-border: 1px solid rgba(90, 80, 179, 1);
+    outline: none;
+    border: 1px solid rgba(90, 80, 179, 1);
 }
 
 .storybook-input--disabled {
-border: 1px solid rgba(217, 217, 217, 1);
-color: #D9D9D9;
+    border: 1px solid rgba(217, 217, 217, 1);
+    color: #D9D9D9;
+    background-color: #FAFBFC;
 }
 
-.storybook-input--disabled:hover {
-border: 1px solid rgba(217, 217, 217, 1);
+.storybook-input--disabled div:hover {
+    border: 1px solid rgba(217, 217, 217, 1);
 }
-.storybook-input--disabled:focus {
-outline: none;
-border: 1px solid rgba(217, 217, 217, 1);
+.storybook-input--disabled div:focus {
+    outline: none;
+    border: 1px solid rgba(217, 217, 217, 1);
+}
+input[type="text"]:disabled {
+    background-color: #FAFBFC;
 }
 
 .storybook-input--error {
@@ -54,7 +78,6 @@ border: 1px solid rgba(217, 217, 217, 1);
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .storybook-input--success {
     border: 1px solid rgba(19, 180, 97, 1);

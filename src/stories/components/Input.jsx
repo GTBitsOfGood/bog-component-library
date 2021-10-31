@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {useState} from "react";
 import '../css/input.css';
-import { icon } from '@fortawesome/fontawesome-svg-core';
 
 /**
  * Primary UI component for user interaction
@@ -26,14 +25,21 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
         cols={cols}
         {...props}
       />):
-      (<input
-        className={['storybook-input','storybook-input--' + (isDisabled? 'isDisabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''), `storybook-input--${variant}`].join(' ')}
-        type="text"
-        onChange={handleChange}
-        placeholder={placeholder}
-        disabled={isDisabled}
-        {...props}
-      />)}
+      (
+      <div 
+      className={['storybook-input','storybook-input--' + (isDisabled? 'isDisabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''), `storybook-input--${variant}`].join(' ')}
+      >
+        {(variant === "leftIcon" ||  variant==="doubleIcon" ) && leftIcon ? <img className='input-icon--left' src={leftIcon}></img> : ''}
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder={placeholder}
+          disabled={isDisabled}
+          {...props}
+        />
+        {(variant === "rightIcon" ||  variant==="doubleIcon" ) && rightIcon ? <img className='input-icon--right' src={rightIcon}></img> : ''}
+      </div>
+      )}
       {error === true && 
       (<div className={'storybook-input-label-error'}>
         <img className={'img-message'} src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png"/>
@@ -45,37 +51,8 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
         <label>Success Message</label>
       </div>)}
     </div>
-    
-    // <button
-    //   type="button"
-    //   className={['storybook-button', `storybook-button--${variant}`].join(' ')}
-    //   style={backgroundColor && { backgroundColor }}
-    //   disabled={isDisabled}
-    //   {...props}
-    // >
-    //   <div className='button-content'>
-    //     {icon && iconPosition == 'left' ? <img className='button-icon--left' src={icon}></img> : ''}
-    //     {label}
-    //     {icon && iconPosition == 'right' ? <img className='button-icon--right' src={icon}></img> : ''}
-    //   </div>
-    // </button>
   );
 };
-// renderSwitch(variant){
-//   switch(variant){
-//     case 'leftIcon':
-//       return (<i class="search icon"></i>);
-//     case 'rightIcon':
-//       return (<i class="close icon" style="left: auto; right: 1px"></i>);
-//     case 'doubleIcon':
-//       return (<div>
-//         <i class="search icon"></i>
-//         <i class="close icon" style="left: auto; right: 1px"></i>
-//       </div>);
-//     default:
-//       return;
-//   }
-// };
 Input.propTypes = {
   /**
    * Primary, secondary or teriary button.
@@ -130,4 +107,6 @@ Input.defaultProps = {
   isDisabled: false,
   error: false, 
   success: false,
+  leftIcon: 'https://img.icons8.com/material-outlined/24/000000/planner.png',
+  rightIcon: 'https://img.icons8.com/material-rounded/24/000000/chevron-down.png',
 };
