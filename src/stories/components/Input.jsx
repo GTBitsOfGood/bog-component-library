@@ -19,7 +19,6 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
       {variant === 'textArea'? 
       (<textarea
         className={['storybook-input','storybook-input--' + (isDisabled? 'disabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''),`storybook-input--${variant}`].join(' ')}
-        value={input}
         onChange={handleChange}
         placeholder={placeholder}
         disabled={isDisabled}
@@ -30,7 +29,6 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
       (<input
         className={['storybook-input','storybook-input--' + (isDisabled? 'isDisabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''), `storybook-input--${variant}`].join(' ')}
         type="text"
-        value={input}
         onChange={handleChange}
         placeholder={placeholder}
         disabled={isDisabled}
