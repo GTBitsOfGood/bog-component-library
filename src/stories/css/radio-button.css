@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+.radio--label {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 4px;
+    color: #3F3F3F;
+}
+
+.radio--label-disabled {
+    color: #BFBFBF;
+}
+
+/* .radio-container input[type='radio'] {
+    display: none;
+}
+
+.radio-container label:before {
+    content: " ";
+    border-radius: 11px;
+    border: 2px solid #D9D9D9;
+    background-color: #FAFBFC;
+}
+
+.radio-container input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    content: " ";
+    background: #473F91;
+} */
+
+/* .radio--button label:before {
+    margin: 0 4px;
+    background-color: #FAFBFC;
+    border: 1px solid #D9D9D9;
+    color: #D9D9D9;
+} */
+
+/* .radio-container input[type=radio]:hover::after {
+    margin: 0 4px;
+    background-color: #473F91;
+    border: 1px solid #473F91;
+    color: #473F91;
+    transition: 0.2s;
+}
+
+.radio-container input[type=radio]:checked:after {
+    margin: 0 4px;
+    background-color: #473F91;
+    border: 1px solid #473F91;
+    color: #473F91;
+    transition: 0.2s;
+}
+
+.radio-container input[type=radio]:checked:hover:after {
+    margin: 0 4px;
+    background-color: #473F91;
+    color: #473F91;
+    transition: 0.2s;
+} */
