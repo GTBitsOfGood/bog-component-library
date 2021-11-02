@@ -84,7 +84,7 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
 };
 Input.propTypes = {
   /**
-   * Primary, secondary or teriary button.
+   * regular, leftIcon, rightIcon, doubleIcon, textArea input
    */
   variant: PropTypes.string.isRequired,
   /**
@@ -95,36 +95,36 @@ Input.propTypes = {
    * Input Placeholder text
    */
    placeholder: PropTypes.string,
-  /*
+  /** 
    * Left Icon file
    */
   leftIcon: PropTypes.string,
-    /*
+  /**
    * Right Icon file
    */
   rightIcon: PropTypes.string,
-  /*
+  /**
    * Disable Input
    */
   isDisabled: PropTypes.bool,
-  /*
-  * Number of rows in textarea
-  */
+  /**
+   * Number of rows in textarea
+   */
   rows: PropTypes.number,
-  /*
-  * Number of cols in textarea
-  */
+  /**
+   * Number of columns in textarea
+   */
   cols: PropTypes.number,
-  /*
-  * input cause error
-  */
+  /**
+   * Input cause error
+   */
   error: PropTypes.bool,
-  /*
-  * input was successfull
-  */
+  /**
+   * Input was successfull
+   */
   success:PropTypes.bool,
   /**
-   * Optional click handler
+   * Optional Input handler
    */
   onChange: PropTypes.func,
 };
