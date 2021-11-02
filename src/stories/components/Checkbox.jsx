@@ -1,34 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../css/Checkbox.css'
+import '../css/checkbox.css'
 
-export const Checkbox = ({ label, isDisabled, isIndeterminate, onChange, ...props}) => {
-    const classs = "checkbox" + (isDisabled? "-disabled": "") + (isIndeterminate? "-indeterminate":"")
+export const Checkbox = ({ label, isDisabled, isIndeterminate, hasLabel, onChange, ...props}) => {
+    const classes = "checkbox" + (isDisabled? "-disabled": "") + (isIndeterminate? "-indeterminate":"") + (hasLabel? "-hasLabel":"")
     return (
-        <label>
+        <label className="container">
           <input 
             id="checkbox" 
-            className={classs} 
+            className={classes} 
             type="checkbox" 
             disabled={isDisabled} 
             indeterminate={isIndeterminate} 
             onChange={onChange} 
             {...props}
           />
-          {label}
+          <span class="checkmark"></span>
+          {hasLabel && label}
         </label>
       );
 };
 
 Checkbox.propTypes = {
     label: PropTypes.string,
+    hasLabel: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isIndeterminate: PropTypes.bool,
     onChange: PropTypes.func,  
 }
 
 Checkbox.defaultProps = {
-    label: "this is a checkbox",
+    label: "Label",
+    hasLabel: false,
     isDisabled: false,
     isIndeterminate: false,
     onChange: undefined,
