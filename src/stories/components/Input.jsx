@@ -63,7 +63,7 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
                   -6.86432 7.59218,-6.86432z">
           </path>
           </svg>
-        <label>Error Message</label>
+        <label className="alert-message">Error Message</label>
       </div>)}
       {success && 
       (<div className={'storybook-input-label-success'}>
@@ -77,7 +77,7 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
             0.293s-0.52-0.105-0.707-0.293l-3.453-3.453c-0.391-0.391-0.391-1.023,
             0-1.414s1.023-0.391,1.414,0 l2.746,2.746l6.853-6.853c0.391-0.391,1.023-0.391,1.414,
             0S22.098,12.316,21.707,12.707z"></path></svg>
-        <label>Success Message</label>
+        <label className="alert-message">Success Message</label>
       </div>)}
     </div>
   );
