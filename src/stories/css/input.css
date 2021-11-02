@@ -95,7 +95,3 @@ input[type="text"]:disabled {
     flex-direction: row;
     align-items: center;
 }
-.img-message{
-    width: 20px;
-    height: auto;
-}
