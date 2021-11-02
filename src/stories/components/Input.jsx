@@ -40,12 +40,12 @@ export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisa
         {(variant === "rightIcon" ||  variant==="doubleIcon" ) && rightIcon ? <img className='input-icon--right' src={rightIcon}></img> : ''}
       </div>
       )}
-      {error === true && 
+      {error && 
       (<div className={'storybook-input-label-error'}>
         <img className={'img-message'} src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png"/>
         <label>Error Message</label>
       </div>)}
-      {success === true && 
+      {success && 
       (<div className={'storybook-input-label-success'}>
         <img className={'img-message'} src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png"/>
         <label>Success Message</label>
@@ -103,7 +103,7 @@ Input.propTypes = {
 Input.defaultProps = {
   variant: 'regular',
   label: 'Label',
-  placeholder: 'placeholder text',
+  placeholder: 'Placeholder text',
   isDisabled: false,
   error: false, 
   success: false,

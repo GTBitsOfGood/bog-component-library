@@ -11,6 +11,7 @@ input{
     font-weight: 400;
     outline: none;
     border: none;
+    width: 230px;
 }
 
 .input-icon--left{
@@ -30,6 +31,7 @@ input{
     font-weight: 400;
     width: fit-content;
     flex-basis: auto;
+    /* align-content: space-between; */
 
 }
 .storybook-input-label {
@@ -37,7 +39,7 @@ input{
 }
 .storybook-input {
     font-family: 'OpenSans', sans-serif;
-    width: auto;
+    width: 240px;
     padding: 12px 16px 12px 16px;
     border-radius: 4px;
     border: 1px solid rgba(217, 217, 217, 1);
