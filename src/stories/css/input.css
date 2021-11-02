@@ -29,6 +29,8 @@ input{
     flex-direction: column;
     font-weight: 400;
     width: fit-content;
+    flex-basis: auto;
+
 }
 .storybook-input-label {
     padding-bottom: 8px;
