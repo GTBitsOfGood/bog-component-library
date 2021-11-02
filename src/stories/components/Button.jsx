@@ -5,37 +5,50 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, ...props }) => {
+  const newLocal = isDisabled && 'disabled';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['storybook-button', `storybook-button--${variant}`].join(' ')}
       style={backgroundColor && { backgroundColor }}
+      disabled={isDisabled}
       {...props}
     >
-      {label}
+      <div className='button-content'>
+        {icon && iconPosition == 'left' ? <img className='button-icon--left' src={icon}></img> : ''}
+        {label}
+        {icon && iconPosition == 'right' ? <img className='button-icon--right' src={icon}></img> : ''}
+      </div>
     </button>
   );
 };
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Primary, secondary or teriary button.
    */
-  primary: PropTypes.bool,
+  variant: PropTypes.string.isRequired,
   /**
    * What background color to use
    */
   backgroundColor: PropTypes.string,
   /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
    * Button contents
    */
   label: PropTypes.string.isRequired,
+  /*
+   * Icon file
+   */
+  icon: PropTypes.string,
+  /*
+   * Icon position
+   */
+  iconPosition: PropTypes.string,
+  /*
+   * Disable button
+   */
+  isDisabled: PropTypes.bool,
   /**
    * Optional click handler
    */
@@ -44,7 +57,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  variant: 'primary',
+  icon: 'https://img.icons8.com/material-outlined/24/ffffff/search--v1.png',
+  isDisabled: false,
   onClick: undefined,
 };
