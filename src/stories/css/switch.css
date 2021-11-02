@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'VisbyCF-ExtraBold';
+  src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
 .switch-container {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  font-family: 'VisbyCF-Medium', 'OpenSans', sans-serif;
+  font-size: 15px;
 }
 
 .toggle-switch {
@@ -45,4 +56,12 @@
   
 .toggle-switch input[type="checkbox"]:checked + .switch {
   background-color: #473F91;
+}
+
+.labelText {
+  padding-right: 20px;
+}
+
+.toggle-switch input[type="checkbox"]:disabled + .switch {
+  opacity: 0.4;
 }

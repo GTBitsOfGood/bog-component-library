@@ -2,46 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/switch.css';
 
-export const Switch = ({ primary, backgroundColor, label, ...props }) => {
-    
-  if (primary) {
-    return (
+export const Switch = ({ disabled, hasLabel, label, ...props }) => {
+  
+  return (
       <div className="switch-container">
+        {hasLabel && <span className="labelText">{label}</span>}
         <label className="toggle-switch">
-            <input type="checkbox" />
+            <input disabled={disabled} type="checkbox" />
             <span className="switch" />
         </label>
-        {label}
       </div>
     );
-  } else {
-    return (
-      <label className="toggle-switch">
-          <input type="checkbox" />
-          <span className="switch" />
-      </label>
-    );
-  }
 };
 
 Switch.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-
-  /**
-   * Switch Label
-   */
+  hasLabel: PropTypes.bool,
   label: PropTypes.string,
-
+  disabled: PropTypes.bool,
 };
 
 Switch.defaultProps = {
-  backgroundColor: null,
-  primary: false,
+  hasLabel: false,
+  disabled: false,
+  label: "Toggle"
 };
