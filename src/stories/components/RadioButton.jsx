@@ -8,7 +8,7 @@ export const RadioButton = ({ groupName, value, label, isDisabled }) => {
         <label className={`radio-container ${disableStyle}`}>
             <input type="radio" name={groupName} value={value} disabled={isDisabled} />
             <span className={`selection ${disableStyle}`}></span>
-            {label}
+            <span className="labelText">{label}</span>
         </label>
     )
 }
