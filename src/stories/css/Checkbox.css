@@ -1,0 +1,110 @@
+@font-face {
+	font-family: 'VisbyCF-Regular';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	font-family: 'VisbyCF-Medium', 'OpenSans', sans-serif;
+	font-size: 15px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 3;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	border-radius: 4px;
+	background-color: #FAFBFC;
+	border: solid #D9D9D9;
+	border-width: thin;
+}
+
+.container:hover input ~ .checkmark {
+	border: solid #473F91;
+	border-width: thin;
+}
+
+.container input:checked ~ .checkmark {
+	height: 16px;
+	width: 16px;
+	background-color: #473F91;
+	border: solid #473F91;
+	border-width: thin;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	left: 5px;
+	width: 4px;
+	height: 10px;
+	border: solid #FAFBFC;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.container input:disabled ~ .labelText {
+	color: #D9D9D9;
+}
+
+.container input:disabled ~ .checkmark {
+	background-color: #FAFBFC;
+	border: solid #D9D9D9;
+	border-width: thin;
+}
+
+.container input:disabled ~ .checkmark:after {
+	border: solid #D9D9D9;
+	border-width: 0 1.5px 1.5px 0;
+}
+
+.container input:indeterminate ~ .checkmark {
+	background-color: #473F91;
+	border: solid #473F91;
+	border-width: thin;
+}
+
+.container input:indeterminate ~ .checkmark:after{
+	left: 3px;
+	width: 10px;
+	height: 7px;
+	display: block;
+	border: solid #FAFBFC;
+	border-width: 0 0 2px 0;
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
