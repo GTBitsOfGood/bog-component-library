@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import '../css/checkbox.css'
 
 export const Checkbox = ({ label, isDisabled, isIndeterminate, hasLabel, onChange, ...props}) => {
-    const classes = "checkbox" + (isDisabled? "-disabled": "") + (isIndeterminate? "-indeterminate":"") + (hasLabel? "-hasLabel":"")
+    const classes = "checkbox" + (isDisabled ? "-disabled" : "") + (isIndeterminate ? "-indeterminate" : "") + (hasLabel ? "-hasLabel" : "")
     return (
         <label className="container">
           <input 
@@ -11,12 +11,16 @@ export const Checkbox = ({ label, isDisabled, isIndeterminate, hasLabel, onChang
             className={classes} 
             type="checkbox" 
             disabled={isDisabled} 
-            indeterminate={isIndeterminate} 
+            ref={(el) => {
+              if (el) {
+                el.indeterminate = isIndeterminate;
+              }
+            }}
             onChange={onChange} 
             {...props}
           />
-          <span class="checkmark"></span>
-          {hasLabel && label}
+          <span className="checkmark"></span>
+          {hasLabel && <span className="labelText">{label}</span>}
         </label>
       );
 };
