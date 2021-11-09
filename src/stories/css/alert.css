@@ -1,40 +1,206 @@
+.storybook-alert-large {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    border-radius: 0.4em;
+    line-height: 1;
+    padding: .2vmin 0vw 0vw 0vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    min-width: min-content;
+    height: min-content;
+}
+
+.storybook-alert-large-header {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    border-radius: 0.4em;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-width: min-content;
+    height: min-content;
+}
+
+.storybook-alert-large-header-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    border-radius: 0.4em;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-width: min-content;
+    height: min-content;
+}
+
+.storybook-alert-large-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    border-radius: 0.4em;
+    line-height: 1;
+    padding: .2vw 2vw 0vw 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-width: min-content;
+    height: min-content;
+}
+
 .storybook-alert {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 345px;
-    border: 0;
-    cursor: pointer;
-    border-radius: 0.4em;
     line-height: 1;
-    padding: 20px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-width: min-content;
+    height: min-content;
+    width: 25vw;
+}
+
+.storybook-alert-header {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-width: min-content;
+    height: 15vh;
+    width: 25vw;
+}
+
+.storybook-alert-header-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:unset;
+    height: min-content;
+    width: 25vw;
+}
+
+.storybook-alert-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 345px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    min-width: min-content;
+    height: min-content;
+    width: 25vw;
+}
+
+.alertBody {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-width: min-content;
-  }
-
-.storybook-alert a {
-    font-size: 18px;
-    color: rgb(112, 112, 112);
-    text-decoration: underline;
-
+    flex: 1;
 }
 
-.storybook-alert a:hover {
-    opacity: 0.5;
-    transition: color 0.2s;
-}
-
-.storybook-alert button {
+.alertBodyLarge {
     display: flex;
-    border: none;
+    flex-direction: row;
+    flex: 1;
 }
 
-.storybook-alert button:hover {
-    opacity: 0.5;
+.alertBodyWithHeader {
+    display: flex;
+    flex-direction: column;
+    flex: 70%;
+    padding-left: 11vmin;
+    padding-right: 17vmin;
+    margin-top: -2vmin;
 }
 
-.storybook-alert img {
-    height: 25px;
-    margin: 0 2% 0 2%;
+Button {
+    align-self: flex-end;
+    justify-content: flex-end;
+    margin: 0vmin -10vmin 2vmin 0vmin;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .headerContent {
+    display: flex;
+    flex: .9;
+    font-weight: bold;
+    flex-direction: row;
+}
+
+.header .headerContent .icon {
+    width: 4vmin;
+    height: 4vmin;
+    padding: 2vmin 4vmin 0vmin 3vmin;
+}
+
+.header .x {
+    width: 4vmin;
+    height: 4vmin;
+    padding: 2vmin 2vmin 0vmin 0vmin;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .x .xIcon {
+    width: 4vmin;
+    height: 4vmin;
+    align-items: flex-end;
+}
+
+.alertBody .icon {
+    width: 4vmin;
+    height: 4vmin;
+    padding: 1.5vmin 4vmin 0vmin 2vmin;
+}
+
+.alertBody Button {
+    margin: 0 0vmin 1vmin 0vmin
+}
+
+.alertBodyLarge .icon {
+    width: 4vmin;
+    height: 4vmin;
+    padding: 1.5vmin 4vmin 0vmin 3vmin;
+}
+
+.alertBody .x {
+
+    padding: 1vmin 0vmin 4vmin 4vmin;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alertBodyLarge .x {
+    flex: .1;
+    padding: 1vmin 0vmin 0vmin 180vmin;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alertBody .x .xIcon {
+    width: 4vmin;
+    height: 4vmin;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.alertBodyLarge .x .xIcon {
+    width: 4vmin;
+    height: 4vmin;
+
+    align-items: flex-end;
+}
+
+.header .headerContent p {
+    margin-top: 2.75vmin;
 }
