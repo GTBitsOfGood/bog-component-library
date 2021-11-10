@@ -39,8 +39,8 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
       >
         <div className="storybook-dropdown-header-title">Choose your player</div>
         {isListOpen
-          ? <img className='dropdown-open' src='https://img.icons8.com/material-rounded/24/000000/chevron-up.png'></img>
-          : <img className='input-close' src='https://img.icons8.com/material-rounded/24/000000/chevron-down.png'></img>}
+          ? <img className='dropdown-open' src='https://img.icons8.com/material-rounded/24/000000/chevron-up.png' alt="close"></img>
+          : <img className='input-close' src='https://img.icons8.com/material-rounded/24/000000/chevron-down.png' alt="open"></img>}
       </button>
       {/* {isListOpen && (
         <div
@@ -124,10 +124,6 @@ Dropdown.propTypes = {
    */
   error: PropTypes.bool,
   /**
-   * Input was successfull
-   */
-  success:PropTypes.bool,
-  /**
    * Optional Input handler
    */
   onChange: PropTypes.func,
@@ -144,5 +140,4 @@ Dropdown.defaultProps = {
   placeholder: 'Placeholder text',
   isDisabled: false,
   error: false, 
-  success: false,
 };

@@ -17,7 +17,7 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 .storybook-dropdown-wrapper--error button{
-    border: rgba(255, 57, 57, 1);
+    border: 1px solid rgba(255, 57, 57, 1) !important ;
 }
 
 .storybook-dropdown-wrapper button{

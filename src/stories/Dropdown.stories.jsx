@@ -18,10 +18,6 @@ export default {
         options: [true, false],
         control: {type: 'radio'},
     },
-    success: {
-        options: [true, false],
-        control: {type: 'radio'},
-      }
   },
 };
 
