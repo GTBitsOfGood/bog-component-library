@@ -14,7 +14,7 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     height: 44px;
     user-select: none;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }
@@ -32,6 +32,7 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     overflow: visible;
     width: inherit;
     padding: 10px 8px;
+    margin-top: 10px;
 
     border: 1px solid #D9D9D9;
     /* background: inherit; */
@@ -71,7 +72,6 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 .storybook-dropdown-label {
-    margin-bottom: 8px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -90,14 +90,15 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 
 .dd-list {
     margin-top: 5px;
+    /* padding-top: 15px; */
+    /* padding-bottom: 2px; */
     position: relative;
     width: inherit;
     height: auto;
     user-select: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: flex-start;
     /* Function/background */
     background: #FAFBFC;
     /* Shadow-1 */
@@ -107,6 +108,7 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 .dd-list button{
+    margin-top: 0;
     border:none;
     outline: none;
 }
@@ -116,4 +118,10 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     background: #EAE6FF;
     border:none;
     outline: none;
+}
+
+.dd-list-item-radio {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
 }

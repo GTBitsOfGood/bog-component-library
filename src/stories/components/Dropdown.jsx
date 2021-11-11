@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {useState} from "react";
 import '../css/dropdown.css';
+import { Checkbox } from './Checkbox';
+import { RadioButton } from './RadioButton';
 
 /**
  * Primary UI component for user interaction
@@ -20,21 +22,24 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
     close();
   }
 
-  // const unSelectSingleItem = (item) => {
-  //   const { list } = this.props;
+  const selectSingleRadioItem = (item) => {
+    const selectedItem = list.find((i) => i.name === item.name);
+    setSelectedItem(selectedItem);
+    close();
+  }
 
-  //   const selectedItem = list.find((i) => i.value === item.value);
-  //   setSelectedItem(selectedItem);
-  // }
+  const selectMultiCheckboxItem = (item) => {
+    const selectedItem = list.find((i) => i.name === item.name);
+    setSelectedItem(selectedItem);
+  }
 
-  // const handleChange =(newValue)=>{    
-  //   setInput(newValue);
-  //   console.log(newValue); 
-  // } 
-  // const { isListOpen, headerTitle } = this.state;
-  // const { list } = this.props;
+  window.addEventListener('click', function(e){   
+    if (!document.getElementById('storybook-dropdown').contains(e.target)){
+      close();
+    } 
+  });
 
-  const displayOptions = () => {
+const displayRegularOptions = () => {
     return list.map((item, i) => {
         return (
           <button
@@ -49,8 +54,41 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
     })
 }
 
+const displayRadioOptions = () => {
+  return list.map((item, i) => {
+      return (
+        <div
+        type="Radio"
+        className="dd-list-item-radio"
+        key={i}
+        onClick={() => selectSingleRadioItem(item)}
+        >
+          <RadioButton radioGroup={"dropdown"} label={item.name}/>
+        </div>
+      )
+  })
+}
+let checkBoxItems = null;
+const displayCheckboxOptions = () => {
+  if(checkBoxItems === null){
+    checkBoxItems =  list.map((item, i) => {
+        return (
+          <div
+          type="checkbox"
+          className="dd-list-item-checkbox"
+          key={i}
+          onClick={() => selectMultiCheckboxItem(item)}
+          >
+            <Checkbox label={item.name}/>
+          </div>
+        )
+    })
+  }
+  return checkBoxItems;
+}
+
   return (
-    <div className={["storybook-dropdown-wrapper",'storybook-dropdown-wrapper--' + (isDisabled? 'disabled':''),'storybook-dropdown-wrapper--' + (error?'error':''),`storybook-dropdown-wrapper--${variant}`].join(' ')}>
+    <div id="storybook-dropdown" className={["storybook-dropdown-wrapper",'storybook-dropdown-wrapper--' + (isDisabled? 'disabled':''),'storybook-dropdown-wrapper--' + (error?'error':''),`storybook-dropdown-wrapper--${variant}`].join(' ')}>
       <label className={'storybook-dropdown-label'}>{label}</label>
       <button
         type="button"
@@ -68,7 +106,9 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
           role="list"
           className="dd-list"
         >
-          {displayOptions()}
+          {variant === "regular" && displayRegularOptions()}
+          {variant === "radio" && displayRadioOptions()}
+          {variant === "checkbox" && displayCheckboxOptions()}
         </div>
       )}
       {!isListOpen && error && 
@@ -149,7 +189,7 @@ Dropdown.defaultProps = {
     {id: 2, name: 'Lily', selected:false},
     {id: 3, name: 'Jade', selected:false},
     {id: 4, name: 'Eric', selected:false},
-    {id: 5, name: 'Marlen', selected:false},
+    {id: 5, name: 'Marlene', selected:false},
   ],
   placeholder: 'Placeholder text',
   isDisabled: false,
