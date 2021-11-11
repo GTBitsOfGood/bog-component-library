@@ -53,6 +53,10 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     color: rgba(217, 217, 217, 1);
 }
 
+.storybook-dropdown-wrapper button:disabled:hover{
+    border: 1px solid #D9D9D9;
+}
+
 
 
 .storybook-dropdown-header {
@@ -70,7 +74,9 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     width: 10px;
     height: auto;
 }
-
+.storybook-dropdown-header-title-placeholder{
+    color:rgba(140, 140, 140, 1);
+}
 .storybook-dropdown-label {
     font-style: normal;
     font-weight: normal;
@@ -88,8 +94,10 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     align-items: center;
 }
 
-.dd-list {
+.storybook-dropdown-list {
     margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     position: relative;
     width: inherit;
     height: auto;
@@ -105,20 +113,20 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     border-radius: 4px;
 }
 
-.dd-list button{
+.storybook-dropdown-list button{
     margin-top: 0;
-    border:none;
-    outline: none;
+    border:none !important;
+    outline: none !important;
 }
 
-.dd-list button:hover{
+.storybook-dropdown-list button:hover{
     /* Midnight/Midnight 100 */
     background: #EAE6FF;
     border:none;
     outline: none;
 }
 
-.dd-list div{
+.storybook-dropdown-list-item-radio{
     margin-top: 0;
     border:none;
     outline: none;
@@ -129,7 +137,19 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     padding-left: 15px;
 }
 
-.dd-list div:hover{
+.storybook-dropdown-list-item-checkbox{
+    margin-top: 0;
+    border:none;
+    outline: none;
+    width: 345px;
+    height: 34px;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.storybook-dropdown-list div:hover{
     /* Midnight/Midnight 100 */
     background: #EAE6FF;
     border:none;

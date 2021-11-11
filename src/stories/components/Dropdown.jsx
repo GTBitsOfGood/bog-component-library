@@ -44,7 +44,7 @@ const displayRegularOptions = () => {
         return (
           <button
           type="button"
-          className="dd-list-item"
+          className="storybook-dropdown-list-item"
           key={i}
           onClick={() => selectSingleItem(item)}
           >
@@ -59,7 +59,7 @@ const displayRadioOptions = () => {
       return (
         <div
         type="Radio"
-        className="dd-list-item-radio"
+        className="storybook-dropdown-list-item-radio"
         key={i}
         onClick={() => selectSingleRadioItem(item)}
         >
@@ -75,11 +75,11 @@ const displayCheckboxOptions = () => {
         return (
           <div
           type="checkbox"
-          className="dd-list-item-checkbox"
+          className="storybook-dropdown-list-item-checkbox"
           key={i}
           onClick={() => selectMultiCheckboxItem(item)}
           >
-            <Checkbox label={item.name}/>
+            <Checkbox label={item.name} hasLabel={true}/>
           </div>
         )
     })
@@ -96,7 +96,8 @@ const displayCheckboxOptions = () => {
         onClick={toggling}
         disabled={isDisabled}
       >
-        <div className="storybook-dropdown-header-title">{selectedItem === null? "Choose your player": selectedItem.name}</div>
+        {selectedItem === null? <div className="storybook-dropdown-header-title-placeholder">{ placeholder}</div>:
+        <div className="storybook-dropdown-header-title">{selectedItem.name}</div>}
         {isListOpen
           ? <img className='dropdown-open' src='https://img.icons8.com/material-rounded/24/000000/chevron-up.png' alt="close"></img>
           : <img className='input-close' src='https://img.icons8.com/material-rounded/24/000000/chevron-down.png' alt="open"></img>}
@@ -104,7 +105,7 @@ const displayCheckboxOptions = () => {
       {isListOpen && list !== null && (
         <div
           role="list"
-          className="dd-list"
+          className="storybook-dropdown-list"
         >
           {variant === "regular" && displayRegularOptions()}
           {variant === "radio" && displayRadioOptions()}
