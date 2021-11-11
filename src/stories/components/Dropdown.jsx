@@ -15,11 +15,17 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
   //   setSelectedItem(null);
   // };
   const selectSingleItem = (item) => {
-    const { list } = this.props;
-
-    const selectedItem = list.find((i) => i.value === item.value);
-    this.selectItem(selectedItem);
+    const selectedItem = list.find((i) => i.name === item.name);
+    setSelectedItem(selectedItem);
+    close();
   }
+
+  // const unSelectSingleItem = (item) => {
+  //   const { list } = this.props;
+
+  //   const selectedItem = list.find((i) => i.value === item.value);
+  //   setSelectedItem(selectedItem);
+  // }
 
   // const handleChange =(newValue)=>{    
   //   setInput(newValue);
@@ -27,6 +33,21 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
   // } 
   // const { isListOpen, headerTitle } = this.state;
   // const { list } = this.props;
+
+  const displayOptions = () => {
+    return list.map((item, i) => {
+        return (
+          <button
+          type="button"
+          className="dd-list-item"
+          key={i}
+          onClick={() => selectSingleItem(item)}
+          >
+            {item.name}
+          </button>
+        )
+    })
+}
 
   return (
     <div className={["storybook-dropdown-wrapper",'storybook-dropdown-wrapper--' + (isDisabled? 'disabled':''),'storybook-dropdown-wrapper--' + (error?'error':''),`storybook-dropdown-wrapper--${variant}`].join(' ')}>
@@ -37,31 +58,20 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
         onClick={toggling}
         disabled={isDisabled}
       >
-        <div className="storybook-dropdown-header-title">Choose your player</div>
+        <div className="storybook-dropdown-header-title">{selectedItem === null? "Choose your player": selectedItem.name}</div>
         {isListOpen
           ? <img className='dropdown-open' src='https://img.icons8.com/material-rounded/24/000000/chevron-up.png' alt="close"></img>
           : <img className='input-close' src='https://img.icons8.com/material-rounded/24/000000/chevron-down.png' alt="open"></img>}
       </button>
-      {/* {isListOpen && (
+      {isListOpen && list !== null && (
         <div
           role="list"
           className="dd-list"
         >
-          {list.map((item) => (
-            <button
-              type="button"
-              className="dd-list-item"
-              key={item.id}
-              onClick={() => this.selectItem(item)}
-            >
-              {item.title}
-              {' '}
-              {item.selected && <FontAwesome name="check" />}
-            </button>
-          ))}
+          {displayOptions()}
         </div>
-      )} */}
-      {error && 
+      )}
+      {!isListOpen && error && 
       (<div className={'storybook-dropdown-label-error'}>
         {/* error icon */}
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -100,17 +110,18 @@ Dropdown.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-     * An object formatted as:
-     * {
-     *      0: {
+     * An array of objects formatted as:
+     * [
+     *      {
      *          id: "unique id"
      *          name: "Item Name"
+     *          selected: "has the item been selected"
      *      },
-     *      1: {...},
+     *      {...},
      *      ...
-     * }
+     * ]
      */
-  list:PropTypes.object,
+  list: PropTypes.array,
   /**
    * Input Placeholder text
    */
@@ -132,11 +143,14 @@ Dropdown.propTypes = {
 Dropdown.defaultProps = {
   variant: 'regular',
   label: 'Label',
-  // list:{
-  //   0: {id: 0, name: 'About Us'},
-  //   1: {id: 1, name: 'Projects'},
-  //   2: {id: 2, name: 'Blog'}
-  // },
+  list:[
+    {id: 0, name: 'Sharath', selected:false},
+    {id: 1, name: 'Alyson', selected:false},
+    {id: 2, name: 'Lily', selected:false},
+    {id: 3, name: 'Jade', selected:false},
+    {id: 4, name: 'Eric', selected:false},
+    {id: 5, name: 'Marlen', selected:false},
+  ],
   placeholder: 'Placeholder text',
   isDisabled: false,
   error: false, 
