@@ -17,20 +17,29 @@ export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error,
   //   setSelectedItem(null);
   // };
   const selectSingleItem = (item) => {
-    const selectedItem = list.find((i) => i.name === item.name);
-    setSelectedItem(selectedItem);
+    if(selectedItem != null){
+      selectedItem.selected = false;
+    }
+    let findSelectedItem = list.find((i) => i.name === item.name);
+    findSelectedItem.selected = true;
+    setSelectedItem(findSelectedItem);
     close();
   }
 
   const selectSingleRadioItem = (item) => {
-    const selectedItem = list.find((i) => i.name === item.name);
-    setSelectedItem(selectedItem);
+    if(selectedItem != null){
+      selectedItem.selected = false;
+    }
+    let findSelectedItem = list.find((i) => i.name === item.name);
+    findSelectedItem.selected = true;
+    setSelectedItem(findSelectedItem);
     close();
   }
 
   const selectMultiCheckboxItem = (item) => {
-    const selectedItem = list.find((i) => i.name === item.name);
-    setSelectedItem(selectedItem);
+    const findSelectedItem = list.find((i) => i.name === item.name);
+    findSelectedItem.selected = true;
+    setSelectedItem(findSelectedItem);
   }
 
   window.addEventListener('click', function(e){   
@@ -44,7 +53,7 @@ const displayRegularOptions = () => {
         return (
           <button
           type="button"
-          className="storybook-dropdown-list-item"
+          className={"storybook-dropdown-list-item-" + (item.selected === true ? "selected":"")}
           key={i}
           onClick={() => selectSingleItem(item)}
           >
@@ -59,7 +68,7 @@ const displayRadioOptions = () => {
       return (
         <div
         type="Radio"
-        className="storybook-dropdown-list-item-radio"
+        className={["storybook-dropdown-list-item-radio","storybook-dropdown-list-item-" + (item.selected === true ? "selected":"")].join(' ')}
         key={i}
         onClick={() => selectSingleRadioItem(item)}
         >
@@ -75,7 +84,7 @@ const displayCheckboxOptions = () => {
         return (
           <div
           type="checkbox"
-          className="storybook-dropdown-list-item-checkbox"
+          className={["storybook-dropdown-list-item-checkbox","storybook-dropdown-list-item-" + (item.selected === true ? "selected":"")].join(' ')}
           key={i}
           onClick={() => selectMultiCheckboxItem(item)}
           >

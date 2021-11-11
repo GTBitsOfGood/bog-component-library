@@ -155,3 +155,7 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     border:none;
     outline: none;
 }
+
+.storybook-dropdown-list-item-selected{
+    background: #EAE6FF !important;
+}
