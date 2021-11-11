@@ -90,8 +90,6 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 
 .dd-list {
     margin-top: 5px;
-    /* padding-top: 15px; */
-    /* padding-bottom: 2px; */
     position: relative;
     width: inherit;
     height: auto;
@@ -120,8 +118,20 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     outline: none;
 }
 
-.dd-list-item-radio {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.dd-list div{
+    margin-top: 0;
+    border:none;
+    outline: none;
+    width: 345px;
+    height: 34px;
+    display: flex;
+    padding-top: 10px;
     padding-left: 15px;
+}
+
+.dd-list div:hover{
+    /* Midnight/Midnight 100 */
+    background: #EAE6FF;
+    border:none;
+    outline: none;
 }
