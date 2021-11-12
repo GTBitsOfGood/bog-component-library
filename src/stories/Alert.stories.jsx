@@ -25,6 +25,7 @@ SuccessAlert.args = {
   iconType: 'success',
   iconColor: '#13B461',
   backgroundColor: '#E3FCEF',
+  borderColor: '',
   size: 'regular',
   hasButton: false,
   buttonLabel: 'Button',

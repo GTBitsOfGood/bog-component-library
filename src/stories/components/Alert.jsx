@@ -13,7 +13,7 @@ import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fo
  * Props: backgroundColor: str, borderColor: str, alertText: str, 
  * hasButton: bool + buttonText: str, hasHeader: bool + headerText: str, size: str, textColor: str
  */
- export const Alert = ({iconType, iconColor, backgroundColor, hasButton, buttonLabel, hasHeader, headerLabel, alertText, url, size, ...props }) => {
+ export const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, buttonLabel, hasHeader, headerLabel, alertText, url, size, ...props }) => {
 
   // var style = "";
   // style = "backgroundColor=" + backgroundColor + " border=1px solid " + border;
@@ -33,12 +33,13 @@ import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fo
           <div
             type="alert"
             className='storybook-alert-large-header-button'
-            style={backgroundColor && { backgroundColor }} 
+            style={backgroundColor && { backgroundColor }}
+            // style={{backgroundColor: {backgroundColor}, borderColor: {borderColor}, borderWidth: "1px"}}
             {...props}
           >
             <div className="header">
               <div className="headerContent"> 
-                <FontAwesomeIcon icon= {alertIcon} className="icon"/> 
+                <FontAwesomeIcon icon={alertIcon} color={iconColor} className="icon"/> 
               <p>{headerLabel}</p>
               </div>
 
@@ -230,10 +231,10 @@ import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fo
      */
     backgroundColor: PropTypes.string,
 
-    // /**
-    //  * What background color to use
-    //  */
-    // border: PropTypes.string,
+    /**
+     * What background color to use
+     */
+    borderColor: PropTypes.string,
 
     /**
      * Boolean value for whether the alert has a button or not.
@@ -266,6 +267,7 @@ import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fo
     iconType: 'success',
     iconColor: '#13B461',
     backgroundColor: '#E3FCEF',
+    borderColor: '',
     size: 'regular',
     hasButton: false,
     hasHeader: false,

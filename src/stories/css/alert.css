@@ -79,7 +79,7 @@
     line-height: 1;
     display: flex;
     flex-direction: column;
-    align-items:unset;
+    align-items: unset;
     height: min-content;
     width: 25vw;
 }
@@ -113,14 +113,14 @@
     flex-direction: column;
     flex: 70%;
     padding-left: 11vmin;
-    padding-right: 17vmin;
+    /* padding-right: 17vmin; */
     margin-top: -2vmin;
 }
 
 Button {
     align-self: flex-end;
     justify-content: flex-end;
-    margin: 0vmin -10vmin 2vmin 0vmin;
+    margin: 0vh 0vw 2vh 0vw;
 }
 
 .header {
@@ -142,10 +142,10 @@ Button {
 }
 
 .header .x {
-    width: 4vmin;
-    height: 4vmin;
-    padding: 2vmin 2vmin 0vmin 0vmin;
-    
+    /* width: 4vmin;
+    height: 4vmin; */
+    padding: 2vh 0vw 0vh 20vw;
+    /* object-position: 90% 10%; */
     display: flex;
     justify-content: flex-end;
 }
@@ -153,7 +153,10 @@ Button {
 .header .x .xIcon {
     width: 4vmin;
     height: 4vmin;
-    align-items: flex-end;
+    /* object-position: 90% 10%; */
+
+    /* align-items: flex-end; */
+    /* justify-content: flex-end; */
 }
 
 .alertBody .icon {
