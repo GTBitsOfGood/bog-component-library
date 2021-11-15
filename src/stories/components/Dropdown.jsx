@@ -72,11 +72,12 @@ const displayRadioOptions = () => {
         key={i}
         onClick={() => selectSingleRadioItem(item)}
         >
-          <RadioButton radioGroup={"dropdown"} label={item.name}/>
+          <RadioButton radioGroup={"dropdown"} label={item.name} isChecked={item.selected}/>
         </div>
       )
   })
 }
+
 let checkBoxItems = null;
 const displayCheckboxOptions = () => {
   if(checkBoxItems === null){

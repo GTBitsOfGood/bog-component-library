@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/radio-button.css';
 
-export const RadioButton = ({ groupName, value, label, isDisabled }) => {
+export const RadioButton = ({ id, groupName, value, label, isDisabled, isChecked }) => {
     const disableStyle = isDisabled && "disable-button"
     return(
         <label className={`radio-container ${disableStyle}`}>
-            <input type="radio" name={groupName} value={value} disabled={isDisabled} />
+            <input type="radio" id={id} name={groupName} value={value} disabled={isDisabled} checked={isChecked}/>
             <span className={`selection ${disableStyle}`}></span>
             <span className="labelText">{label}</span>
         </label>
@@ -30,6 +30,9 @@ RadioButton.propTypes = {
      * Disabled radio button
      */
     isDisabled: PropTypes.bool,
+     /*
+     * Checked radio button
+     */
 }
 
 RadioButton.defaultProps = {
