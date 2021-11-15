@@ -8,6 +8,16 @@ export default {
   decorators: [withDesign],
   component: Tooltip,
   argTypes: {
+    size: {
+      options: ["large", "small"],
+      control: {type: 'radio'},
+      default: "large",
+    },
+    style: {
+      options: ["dark", "light", "brand", "capitalized"],
+      control: {type: 'radio'},
+      default: "dark",
+    }
   },
   parameters : {
     design: {
@@ -17,20 +27,18 @@ export default {
   }
 };
 
-const Template = (args) => (
-  <Tooltip {...args}>
-    <div>
-      Hover over me!
-    </div>
-  </Tooltip>
-)
+const Template = (args) => <Tooltip {...args} />
 
 export const Large = Template.bind({});
 Large.args = {
-
+  text: "tooltip",
+  size: "large",
+  style: "dark",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-
+  text: "tooltip",
+  size: "small",
+  style: "dark",
 };

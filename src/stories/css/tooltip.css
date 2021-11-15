@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf') format('truetype');
+}
+
+.tooltip-container {
+    display: inline-block;
+    border-radius: 1px;
+}
+
+.tooltip--large {
+    padding: 6px;
+    font-size: 12px;
+}
+
+.tooltip--small {
+    padding: 3px 6px 3px 6px;
+    font-size: 8px;
+}
+
+.style--dark {
+    background-color: #666666;
+    color: white;
+}
+
+.style--light {
+    background-color: #F2F2F2;
+    color: black;
+}
+
+.style--brand {
+    background-color: #F2F2F2;
+    color: #5A50B3;
+}
+
+.style--capitalized {
+    background-color: #FD904C;
+    color: white;
+    text-transform: uppercase;
+}
+
+.style--capitalized .tooltip-text {
+    font-family: "VisbyCF";
+    font-size: 8px;
+}
+
+.tooltip-text {
+    font-family: "OpenSans";
+}
+
+.tooltip-text::after {
+    content: " ";
+    /* position: relative; */
+    /* position: absolute; */
+    /* top: 100%; */
+    /* left: 50%; */
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
