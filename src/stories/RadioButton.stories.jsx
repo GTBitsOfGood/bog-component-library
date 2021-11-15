@@ -17,10 +17,12 @@ export default {
 
 const Template = (args) => {
   const [_, updateArgs] = useArgs();
-  
 
   const handle = (event) => {
-    args[event.target.id].isChecked = true
+    for (let a = 0; a < args.length; a++){
+      if (a !== event.target.id) args[a].isChecked = false
+      else args[a].isChecked = true
+    }
     updateArgs(args);
   };
 
