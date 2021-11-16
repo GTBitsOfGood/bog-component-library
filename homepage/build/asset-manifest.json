@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.11aec063.chunk.css",
+    "main.js": "/static/js/main.2ebc2c12.chunk.js",
+    "main.js.map": "/static/js/main.2ebc2c12.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7277ff41.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7277ff41.js.map",
+    "static/js/2.ae92c962.chunk.js": "/static/js/2.ae92c962.chunk.js",
+    "static/js/2.ae92c962.chunk.js.map": "/static/js/2.ae92c962.chunk.js.map",
+    "static/js/3.3591ebc0.chunk.js": "/static/js/3.3591ebc0.chunk.js",
+    "static/js/3.3591ebc0.chunk.js.map": "/static/js/3.3591ebc0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.11aec063.chunk.css.map": "/static/css/main.11aec063.chunk.css.map",
+    "static/js/2.ae92c962.chunk.js.LICENSE.txt": "/static/js/2.ae92c962.chunk.js.LICENSE.txt",
+    "static/media/LibraryComponents.css": "/static/media/VisbyCF-Medium.c7b2c9ed.ttf",
+    "static/media/StorybookButton.css": "/static/media/VisbyCF-Bold.94902a85.ttf",
+    "static/media/homepage_main.4948c0bb.png": "/static/media/homepage_main.4948c0bb.png",
+    "static/media/storybook_logo.c5da0e8c.svg": "/static/media/storybook_logo.c5da0e8c.svg",
+    "static/media/website_capy.f4f6e164.png": "/static/media/website_capy.f4f6e164.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7277ff41.js",
+    "static/js/2.ae92c962.chunk.js",
+    "static/css/main.11aec063.chunk.css",
+    "static/js/main.2ebc2c12.chunk.js"
+  ]
+}
