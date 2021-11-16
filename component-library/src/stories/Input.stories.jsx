@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Input } from './components/Input';
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Components/Input',
@@ -23,6 +24,12 @@ export default {
         control: {type: 'radio'},
       }
   },
+  parameters : {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DEfDgRT4G9732YxrqTqq8V/BoG-Design-System-(Working-File)?node-id=897%3A6012"
+    },
+  }
 };
 
 const Template = (args) => <Input {...args} />;
