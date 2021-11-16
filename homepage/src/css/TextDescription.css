@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'VisbyCF-Bold';
-	src: url('../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf')  format('truetype');
+	font-family: 'VisbyCF-ExtraBold';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
 }
 
 @font-face {
@@ -20,7 +20,15 @@
 }
 
 h1 {
-	font-family: 'VisbyCF-Bold', 'OpenSans', sans-serif;
+	font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
+    font-size: 40px;
+	font-weight: 800;
+    /* line-height: 29px; */
+    color: 3F3F3F;
+}
+
+h2 {
+	font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
     font-size: 24px;
     line-height: 29px;
     color: 3F3F3F;

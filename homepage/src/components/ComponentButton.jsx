@@ -1,14 +1,14 @@
 import '../css/ComponentButton.css';
 
-function Button() {
+function Button(props) {
   return (
-      <a 
-        href="/components"
+      <button 
         alt="link_to_components"
         className="component-button"
+        onClick={() => console.log("Hey")}
       >
         View Components →
-      </a>
+      </button>
   );
 }
 

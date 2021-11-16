@@ -20,4 +20,6 @@
 	border-radius: 4px;
 	font-size: 18px;
 	font-weight: 800;
+	border: none;
+	cursor: pointer;
 }

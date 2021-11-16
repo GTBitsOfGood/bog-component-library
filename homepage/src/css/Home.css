@@ -9,7 +9,6 @@
     font-size: calc(10px + 2vmin);
 }
 
-
 .text-container {
     display: inline-block;
     width: 80vw;
@@ -24,6 +23,10 @@
     display: flex;
     max-width: 460px;
     padding: 10px 0;
+}
+
+.button-container button + a {
+    margin-left: 10px;
 }
 
 .button-container a + a {
