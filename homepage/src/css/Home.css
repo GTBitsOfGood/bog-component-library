@@ -1,0 +1,34 @@
+.home-container {
+    text-align: center;
+    min-height: 100vh;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.text-container {
+    display: inline-block;
+    width: 80vw;
+    height: fit-content;
+}
+
+.button-container {
+    display: block;
+}
+
+.button-container div {
+    display: flex;
+    max-width: 460px;
+    padding: 10px 0;
+}
+
+.button-container button + a {
+    margin-left: 10px;
+}
+
+.button-container a + a {
+    margin-left: 10px;
+}
