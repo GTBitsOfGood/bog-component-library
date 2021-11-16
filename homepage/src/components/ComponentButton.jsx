@@ -5,7 +5,7 @@ function Button(props) {
       <button 
         alt="link_to_components"
         className="component-button"
-        onClick={() => console.log("Hey")}
+        onClick={() => props.handle(false)}
       >
         View Components →
       </button>

@@ -26,11 +26,11 @@ const components = [
   { id: 8, img: switch_img, heading: 'switch', content: 'An element that allows the user to toggle between two options or states. Can be customized with icons or labels.'},
 ]
 
-function LibraryComponents() {
+function LibraryComponents(props) {
   return (
     <div className="library-container">
         <div className="navbar-container">
-            <img className="components-logo" src={logo} alt="homepage_main_image"/>
+            <img className="components-logo" src={logo} alt="homepage_main_image" onClick={() => props.handle(true)}/>
         </div>
         <div className="library-content-container">
             <div className="components-menubar">

@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import Home from './components/Home';
 import LibraryComponents from './components/LibraryComponents';
 
 function App() {
+  const [isHome, setIsHome] = useState(true);
+
   return (
     <>
-      {/* <Home/> */}
-      <LibraryComponents />
+      {isHome && <Home handle={setIsHome}/>}
+      {!isHome && <LibraryComponents handle={setIsHome} />}
     </>
   );
 }

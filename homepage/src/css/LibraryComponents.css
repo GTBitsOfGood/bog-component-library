@@ -34,6 +34,7 @@
 .components-logo {
     width: 129.38px;
     height: 37.45px;
+    cursor: pointer;
 }
 
 .components-menubar {

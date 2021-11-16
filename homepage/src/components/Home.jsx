@@ -6,7 +6,7 @@ import StorybookButton from './StorybookButton';
 import homepage from '../assets/homepage_main.png';
 import '../css/Home.css';
 
-function Home() {
+function Home(props) {
   return (
     <div className="home-container">
         <img src={homepage} alt="homepage_main_image"/>
@@ -16,7 +16,7 @@ function Home() {
             <TextDescription heading="Get Started"/>
             <div className="button-container">
                 <div>
-                  <ConponentButton/>
+                  <ConponentButton handle={props.handle}/>
                   <GithubButton/>
                 </div>
                 <div>
