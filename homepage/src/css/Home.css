@@ -1,0 +1,25 @@
+.home-container {
+    text-align: center;
+    min-height: 100vh;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+
+.text-container {
+    display: inline-block;
+    width: 80vw;
+}
+
+.button-container {
+    display: flex;
+    width: 460px;
+}
+
+.button-container a + a {
+    margin-left: 10px;
+}

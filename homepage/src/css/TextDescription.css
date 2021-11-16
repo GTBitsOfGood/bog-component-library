@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'VisbyCF-Bold';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'VisbyCF-Medium';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+.text-description-container {
+    display: block;
+    text-align: left;
+    width: 460px;
+}
+
+h1 {
+	font-family: 'VisbyCF-Bold', 'OpenSans', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    color: 3F3F3F;
+}
+
+p {
+	font-family: 'VisbyCF-Medium', 'OpenSans', sans-serif;
+    font-size: 16px;
+}
