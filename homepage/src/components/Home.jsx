@@ -11,8 +11,8 @@ function Home(props) {
     <div className="home-container">
         <img src={homepage} alt="homepage_main_image"/>
         <div className="text-container">
-            <TextDescription heading={"What is a design System?"} content={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}/>
-            <TextDescription heading={"Why does Bits of Good need one?"} content={"Our goal is to connect with local non-profits and work to make their job achievable through powerful web apps. We work with various non-profits."}/>
+            <TextDescription heading={"What is a design System?"} content={"A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications."}/>
+            <TextDescription heading={"Why does Bits of Good need one?"} content={"There is confusion across projects about what design guidelines and component libraries to use. Using multiple different libraries and kits makes it difficult to stay consistent during development and to maintain a product after shipping."}/>
             <TextDescription heading="Get Started"/>
             <div className="button-container">
                 <div>
