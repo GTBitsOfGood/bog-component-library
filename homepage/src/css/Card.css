@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'VisbyCF-ExtraBold';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -24,5 +34,18 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 0px 20px;
+    margin: 20px 20px 0 0;
+}
+
+h3 {
+	font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
+    font-size: 24px;
+    padding: 20px 0 0 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.card-content {
+    max-width: 260px;
+    padding: 0 0 0 20px;
 }
