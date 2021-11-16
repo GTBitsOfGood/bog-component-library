@@ -1,7 +1,7 @@
 .home-container {
     text-align: center;
     min-height: 100vh;
-    padding-bottom: 10vh;
+    padding: 10vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,11 +13,17 @@
 .text-container {
     display: inline-block;
     width: 80vw;
+    height: fit-content;
 }
 
 .button-container {
+    display: block;
+}
+
+.button-container div {
     display: flex;
-    width: 460px;
+    max-width: 460px;
+    padding: 10px 0;
 }
 
 .button-container a + a {

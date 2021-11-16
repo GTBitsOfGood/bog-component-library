@@ -1,6 +1,8 @@
 import TextDescription from './TextDescription';
+import ConponentButton from './ComponentButton';
 import FigmaButton from './FigmaButton';
 import GithubButton from './GithubButton';
+import StorybookButton from './StorybookButton';
 import homepage from '../assets/homepage_main.png';
 import '../css/Home.css';
 
@@ -13,8 +15,14 @@ function Home() {
             <TextDescription heading={"Why does Bits of Good need one?"} content={"Our goal is to connect with local non-profits and work to make their job achievable through powerful web apps. We work with various non-profits."}/>
             <TextDescription heading="Get Started"/>
             <div className="button-container">
-                <FigmaButton/>
-                <GithubButton/>
+                <div>
+                  <ConponentButton/>
+                  <GithubButton/>
+                </div>
+                <div>
+                  <StorybookButton/>
+                  <FigmaButton/>
+                </div>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
-.github-button {
+.component-button {
     display: block;
     text-align: left;
     text-decoration: none;
@@ -20,10 +20,4 @@
 	border-radius: 4px;
 	font-size: 18px;
 	font-weight: 800;
-}
-
-.github-button-image {
-	height: 13px;
-	width: 13px;
-	padding: 0 10px 0 10px;
 }
