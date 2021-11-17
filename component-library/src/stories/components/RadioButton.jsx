@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/radio-button.css';
 
-export const RadioButton = ({ id, groupName, value, label, isDisabled, isChecked }) => {
+ const RadioButton = ({ id, groupName, value, label, isDisabled, isChecked }) => {
     const disableStyle = isDisabled && "disable-button"
     return(
         <label className={`radio-container ${disableStyle}`}>
@@ -41,3 +41,5 @@ RadioButton.defaultProps = {
     label: 'Label',
     isDisabled: false,
 }
+
+export default RadioButton;

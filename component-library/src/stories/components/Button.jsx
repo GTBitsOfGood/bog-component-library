@@ -5,7 +5,7 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, ...props }) => {
+ const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, ...props }) => {
   const newLocal = isDisabled && 'disabled';
   return (
     <button
@@ -62,3 +62,5 @@ Button.defaultProps = {
   isDisabled: false,
   onClick: undefined,
 };
+
+export default Button;
