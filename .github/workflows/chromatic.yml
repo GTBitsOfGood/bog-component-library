@@ -4,6 +4,10 @@ name: 'Chromatic'
 # Event for the workflow
 on: push
 
+defaults:
+  run:
+    working-directory: component-library
+
 # List of jobs
 jobs:
   chromatic-deployment:
