@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'VisbyCF-Bold';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+.github-button {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+	font-family: 'VisbyCF-Bold', 'OpenSans', sans-serif;
+	color: white;
+	background-color: #2D285C;
+	padding: 7px 16px 8px 16px;
+	max-width: fit-content;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.github-button-image {
+	height: 13px;
+	width: 13px;
+	padding: 0 10px 0 10px;
+}
