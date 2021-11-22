@@ -9,6 +9,10 @@ export default {
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
+    size: {
+      options: ['large', 'medium', 'small'],
+      control: {type: 'radio'},
+    },
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
       control: {type: 'radio'},
