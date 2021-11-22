@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'VisbyCF-ExtraBold';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'VisbyCF-Medium';
+	src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+.library-container {
+    padding-left: 140px;
+    padding-bottom: 10vh;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container {
+    max-width: 100vw;
+    padding-top: 58px;
+}
+
+.library-content-container {
+    display: flex;
+}
+
+.components-logo {
+    width: 129.38px;
+    height: 37.45px;
+    cursor: pointer;
+}
+
+.components-menubar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 253px;
+    padding: 28px 0;
+}
+
+.components-container {
+    width: 1060px;
+}
+
+.component-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menubar-heading {
+	font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
+    font-size: 12px;
+    color: #473F91;
+    text-transform: uppercase;
+    padding: 9px 0;
+}
+
+.menubar-content {
+	font-family: 'VisbyCF-Medium', 'OpenSans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #473F91;
+    padding: 9px 8px;
+}
+
+.capy {
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+}
