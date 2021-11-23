@@ -21,7 +21,7 @@ jobs:
       - name: Build Storybook
         run: yarn build-storybook # script defined in root ./package.json
       - name: Chromatic Preview
-        uses: chromaui/action@v1
+        # uses: chromaui/action@v1
         run: yarn chromatic
         # Chromatic GitHub Action options
         with:
