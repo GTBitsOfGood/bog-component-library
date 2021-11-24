@@ -5,12 +5,7 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-<<<<<<< HEAD
- const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, ...props }) => {
-  const newLocal = isDisabled && 'disabled';
-=======
 export const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, size, ...props }) => {
->>>>>>> 9554294e933c93e55d16f2c68791a97647202371
   return (
     <button
       type="button"
