@@ -5,7 +5,7 @@ import '../css/alert.css';
 /**
  * Primary UI component for user interaction
  */
- export const Alert = ({backgroundColor, alertText, url, ...props }) => {
+  const Alert = ({backgroundColor, alertText, url, ...props }) => {
     return (
       <div
         type="alert"
@@ -41,3 +41,5 @@ import '../css/alert.css';
     alertText: 'Nice, you triggered this alert message!', 
     url: 'https://youtu.be/dQw4w9WgXcQ',
   };
+
+export default Alert;

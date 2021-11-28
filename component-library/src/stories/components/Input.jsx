@@ -6,7 +6,7 @@ import '../css/input.css';
 /**
  * Primary UI component for user interaction
  */
-export const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisabled, rows, cols, error, success, onChange, ...props }) => {
+ const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisabled, rows, cols, error, success, onChange, ...props }) => {
   const [input, setInput] = useState(null);
   const handleChange =(newValue)=>{    
     setInput(newValue);
@@ -139,3 +139,5 @@ Input.defaultProps = {
   leftIcon: 'https://img.icons8.com/material-outlined/24/000000/planner.png',
   rightIcon: 'https://img.icons8.com/material-rounded/24/000000/chevron-down.png',
 };
+
+export default Input;
