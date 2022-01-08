@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Button from './components/Button';
 import { withDesign } from 'storybook-addon-designs'
 
@@ -16,6 +14,9 @@ export default {
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
       control: {type: 'select'},
+    },
+    icon: {
+      control: {type: 'element'}
     },
     iconPosition: {
       options: ['left', 'right'],
@@ -44,11 +45,9 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary",
-  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   variant: "tertiary",
-  icon: 'https://img.icons8.com/material-outlined/24/282c34/search--v1.png',
 };

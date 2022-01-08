@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/button.css';
 
-const Button = ({ variant, backgroundColor, label, hasIcon, icon, iconPosition, isDisabled, size, ...props }) => {
+const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, label, onClick, size, variant, ...props }) => {
   return (
     <button
       type="button"
@@ -10,11 +10,11 @@ const Button = ({ variant, backgroundColor, label, hasIcon, icon, iconPosition, 
       style={backgroundColor && { backgroundColor }}
       disabled={isDisabled}
       {...props}
+      onClick={onClick}
     >
-      <div className='button-content' >
-        {hasIcon && iconPosition === 'left' && React.cloneElement(icon, {className: 'button-icon--left'})}
+      <div className={`button-content${iconPosition === 'right' ? '--right' : '--left'}`}>
         {label}
-        {hasIcon && iconPosition === 'right' && React.cloneElement(icon, {className: 'button-icon--right'})}
+        {hasIcon && React.cloneElement(icon, {className: `button-icon${iconPosition === 'right' ? "--right" : '--left'}`})}
       </div>
     </button>
   );
@@ -38,7 +38,7 @@ Button.defaultProps = {
   icon: <img src='https://img.icons8.com/material-outlined/24/ffffff/search--v1.png' alt='search-icon'/>,
   iconPosition: 'right',
   isDisabled: false,
-  label: 'Button',
+  label: "Button",
   onClick: undefined,
   size: 'large',
   variant: 'primary'
