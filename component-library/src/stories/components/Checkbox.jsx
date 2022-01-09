@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../css/checkbox.css'
 
-export const Checkbox = ({ label, isDisabled, isIndeterminate, hasLabel, onChange, ...props}) => {
+ const Checkbox = ({ label, isDisabled, isIndeterminate, hasLabel, onChange, ...props}) => {
     const classes = "checkbox" + (isDisabled ? "-disabled" : "") + (isIndeterminate ? "-indeterminate" : "") + (hasLabel ? "-hasLabel" : "")
     return (
         <label className="container">
@@ -40,3 +40,5 @@ Checkbox.defaultProps = {
     isIndeterminate: false,
     onChange: undefined,
 }
+
+export default Checkbox;

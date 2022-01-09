@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { RadioButton } from './components/RadioButton';
+import RadioButton from './components/RadioButton';
 import { useArgs } from '@storybook/client-api';
 import { withDesign } from 'storybook-addon-designs'
 
