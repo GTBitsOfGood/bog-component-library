@@ -5,7 +5,7 @@ import '../css/button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, size, ...props }) => {
+const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, size, ...props }) => {
   return (
     <button
       type="button"
@@ -63,3 +63,5 @@ Button.defaultProps = {
   onClick: undefined,
   size: 'large'
 };
+
+export default Button;

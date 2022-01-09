@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/switch.css';
 
-export const Switch = ({ disabled, hasLabel, label, ...props }) => {
+ const Switch = ({ disabled, hasLabel, label, ...props }) => {
   
   return (
       <div className="switch-container">
@@ -26,3 +26,5 @@ Switch.defaultProps = {
   disabled: false,
   label: "Toggle"
 };
+
+export default Switch;

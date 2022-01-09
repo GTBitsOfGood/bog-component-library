@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {useState} from "react";
 import '../css/dropdown.css';
-import { Checkbox } from './Checkbox';
-import { RadioButton } from './RadioButton';
+import Checkbox from './Checkbox.jsx';
+import RadioButton from './RadioButton.jsx';
 
 /**
  * Primary UI component for user interaction
  */
-export const Dropdown = ({ variant, label, list, placeholder, isDisabled, error, onChange, ...props }) => {
+ const Dropdown = ({ variant, label, list, placeholder, isDisabled, error, onChange, ...props }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isListOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isListOpen);
@@ -206,3 +206,5 @@ Dropdown.defaultProps = {
   isDisabled: false,
   error: false, 
 };
+
+export default Dropdown;

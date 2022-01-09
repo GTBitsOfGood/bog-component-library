@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../css/navbar.css'
-import {Button} from './Button'
+import Button from './Button'
 
 export const Navbar = ({menuItems, logo, backgroundColor, addButton, buttonLabel, ...props}) => {
 

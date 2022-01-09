@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from './components/Button';
+import Button from './components/Button';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {

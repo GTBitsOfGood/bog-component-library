@@ -6,15 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 /**
- * Primary UI component for user interaction
- */
-
-/**
  * Props: backgroundColor: str, borderColor: str, alertText: str, 
  * hasButton: bool + buttonText: str, hasHeader: bool + headerText: str, size: str, textColor: str
  */
- export const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, buttonLabel, hasHeader, headerLabel, alertText, url, size, ...props }) => {
-
+const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, buttonLabel, hasHeader, headerLabel, alertText, url, size, ...props }) => {
   // var style = "";
   // style = "backgroundColor=" + backgroundColor + " border=1px solid " + border;
   var alertIcon; 
@@ -214,83 +209,80 @@ import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fo
   }
 };
   
-  Alert.propTypes = {
+Alert.propTypes = {
+
+  /**
+   * What type of alert
+   */
+    iconType: PropTypes.string,
+
+  /**
+  * What type of alert
+  */
+  iconColor: PropTypes.string,
+
+  /**
+   * What background color to use
+   */
+  backgroundColor: PropTypes.string,
+
+  /**
+   * What background color to use
+   */
+  borderColor: PropTypes.string,
+
+  /**
+   * Boolean value for whether the alert has a button or not.
+   */
+  hasButton: PropTypes.bool,
+
+  /**
+   * Label of the button (if it has one)
+   */
+  buttonLabel: PropTypes.string,
+
+  /**
+   * Boolean value for whether the alert has a button or not.
+   */
+    hasHeader: PropTypes.bool,
 
     /**
-     * What type of alert
-     */
-     iconType: PropTypes.string,
-
-    /**
-    * What type of alert
+    * Label of the button (if it has one)
     */
-    iconColor: PropTypes.string,
+    headerLabel: PropTypes.string,
 
-    /**
-     * What background color to use
-     */
-    backgroundColor: PropTypes.string,
+  /**
+   * Alert message
+   */
+  alertText: PropTypes.string,
 
-    /**
-     * What background color to use
-     */
-    borderColor: PropTypes.string,
+};
 
-    /**
-     * Boolean value for whether the alert has a button or not.
-     */
-    hasButton: PropTypes.bool,
+Alert.defaultProps = {
+  iconType: 'success',
+  iconColor: '#13B461',
+  backgroundColor: '#E3FCEF',
+  borderColor: '',
+  size: 'regular',
+  hasButton: false,
+  hasHeader: false,
+  buttonLabel: 'Button',
+  alertText: 'This is a description of something that has happened + what you can do.', 
+};
 
-    /**
-     * Label of the button (if it has one)
-     */
-    buttonLabel: PropTypes.string,
+// temporarily removed code
 
-    /**
-     * Boolean value for whether the alert has a button or not.
-     */
-     hasHeader: PropTypes.bool,
+// return (
+//   <div
+//     type="alert"
+//     className='storybook-alert'
+//     // className={['storybook-alert', `storybook-alert--${url}`].join(' ')}
+//     style={backgroundColor && { backgroundColor }}
+//     {...props}
+//   >
+//     <a href={url}>{(alertText == null || alertText === '') ? url : alertText}</a>
+//     <Button variant="tertiary" label="Button"/>
+//   </div>
+// );
 
-     /**
-      * Label of the button (if it has one)
-      */
-     headerLabel: PropTypes.string,
-
-    /**
-     * Alert message
-     */
-    alertText: PropTypes.string,
-
-  };
-  
-  Alert.defaultProps = {
-    iconType: 'success',
-    iconColor: '#13B461',
-    backgroundColor: '#E3FCEF',
-    borderColor: '',
-    size: 'regular',
-    hasButton: false,
-    hasHeader: false,
-    buttonLabel: 'Button',
-    alertText: 'This is a description of something that has happened + what you can do.', 
-  };
-
-
-
-
-
-
-  // temporarily removed code
-
-  // return (
-  //   <div
-  //     type="alert"
-  //     className='storybook-alert'
-  //     // className={['storybook-alert', `storybook-alert--${url}`].join(' ')}
-  //     style={backgroundColor && { backgroundColor }}
-  //     {...props}
-  //   >
-  //     <a href={url}>{(alertText == null || alertText === '') ? url : alertText}</a>
-  //     <Button variant="tertiary" label="Button"/>
-  //   </div>
-  // );
+export default Alert;
