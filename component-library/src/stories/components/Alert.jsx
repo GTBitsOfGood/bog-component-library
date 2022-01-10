@@ -270,19 +270,4 @@ Alert.defaultProps = {
   alertText: 'This is a description of something that has happened + what you can do.', 
 };
 
-// temporarily removed code
-
-// return (
-//   <div
-//     type="alert"
-//     className='storybook-alert'
-//     // className={['storybook-alert', `storybook-alert--${url}`].join(' ')}
-//     style={backgroundColor && { backgroundColor }}
-//     {...props}
-//   >
-//     <a href={url}>{(alertText == null || alertText === '') ? url : alertText}</a>
-//     <Button variant="tertiary" label="Button"/>
-//   </div>
-// );
-
 export default Alert;
