@@ -37,14 +37,6 @@
     cursor: pointer;
 }
 
-.components-menubar {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 253px;
-    padding: 28px 0;
-}
-
 .components-container {
     width: 1060px;
 }
@@ -53,22 +45,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-
-.menubar-heading {
-	font-family: 'VisbyCF-ExtraBold', 'OpenSans', sans-serif;
-    font-size: 12px;
-    color: #473F91;
-    text-transform: uppercase;
-    padding: 9px 0;
-}
-
-.menubar-content {
-	font-family: 'VisbyCF-Medium', 'OpenSans', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #473F91;
-    padding: 9px 8px;
 }
 
 .capy {
