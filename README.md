@@ -3,8 +3,19 @@ A reusable, easily readable, easily integrated, and widely used component librar
 
 ## Build Instructions
 1. Clone the repository
+
+### Instructions to run the component library
+1. Run `cd component-library` to navigate to the component library directory
 2. Run `yarn` to install all dependencies 
 3. Run `yarn storybook` to run the application and prompt the Storybook UI
+
+### Instructions to run the homepage
+Optional: If you're still in the component-library repo, run `cd ..` to navigate to the repo's base directory
+1. Run `cd homepage` to navigate to the component library directory
+2. Run `yarn` to install all dependencies 
+3. Run `yarn start` to run the application and prompt the homepage
+
+Note: You can run both directories simultaneously (as they run on different ports)
 
 ## Gitflow
 Please do not push to main directly. BoG Component Library only accepts code that has been approved from a Pull Request. In order to make changes to the code, we recommend the following steps:
