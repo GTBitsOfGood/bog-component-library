@@ -10,7 +10,7 @@ A reusable, easily readable, easily integrated, and widely used component librar
 3. Run `yarn storybook` to run the application and prompt the Storybook UI
 
 ### Instructions to run the homepage
-Optional: If you're still in the component-library repo, run `cd ..` to navigate to the repo's base directory
+Optional: If you're still in the component-library directory, run `cd ..` to navigate to the repo's base directory
 1. Run `cd homepage` to navigate to the component library directory
 2. Run `yarn` to install all dependencies 
 3. Run `yarn start` to run the application and prompt the homepage
