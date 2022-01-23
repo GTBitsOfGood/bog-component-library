@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/button.css';
 
-/**
- * Primary UI component for user interaction
- */
-const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisabled, size, ...props }) => {
+const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, label, onClick, size, variant, ...props }) => {
   return (
     <button
       type="button"
@@ -13,55 +10,38 @@ const Button = ({ variant, backgroundColor, label, icon, iconPosition, isDisable
       style={backgroundColor && { backgroundColor }}
       disabled={isDisabled}
       {...props}
+      onClick={onClick}
     >
-      <div className='button-content'>
-        {icon && iconPosition === 'left' ? <img className='button-icon--left' src={icon}></img> : ''}
+      <div className={`button-content${iconPosition === 'right' ? '--right' : '--left'}`}>
         {label}
-        {icon && iconPosition === 'right' ? <img className='button-icon--right' src={icon}></img> : ''}
+        {hasIcon && React.cloneElement(icon, {className: `button-icon${iconPosition === 'right' ? "--right" : '--left'}`})}
       </div>
     </button>
   );
 };
 
 Button.propTypes = {
-  /**
-   * Primary, secondary or teriary button.
-   */
-  variant: PropTypes.string.isRequired,
-  /**
-   * What background color to use
-   */
   backgroundColor: PropTypes.string,
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /*
-   * Icon file
-   */
-  icon: PropTypes.string,
-  /*
-   * Icon position
-   */
+  hasIcon: PropTypes.bool,
+  icon: PropTypes.element,
   iconPosition: PropTypes.string,
-  /*
-   * Disable button
-   */
   isDisabled: PropTypes.bool,
-  /**
-   * Optional click handler
-   */
+  label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   size: PropTypes.string.isRequired,
+  variant: PropTypes.string.isRequired,
 };
 
 Button.defaultProps = {
   backgroundColor: null,
-  variant: 'primary',
-  icon: 'https://img.icons8.com/material-outlined/24/ffffff/search--v1.png',
+  hasIcon: false,
+  icon: <img src='https://img.icons8.com/material-outlined/24/ffffff/search--v1.png' alt='search-icon'/>,
+  iconPosition: 'right',
   isDisabled: false,
+  label: "Button",
   onClick: undefined,
-  size: 'large'
+  size: 'large',
+  variant: 'primary'
 };
 
 export default Button;
