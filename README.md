@@ -1,6 +1,8 @@
 # BoG Component Library
 A reusable, easily readable, easily integrated, and widely used component library for Bits of Good.
 
+## Project Structure
+<img width="394" alt="Screen Shot 2022-01-22 at 7 07 15 PM" src="https://user-images.githubusercontent.com/54591248/150659684-92333bee-5f50-4282-a39c-2dd24d85d565.png">
 ## Build Instructions
 1. Clone the repository
 
@@ -76,5 +78,3 @@ Note: In instances where the PM is also assigned as a reviewer, the please wait 
 2. If one (or more) of your reviewers request changes, then please do so. 
 3. Once you're fully approved, go ahead and merge your changes! (your EM is automatically pinged so you may or may not choose to Slack them regarding your status)
 4. Hooray! You're code is now (hopefully forever) a part of the project! You may not see your changes deployed right away; typically we try to deploy twice during the semster.
-## Project Structure
-<img width="394" alt="Screen Shot 2022-01-22 at 7 07 15 PM" src="https://user-images.githubusercontent.com/54591248/150659684-92333bee-5f50-4282-a39c-2dd24d85d565.png">
