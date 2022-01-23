@@ -40,5 +40,12 @@ Typically PRs are only created once you're done with all your changes; however, 
 10. Finally assign the EM (always), designers (always) and the PM (only if specified on your ticket) as reviewers.
 11. Make sure all the checks are passing (or gets till the "Needs Review" stage in most cases) and none of the automatic checks are failing. (in red) If this is the case then you need to make changes to your code as your current changes may break the build if merged. Slack the EM if you need assistance with this.
 12. Finally, you're all done! (YAY!) Now you just have to wait...
+
+## Merging a PR
+1. Once you've opened a PR, wait until **the EM and atleast one designer** has approved your changes. This would also typically mean that all your automated checks are green!
+Note: In instances where the PM is also assigned as a reviewer, the please wait from them to also approve your changes.
+2. If one (or more) of your reviewers request changes, then please do so. 
+3. Once you're fully approved, go ahead and merge your changes! (your EM is automatically pinged so you may or may not choose to Slack them regarding your status)
+4. Hooray! You're code is now (hopefully forever) a part of the project! You may not see your changes deployed right away; typically we try to deploy twice during the semster.
 ## Project Structure
 <img width="394" alt="Screen Shot 2022-01-22 at 7 07 15 PM" src="https://user-images.githubusercontent.com/54591248/150659684-92333bee-5f50-4282-a39c-2dd24d85d565.png">
