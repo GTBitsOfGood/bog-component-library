@@ -24,3 +24,6 @@ Please do not push to main directly. BoG Component Library only accepts code tha
 3. Wait for approval from the EM and another developer
 
 NOTE: You can create a new branch in command line with `git checkout -b myBranchName`. To check what branch you are on, you can run `git branch`. If you don't see a branch, try `git fetch origin`.
+
+## Project Structure
+<img width="394" alt="Screen Shot 2022-01-22 at 7 07 15 PM" src="https://user-images.githubusercontent.com/54591248/150659684-92333bee-5f50-4282-a39c-2dd24d85d565.png">
