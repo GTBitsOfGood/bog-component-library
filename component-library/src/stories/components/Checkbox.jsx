@@ -26,19 +26,19 @@ import '../css/checkbox.css'
 };
 
 Checkbox.propTypes = {
-    label: PropTypes.string,
-    hasLabel: PropTypes.bool,
-    isDisabled: PropTypes.bool,
-    isIndeterminate: PropTypes.bool,
-    onChange: PropTypes.func,  
+  label: PropTypes.string,
+  hasLabel: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isIndeterminate: PropTypes.bool,
+  onChange: PropTypes.func,  
 }
 
 Checkbox.defaultProps = {
-    label: "Label",
-    hasLabel: false,
-    isDisabled: false,
-    isIndeterminate: false,
-    onChange: undefined,
+  label: "Label",
+  hasLabel: false,
+  isDisabled: false,
+  isIndeterminate: false,
+  onChange: undefined,
 }
 
 export default Checkbox;
