@@ -3,7 +3,9 @@ A reusable, easily readable, easily integrated, and widely used component librar
 
 ## Project Structure
 <img width="394" alt="Screen Shot 2022-01-22 at 7 07 15 PM" src="https://user-images.githubusercontent.com/54591248/150659684-92333bee-5f50-4282-a39c-2dd24d85d565.png">
+
 ## Build Instructions
+
 1. Clone the repository
 
 ### Instructions to run the component library
