@@ -9,6 +9,7 @@
 }
 
 .tooltip-container {
+    position: relative;
     display: inline-block;
     border-radius: 1px;
 }
@@ -26,6 +27,7 @@
 .style--dark {
     background-color: #666666;
     color: white;
+    border-color: #666666 transparent transparent transparent;
 }
 
 .style--light {
@@ -53,14 +55,29 @@
     font-family: "OpenSans";
 }
 
-.tooltip-text::after {
+.tooltip-arrow::after {
     content: " ";
-    /* position: relative; */
-    /* position: absolute; */
-    /* top: 100%; */
-    /* left: 50%; */
+    position: absolute;
+    top: 100%;
+    left: 50%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    /* border-color: black transparent transparent transparent; */
+}
+
+.tooltip-arrow--dark::after {
+    border-color: #666666 transparent transparent transparent;
+}
+
+.tooltip-arrow--light::after {
+    border-color: #F2F2F2 transparent transparent transparent;
+}
+
+.tooltip-arrow--brand::after {
+    border-color: #F2F2F2 transparent transparent transparent;
+}
+
+.tooltip-arrow--capitalized::after {
+    border-color: #FD904C transparent transparent transparent;
 }

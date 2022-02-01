@@ -6,7 +6,7 @@ export const Tooltip = ({ size, text, style,...props }) => {
 
     return (
         <div className={`tooltip-container tooltip--${size} style--${style}`}>
-            <span className="tooltip-text">{text}</span>
+            <span className={`tooltip-text tooltip-arrow tooltip-arrow--${style}`}>{text}</span>
         </div>
     );
 };
