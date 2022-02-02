@@ -55,29 +55,140 @@
     font-family: "OpenSans";
 }
 
-.tooltip-arrow::after {
+
+/* Tooltip general styling */
+
+.tooltip-arrow--vertical::after {
     content: " ";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    margin-top: -4px;
+    border-width: 4px;
     border-style: solid;
-    /* border-color: black transparent transparent transparent; */
 }
 
-.tooltip-arrow--dark::after {
+.tooltip-arrow--horizontal::after {
+    content: " ";
+    position: absolute;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+
+/* Tooltip arrow positions on edge */
+
+.tooltip-position--horizontal-1::after {
+    left: 25%;
+}
+
+.tooltip-position--horizontal-2::after {
+    left: 50%;
+}
+
+.tooltip-position--horizontal-3::after {
+    left: 75%;
+}
+
+.tooltip-position--vertical-1::after {
+    top: 25%;
+}
+
+.tooltip-position--vertical-2::after {
+    top: 50%;
+}
+
+.tooltip-position--vertical-3::after {
+    top: 75%;
+}
+
+
+/* Tooltip arrow on bottom */
+
+.tooltip-arrow--dark-bottom::after {
+    top: 100%;
     border-color: #666666 transparent transparent transparent;
 }
 
-.tooltip-arrow--light::after {
+.tooltip-arrow--light-bottom::after {
+    top: 100%;
     border-color: #F2F2F2 transparent transparent transparent;
 }
 
-.tooltip-arrow--brand::after {
+.tooltip-arrow--brand-bottom::after {
+    top: 100%;
     border-color: #F2F2F2 transparent transparent transparent;
 }
 
-.tooltip-arrow--capitalized::after {
+.tooltip-arrow--capitalized-bottom::after {
+    top: 100%;
     border-color: #FD904C transparent transparent transparent;
+}
+
+
+/* Tooltip arrow on right */
+
+.tooltip-arrow--dark-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #666666;
+}
+
+.tooltip-arrow--light-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #F2F2F2;
+}
+
+.tooltip-arrow--brand-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #F2F2F2;
+}
+
+.tooltip-arrow--capitalized-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #FD904C;
+}
+
+
+/* Tooltip arrow on left */
+
+.tooltip-arrow--dark-left::after {
+    right: 100%;
+    border-color: transparent #666666 transparent transparent;
+}
+
+.tooltip-arrow--light-left::after {
+    right: 100%;
+    border-color: transparent #F2F2F2 transparent transparent;
+}
+
+.tooltip-arrow--brand-left::after {
+    right: 100%;
+    border-color: transparent #F2F2F2 transparent transparent;
+}
+
+.tooltip-arrow--capitalized-left::after {
+    right: 100%;
+    border-color: transparent #FD904C transparent transparent;
+}
+
+
+/* Tooltip arrow on top */
+
+.tooltip-arrow--dark-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #666666 transparent;
+}
+
+.tooltip-arrow--light-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #F2F2F2 transparent;
+}
+
+.tooltip-arrow--brand-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #F2F2F2 transparent;
+}
+
+.tooltip-arrow--capitalized-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #FD904C transparent;
 }

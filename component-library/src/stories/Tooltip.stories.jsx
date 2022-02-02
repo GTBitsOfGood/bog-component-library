@@ -17,7 +17,17 @@ export default {
       options: ["dark", "light", "brand", "capitalized"],
       control: {type: 'radio'},
       default: "dark",
-    }
+    },
+    arrowDirection: {
+      options: ["bottom", "right", "top", "left"],
+      control: {type: 'radio'},
+      default: "bottom",
+    },
+    arrowPosition: {
+      options: ["1", "2", "3"],
+      control: {type: 'radio'},
+      default: "2",
+    },
   },
   parameters : {
     design: {
@@ -34,6 +44,8 @@ Large.args = {
   text: "tooltip",
   size: "large",
   style: "dark",
+  arrowDirection: "bottom",
+  arrowPosition: "2",
 };
 
 export const Small = Template.bind({});
@@ -41,4 +53,6 @@ Small.args = {
   text: "tooltip",
   size: "small",
   style: "dark",
+  arrowDirection: "bottom",
+  arrowPosition: "2",
 };

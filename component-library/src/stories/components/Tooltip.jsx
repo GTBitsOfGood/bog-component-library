@@ -2,11 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/tooltip.css';
 
-export const Tooltip = ({ size, text, style,...props }) => {
+export const Tooltip = ({ size, text, style, arrowDirection, arrowPosition, ...props }) => {
+
+    let orientation;
+    if (arrowDirection == 'top' || arrowDirection == 'bottom') {
+        orientation = 'horizontal'
+    } else {
+        orientation = 'vertical'
+    }
 
     return (
         <div className={`tooltip-container tooltip--${size} style--${style}`}>
-            <span className={`tooltip-text tooltip-arrow tooltip-arrow--${style}`}>{text}</span>
+            <span className={`tooltip-text
+                tooltip-arrow--${orientation}
+                tooltip-arrow--${style}-${arrowDirection}
+                tooltip-position--${orientation}-${arrowPosition}`}>{text}</span>
         </div>
     );
 };
@@ -24,10 +34,20 @@ Tooltip.propTypes = {
      * Tooltip color style
      */
     style: PropTypes.string,
+    /*
+     * Direction that tooltip arrow points towards
+     */
+    arrowDirection: PropTypes.string,
+    /*
+     * Arrow's position on the edge of tooltip box
+     */
+    arrowPosition: PropTypes.string,
 }
 
 Tooltip.defaultProps = {
     text: "tooltip",
     size: "large",
     style: "dark",
+    arrowDirection: "bottom",
+    arrowPosition: "2",
 }
