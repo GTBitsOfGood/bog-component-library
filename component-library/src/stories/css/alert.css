@@ -3,7 +3,8 @@
     font-weight: 345px;
     border-radius: 0.4em;
     line-height: 1;
-    padding: .2vmin 0vw 0vw 0vmin;
+    /* padding: .2vmin 0vw 0vw 0vmin; */
+    padding: .2px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -41,7 +42,8 @@
     font-weight: 345px;
     border-radius: 0.4em;
     line-height: 1;
-    padding: .2vw 2vw 0vw 0vw;
+    /* padding: .2vw 2vw 0vw 0vw; */
+    padding: .2px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -58,7 +60,8 @@
     align-items: left;
     min-width: min-content;
     height: min-content;
-    width: 25vw;
+    /* width: 25vw; */
+    width: 25px;
 }
 
 .storybook-alert-header {
@@ -69,8 +72,10 @@
     flex-direction: column;
     align-items: left;
     min-width: min-content;
-    height: 15vh;
-    width: 25vw;
+    /* height: 15vh;
+    width: 25vw; */
+    height: 15px;
+    width: 25px;
 }
 
 .storybook-alert-header-button {
@@ -81,7 +86,8 @@
     flex-direction: column;
     align-items: unset;
     height: min-content;
-    width: 25vw;
+    /* width: 25vw; */
+    width: 25px;
 }
 
 .storybook-alert-button {
@@ -93,7 +99,8 @@
     align-items: unset;
     min-width: min-content;
     height: min-content;
-    width: 25vw;
+    /* width: 25vw; */
+    width: 25px;
 }
 
 .alertBody {
@@ -112,15 +119,16 @@
     display: flex;
     flex-direction: column;
     flex: 70%;
-    padding-left: 11vmin;
+    /* padding-left: 11vmin; */
     /* padding-right: 17vmin; */
-    margin-top: -2vmin;
+    /* margin-top: -2vmin; */
 }
 
 Button {
     align-self: flex-end;
     justify-content: flex-end;
-    margin: 0vh 0vw 2vh 0vw;
+    /* margin: 0vh 0vw 2vh 0vw; */
+    margin: 0px 0px 2px 0px;
 }
 
 .header {
@@ -136,48 +144,61 @@ Button {
 }
 
 .header .headerContent .icon {
-    width: 4vmin;
+    /* width: 4vmin;
     height: 4vmin;
-    padding: 2vmin 4vmin 0vmin 3vmin;
+    padding: 2vmin 4vmin 0vmin 3vmin; */
+    width: 4px;
+    height: 4px;
+    padding: 2px 4px 0px 3px;
 }
 
 .header .x {
     /* width: 4vmin;
     height: 4vmin; */
-    padding: 2vh 0vw 0vh 20vw;
+    /* padding: 2vh 0vw 0vh 20vw; */
     /* object-position: 90% 10%; */
     display: flex;
     justify-content: flex-end;
 }
 
 .header .x .xIcon {
-    width: 4vmin;
-    height: 4vmin;
-    /* object-position: 90% 10%; */
+    /* width: 4vmin;
+    height: 4vmin; */
+    width: 4px;
+    height: 4px;
+    object-position: 90% 10%;
 
-    /* align-items: flex-end; */
-    /* justify-content: flex-end; */
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .alertBody .icon {
-    width: 4vmin;
-    height: 4vmin;
-    padding: 1.5vmin 4vmin 0vmin 2vmin;
+    /* width: 4vmin;
+    height: 4vmin; */
+    width: 4px;
+    height: 4px;
+    /* padding: 1.5vmin 4vmin 0vmin 2vmin; */
+    padding: 1.5px 4px 0px 2px;
 }
 
 .alertBody Button {
-    margin: 0 0vmin 1vmin 0vmin
+    /* margin: 0 0vmin 1vmin 0vmin; */
+    margin: 0 0px 1px 0px;
 }
 
 .alertBodyLarge .icon {
-    width: 4vmin;
+    /* width: 4vmin;
     height: 4vmin;
-    padding: 1.5vmin 4vmin 0vmin 3vmin;
+    padding: 1.5vmin 4vmin 0vmin 3vmin; */
+    width: 4px;
+    height: 4px;
+    padding: 1.5px 4px 0px 3;
 }
 
 .alertBody .x {
 
-    padding: 1vmin 0vmin 4vmin 4vmin;
+    /* padding: 1vmin 0vmin 4vmin 4vmin; */
+    padding: 1px 0px 4px 4px;
 
     display: flex;
     justify-content: flex-end;
@@ -185,25 +206,30 @@ Button {
 
 .alertBodyLarge .x {
     flex: .1;
-    padding: 1vmin 0vmin 0vmin 180vmin;
+    /* padding: 1vmin 0vmin 0vmin 180vmin; */
+    padding: 1px 0px 0px 180px;
     display: flex;
     justify-content: flex-end;
 }
 
 .alertBody .x .xIcon {
-    width: 4vmin;
-    height: 4vmin;
+    /* width: 4vmin;
+    height: 4vmin; */
+    /* width: 4px;
+    height: 4px; */
     align-items: flex-end;
     justify-content: flex-end;
 }
 
 .alertBodyLarge .x .xIcon {
-    width: 4vmin;
-    height: 4vmin;
-
+    /* width: 4vmin;
+    height: 4vmin; */
+    width: 4px;
+    height: 4px;
     align-items: flex-end;
 }
 
 .header .headerContent p {
-    margin-top: 2.75vmin;
+    /* margin-top: 2.75vmin; */
+    margin-top: 2.75px;
 }

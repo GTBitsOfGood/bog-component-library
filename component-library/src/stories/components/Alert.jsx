@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/alert.css';
 import { Button } from './Button.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
+// import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fontawesome/free-solid-svg-icons'
+// example: import Flow from './assets/flow.svg';
+import Times from '../assets/times.svg';
+import InfoCircleBrand from '../assets/infoCircleBrand.svg';
+import InfoCircleMessage from '../assets/infoCircleMessage.svg';
+import CheckCircleSuccess from '../assets/checkCircleSuccess.svg';
+import ExclamationTriangleFailure from '../assets/exclamationTriangleFailure.svg';
 
 /**
  * Props: backgroundColor: str, borderColor: str, alertText: str, 
@@ -14,11 +20,13 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
   // style = "backgroundColor=" + backgroundColor + " border=1px solid " + border;
   var alertIcon; 
   if (iconType === 'success') {
-    alertIcon = faCheckCircle
+    alertIcon = CheckCircleSuccess
   } else if (iconType === 'failure') {
-    alertIcon = faExclamationTriangle
+    alertIcon = ExclamationTriangleFailure
+  } else if (iconType === 'message') {
+    alertIcon = InfoCircleMessage
   } else {
-    alertIcon = faInfoCircle
+    alertIcon = InfoCircleBrand
   }
 
   if (hasButton) {
@@ -34,12 +42,14 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
           >
             <div className="header">
               <div className="headerContent"> 
-                <FontAwesomeIcon icon={alertIcon} color={iconColor} className="icon"/> 
+                <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+                {/* <FontAwesomeIcon icon={alertIcon} color={iconColor} className="icon"/>  */}
               <p>{headerLabel}</p>
               </div>
 
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
 
             </div>
@@ -59,12 +69,14 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
           >
             <div className="header">
               <div className="headerContent"> 
-                <FontAwesomeIcon icon= {alertIcon} className="icon"/> 
+                <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+                {/* <FontAwesomeIcon icon= {alertIcon} className="icon"/>  */}
               <p>{headerLabel}</p>
               </div>
 
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
 
             </div>
@@ -86,12 +98,14 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
             {...props}
           >
             <div className="alertBodyLarge">
-              <FontAwesomeIcon icon= {alertIcon} className="icon"/> 
+              <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+              {/* <FontAwesomeIcon icon= {alertIcon} className="icon"/>  */}
 
               <p>{alertText}</p>
               <Button variant="tertiary" label="Button"/>
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
           </div>
@@ -105,13 +119,15 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
             {...props}
           >
             <div className="alertBody">
-              <FontAwesomeIcon icon={alertIcon} className="icon"/> 
+              <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+              {/* <FontAwesomeIcon icon={alertIcon} className="icon"/>  */}
 
               <p>{alertText}</p>
               <Button variant="tertiary" label="Button"/>
 
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
           </div>
@@ -130,12 +146,14 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
           >
             <div className="header">
               <div className="headerContent"> 
-                <FontAwesomeIcon icon= {alertIcon} className="icon"/> 
+                <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+                {/* <FontAwesomeIcon icon= {alertIcon} className="icon"/>  */}
               <p>{headerLabel}</p>
               </div>
 
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
             <div className="alertBodyWithHeader">
@@ -153,12 +171,14 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
           >
             <div className="header">
               <div className="headerContent"> 
-                <FontAwesomeIcon icon= {alertIcon} className="icon"/> 
+                <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+                {/* <FontAwesomeIcon icon= {alertIcon} className="icon"/>  */}
               <p>{headerLabel}</p>
               </div>
 
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
             <div className="alertBodyWithHeader">
@@ -177,10 +197,12 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
             {...props}
           >
             <div className="alertBodyLarge">
-              <FontAwesomeIcon icon={alertIcon} className="icon"/> 
+              <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+              {/* <FontAwesomeIcon icon={alertIcon} className="icon"/>  */}
               <p>{alertText}</p>
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
           </div>
@@ -195,11 +217,13 @@ const Alert = ({iconType, iconColor, backgroundColor, borderColor, hasButton, bu
           >
 
             <div className="alertBody">
-              <FontAwesomeIcon icon={alertIcon} className="icon" color={iconColor}/> 
+              <img src={alertIcon} color={iconColor} className="icon" alt={iconType}/>
+              {/* <FontAwesomeIcon icon={alertIcon} className="icon" color={iconColor}/>  */}
 
               <p>{alertText}</p>
               <div className="x"> 
-                <FontAwesomeIcon icon={faTimes} className="xIcon"/> 
+                <img src={Times} className="xIcon" alt='close'/> 
+                {/* <FontAwesomeIcon icon={faTimes} className="xIcon"/>  */}
               </div>
             </div>
           </div>
