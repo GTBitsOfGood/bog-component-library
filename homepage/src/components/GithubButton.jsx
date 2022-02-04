@@ -1,7 +1,6 @@
 import '../css/GithubButton.css';
-import logo from '../assets/github_logo.jpeg';
 
-function Button() {
+function Button({logo}) {
   return (
       <a 
         href="https://github.com/GTBitsOfGood/bog-component-library"
