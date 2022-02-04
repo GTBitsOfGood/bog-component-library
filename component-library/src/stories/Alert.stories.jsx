@@ -6,7 +6,7 @@ export default {
   title: 'Components/Alert',
   component: Alert,
   argTypes: {
-    iconType: {
+    type: {
       options: ['success', 'failure', 'message', 'brand message'],
       control: {type: 'radio'},
     },
@@ -22,7 +22,7 @@ const Template = (args) => <Alert {...args} />;
 
 export const SuccessAlert = Template.bind({});
 SuccessAlert.args = {
-  iconType: 'success',
+  type: 'success',
   iconColor: '#13B461',
   backgroundColor: '#E3FCEF',
   borderColor: '',
@@ -36,7 +36,7 @@ SuccessAlert.args = {
 
 export const FailureAlert = Template.bind({});
 FailureAlert.args = {
-  iconType: 'failure',
+  type: 'failure',
   iconColor: '#FF3939',
   backgroundColor: '#FFE3E3',
   size: 'regular',
@@ -49,7 +49,7 @@ FailureAlert.args = {
 
 export const MessageAlert = Template.bind({});
 MessageAlert.args = {
-  iconType: 'message',
+  type: 'message',
   iconColor: '#005EEF',
   backgroundColor: '#DEEBFF',
   size: 'regular',
@@ -62,7 +62,7 @@ MessageAlert.args = {
 
 export const BrandMessageAlert = Template.bind({});
 BrandMessageAlert.args = {
-  iconType: 'brand message',
+  type: 'brand message',
   iconColor: '#473F91',
   backgroundColor: '#EAE6FF',
   size: 'regular',
