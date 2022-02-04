@@ -63,6 +63,7 @@
     "@storybook/node-logger": "^6.3.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.8",
+    "@storybook/testing-react": "^1.2.3",
     "chromatic": "^6.0.6",
     "node-sass": "^6.0.1",
     "rollup": "^2.60.0",
@@ -71,5 +72,8 @@
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-styles": "^3.14.1",
     "storybook-addon-designs": "^6.2.0"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   }
 }
