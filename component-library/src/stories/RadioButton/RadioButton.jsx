@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/radio-button.css';
+import './radio-button.css';
 
  const RadioButton = ({ id, groupName, value, label, isDisabled, isChecked }) => {
     const disableStyle = isDisabled && "disable-button"

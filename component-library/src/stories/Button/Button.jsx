@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/button.css';
+import './button.css';
 
 const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, label, onClick, size, variant, ...props }) => {
   return (
