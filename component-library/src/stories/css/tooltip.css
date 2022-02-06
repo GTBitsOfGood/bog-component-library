@@ -11,7 +11,11 @@
 .tooltip-container {
     position: relative;
     display: inline-block;
+    overflow-wrap: break-word;
+    font-family: "OpenSans";
     border-radius: 1px;
+    max-width: 20%;
+    text-align: center;
 }
 
 .tooltip--large {
@@ -41,7 +45,7 @@
 }
 
 .style--capitalized {
-    background-color: #FD904C;
+    background-color: #36306E;
     color: white;
     text-transform: uppercase;
 }
@@ -121,7 +125,7 @@
 
 .tooltip-arrow--capitalized-bottom::after {
     top: 100%;
-    border-color: #FD904C transparent transparent transparent;
+    border-color: #36306E transparent transparent transparent;
 }
 
 
@@ -144,7 +148,7 @@
 
 .tooltip-arrow--capitalized-right::after {
     left: 100%;
-    border-color: transparent transparent transparent #FD904C;
+    border-color: transparent transparent transparent #36306E;
 }
 
 
@@ -167,7 +171,7 @@
 
 .tooltip-arrow--capitalized-left::after {
     right: 100%;
-    border-color: transparent #FD904C transparent transparent;
+    border-color: transparent #36306E transparent transparent;
 }
 
 
@@ -190,5 +194,5 @@
 
 .tooltip-arrow--capitalized-top::after {
     bottom: 100%;
-    border-color: transparent transparent #FD904C transparent;
+    border-color: transparent transparent #36306E transparent;
 }

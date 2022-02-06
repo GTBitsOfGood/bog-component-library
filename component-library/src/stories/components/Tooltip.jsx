@@ -13,10 +13,11 @@ export const Tooltip = ({ size, text, style, arrowDirection, arrowPosition, ...p
 
     return (
         <div className={`tooltip-container tooltip--${size} style--${style}`}>
-            <span className={`tooltip-text
+            {text}
+            <span className={`
                 tooltip-arrow--${orientation}
                 tooltip-arrow--${style}-${arrowDirection}
-                tooltip-position--${orientation}-${arrowPosition}`}>{text}</span>
+                tooltip-position--${orientation}-${arrowPosition}`}></span>
         </div>
     );
 };
