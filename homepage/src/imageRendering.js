@@ -8,7 +8,6 @@ import axios from 'axios'
  */
 export async function fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading) {
     try {
-        
         const resultJson = (await axios.get(process.env.REACT_APP_DELIVERY_ENDPOINT)).data;
         resultJson.includes.Asset.forEach((asset) => {
         const imageObject = {

@@ -12,7 +12,7 @@ function App() {
   // make the api call
   useEffect(() => {
     fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading);
-  }, []);
+  }, [imageURLS]);
 
   return (
     <>
