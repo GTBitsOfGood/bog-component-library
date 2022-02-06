@@ -41,8 +41,10 @@ const Alert = ({type, iconColor, backgroundColor, borderColor, hasButton, button
     <div
       type="alert"
       className={['storybook-alert', `storybook-alert--${size}`].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      // style={{backgroundColor: {backgroundColor}, borderColor: {borderColor}, borderWidth: "1px"}}
+      style={{
+        backgroundColor: backgroundColor,
+        borderColor: borderColor,
+      }}
       {...props}
     >
       <div 

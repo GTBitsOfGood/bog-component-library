@@ -8,11 +8,13 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 .storybook-alert {
-    border-radius: 0.4em;
+    border-radius: 4px;
     display: flex;
     flex-direction: row;
     min-width: min-content;
     min-height: min-content;
+    border: 1px solid;
+    border-color: transparent;
 }
 
 .storybook-alert--regular{
