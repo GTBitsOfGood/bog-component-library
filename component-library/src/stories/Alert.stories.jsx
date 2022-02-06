@@ -14,8 +14,15 @@ export default {
     size: {
       options: ['large', 'regular'],
       control: {type: 'radio'},
-    }
+    },
+    onClick: { action: 'clicked' }
   },
+  parameters : {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DEfDgRT4G9732YxrqTqq8V/BoG-Component-Library-(Design-System)-%2F-Fall21?node-id=909%3A16607"
+    },
+  }
 };
 
 const Template = (args) => <Alert {...args} />;
@@ -72,30 +79,3 @@ BrandMessageAlert.args = {
   headerLabel: "WE BOG HERE ",
   alertText: 'This is a description of something that has happened + what you can do.',
 };
-
-// export const FailureAlert = Template.bind({});
-// FailureAlert.args = {
-//   backgroundColor: '#FFE3E3',
-//   hasButton: false,
-//   buttonLabel: 'Button',
-//   alertText: 'Nice, you triggered this alert message!',
-//   url: 'https://youtu.be/dQw4w9WgXcQ'
-// };
-
-// export const AlertMessage = Template.bind({});
-// AlertMessage.args = {
-//   backgroundColor: '#DEEBFF',
-//   hasButton: false,
-//   buttonLabel: 'Button',
-//   alertText: 'Nice, you triggered this alert message!',
-//   url: 'https://youtu.be/dQw4w9WgXcQ'
-// };
-
-// export const AlertBrandMessage = Template.bind({});
-// AlertBrandMessage.args = {
-//   backgroundColor: '#EAE6FF',
-//   hasButton: false,
-//   buttonLabel: 'Button',
-//   alertText: 'Nice, you triggered this alert message!',
-//   url: 'https://youtu.be/dQw4w9WgXcQ'
-// };

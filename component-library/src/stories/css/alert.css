@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'VisbyCF-ExtraBold';
-    src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
+    font-family: 'VisbyCF-Bold';
+    src: url('../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf')  format('truetype');
   }
 @font-face {
 font-family: 'OpenSans';
@@ -9,14 +9,8 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 
 .storybook-alert {
     border-radius: 0.4em;
-    /* line-height: 1; */
-    /* padding: .2vmin 0vw 0vw 0vmin; */
-    /* padding: .2px 0px 0px 0px; */
     display: flex;
     flex-direction: row;
-    /* align-items: left; */
-    /* align-items: flex-start; */
-    /* justify-content: flex-end; */
     min-width: min-content;
     min-height: min-content;
 }
@@ -31,36 +25,60 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
     min-height: 36px;
 }
 
+.storybook-alert--large .storybook-alertBody{
+    min-width: 692px; 
+}
+
+.storybook-alert--regular .storybook-alertBody{
+    min-width: 212px; 
+}
+
 .storybook-alertIconDiv{
     display: flex;
     justify-content: flex-start;
     padding-right: 13px;
     padding-left: 13px;
-    padding-top: 11px;
+    padding-top: 9px;
 }
 .storybook-alertBody{
     display: flex;
     flex-direction: column;
 }
-.storybook-alertHeader{
-    font-family: 'VisbyCF-ExtraBold', sans-serif;
+.storybook-alertHeader p{
+    font-family: 'VisbyCF-Bold', sans-serif;
     font-weight: 800;
     font-size: 12px;
-    /* padding-bottom: 4px; */
+    /* line-height: 17px; */
+    margin-bottom: 0px;
+    letter-spacing: 1.5px;
 }
+
+    
 
 .storybook-alertBodyText{
     font-family: 'OpenSans', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
 }
 
-.storybook-alertButton{
-    font-family: 'VisbyCF-ExtraBold', sans-serif;
+.storybook-alertButtonDiv{
+    font-family: 'VisbyCF-Bold', sans-serif;
     font-weight: 800;
     font-size: 14px;
     /* padding-top: 2.5px; */
     align-self: flex-end;
+    padding-bottom: 10px;
+}
+
+.storybook-alertButton{
+    border: 0px;
+    background-color: transparent;
+    outline: none;
+    /* border: 16px; */
+}
+
+.storybook-alertButtonDiv:hover{
+    opacity: 0.5;
 }
 
 .storybook-alertIcon{
@@ -70,12 +88,24 @@ src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 
 .storybook-alertXDiv{
     display: flex;
-    padding-right: 13px;
-    padding-left: 13px;
-    padding-top: 13px;
+    padding-right: 10px;
+    padding-left: 8px;
+    padding-top: 11px;
     /* justify-self: flex-end; */
     margin-left: auto;
 }
+
+.storybook-alertXDiv:hover{
+    opacity: 0.5;
+}
+
+.storybook-alertXButton{
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    align-self: flex-start;
+}
+
 .storybook-alertXIcon{
     height: 13px;
     width: 13px;
