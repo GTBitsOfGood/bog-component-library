@@ -86,8 +86,9 @@
   border: 0px;
   padding: 0px;
   align-self: flex-start;
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
+  
 }
 
 .storybook-alertXIcon {
