@@ -1,114 +1,96 @@
 @font-face {
-    font-family: 'VisbyCF-Bold';
-    src: url('../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf')  format('truetype');
-  }
+  font-family: "VisbyCF-Bold";
+  src: url("../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf") format("truetype");
+}
 @font-face {
-font-family: 'OpenSans';
-src: url('../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+  font-family: "VisbyCF-ExtraBold";
+  src: url("../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/Fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
 }
 
 .storybook-alert {
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    min-width: min-content;
-    min-height: min-content;
-    border: 1px solid;
-    border-color: transparent;
+  display: flex;
+  flex-direction: row;
+  /* min-width: min-content;
+    min-height: min-content; */
+  border: 1px solid;
+  border-color: transparent;
+  padding: 10px;
 }
 
-.storybook-alert--regular{
-    max-width: 300px; 
-    min-height: 36px;
+.storybook-alertIconDiv {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 10px;
 }
 
-.storybook-alert--large{
-    max-width: 780px; 
-    min-height: 36px;
+.storybook-alertBody {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+.storybook-alertHeader p {
+  font-family: "VisbyCF-ExtraBold", sans-serif;
+  font-size: 12px;
+  margin: 0px 0px 4px 0px;
+  letter-spacing: 1.5px;
 }
 
-.storybook-alert--large .storybook-alertBody{
-    min-width: 692px; 
+.storybook-alertBodyText p {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
 }
 
-.storybook-alert--regular .storybook-alertBody{
-    min-width: 212px; 
+.storybook-alertButtonDiv {
+  align-self: flex-end;
+  padding: 0px;
+  margin: 4px 0px 0px 0px;
 }
 
-.storybook-alertIconDiv{
-    display: flex;
-    justify-content: flex-start;
-    padding-right: 13px;
-    padding-left: 13px;
-    padding-top: 9px;
-}
-.storybook-alertBody{
-    display: flex;
-    flex-direction: column;
-}
-.storybook-alertHeader p{
-    font-family: 'VisbyCF-Bold', sans-serif;
-    font-weight: 800;
-    font-size: 12px;
-    /* line-height: 17px; */
-    margin-bottom: 0px;
-    letter-spacing: 1.5px;
+.storybook-alertButton {
+  border: 0px;
+  padding: 0px;
+  background-color: transparent;
+  outline: none;
 }
 
-    
-
-.storybook-alertBodyText{
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    font-size: 11px;
+.storybook-alertButtonDiv:hover {
+  opacity: 0.5;
 }
 
-.storybook-alertButtonDiv{
-    font-family: 'VisbyCF-Bold', sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    /* padding-top: 2.5px; */
-    align-self: flex-end;
-    padding-bottom: 10px;
+.storybook-alertIcon {
+  height: 16px;
+  width: 16px;
 }
 
-.storybook-alertButton{
-    border: 0px;
-    background-color: transparent;
-    outline: none;
-    /* border: 16px; */
+.storybook-alertXDiv {
+  display: flex;
+  justify-self: flex-end;
+  margin-left: auto;
 }
 
-.storybook-alertButtonDiv:hover{
-    opacity: 0.5;
+.storybook-alertXDiv:hover {
+  opacity: 0.5;
 }
 
-.storybook-alertIcon{
-    height: 18px;
-    width: 18px;
+.storybook-alertXButton {
+  background-color: transparent;
+  outline: none;
+  margin-left: 10px;
+  border: 0px;
+  padding: 0px;
+  align-self: flex-start;
+  height: 16px;
+  width: 16px;
 }
 
-.storybook-alertXDiv{
-    display: flex;
-    padding-right: 10px;
-    padding-left: 8px;
-    padding-top: 11px;
-    /* justify-self: flex-end; */
-    margin-left: auto;
-}
-
-.storybook-alertXDiv:hover{
-    opacity: 0.5;
-}
-
-.storybook-alertXButton{
-    background-color: transparent;
-    outline: none;
-    border: 0px;
-    align-self: flex-start;
-}
-
-.storybook-alertXIcon{
-    height: 13px;
-    width: 13px;
+.storybook-alertXIcon {
+  height: 12px;
+  width: 12px;
 }

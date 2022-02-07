@@ -1,153 +1,200 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../css/alert.css';
-import {useState} from "react";
-// import { Button } from './Button.jsx';
+import React from "react";
+import PropTypes from "prop-types";
+import "../css/alert.css";
+import Button from "./Button.jsx";
 // import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
 // import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fontawesome/free-solid-svg-icons'
 // example: import Flow from './assets/flow.svg';
-import Times from '../assets/times.svg';
-import InfoCircleBrand from '../assets/infoCircleBrand.svg';
-import InfoCircleMessage from '../assets/infoCircleMessage.svg';
-import CheckCircleSuccess from '../assets/checkCircleSuccess.svg';
-import ExclamationTriangleFailure from '../assets/exclamationTriangleFailure.svg';
+import Times from "../assets/icons/close.svg";
+import InfoCircle from "../assets/icons/message.svg";
+import CheckCircle from "../assets/icons/success.svg";
+import ErrorTriangle from "../assets/icons/error.svg";
 
 /**
- * Props: backgroundColor: str, borderColor: str, alertText: str, 
+ * Props: backgroundColor: str, borderColor: str, alertText: str,
  * hasButton: bool + buttonText: str, hasHeader: bool + headerText: str, size: str, textColor: str
  */
-const Alert = ({type, iconColor, backgroundColor, borderColor, hasButton, buttonLabel, hasHeader, headerLabel, alertText, url, size, onClick, ...props }) => {
-  // var style = "";
-  // style = "backgroundColor=" + backgroundColor + " border=1px solid " + border;
-  // const [isAlertOpen, setIsOpen] = useState(true);
-  // const close = () => setIsOpen(false);
-  // window.addEventListener('click', function(e){   
-  //   if (document.getElementById('storybook-alertXButton').contains(e.target)){
-  //     close();
-  //   } 
-  // });
-  var alertIcon; 
-  if (type === 'success') {
-    alertIcon = CheckCircleSuccess
-  } else if (type === 'failure') {
-    alertIcon = ExclamationTriangleFailure
-  } else if (type === 'message') {
-    alertIcon = InfoCircleMessage
+const Alert = ({
+  type,
+  width,
+  height,
+  icon,
+  alertText,
+  buttonLabel,
+  headerLabel,
+  onClick,
+  onCloseClick,
+  backgroundColor,
+  borderColor,
+  headerColor,
+  textColor,
+  buttonColor,
+  iconColor,
+  hasIcon,
+  hasButton,
+  hasHeader,
+  cornerRadius,
+  ...props
+}) => {
+  var alertIcon;
+  if (type === "success") {
+    alertIcon = CheckCircle;
+  } else if (type === "failure") {
+    alertIcon = ErrorTriangle;
   } else {
-    alertIcon = InfoCircleBrand
+    alertIcon = InfoCircle;
   }
 
-  return(
+  return (
     <div
       type="alert"
-      className={['storybook-alert', `storybook-alert--${size}`].join(' ')}
+      className="storybook-alert"
       style={{
         backgroundColor: backgroundColor,
         borderColor: borderColor,
+        width: width + "px",
+        height: height + "px",
+        borderRadius: cornerRadius + "px",
       }}
       {...props}
     >
-      <div 
-        className='storybook-alertIconDiv'
-      >
-        <img src={alertIcon} color={iconColor} className="storybook-alertIcon" alt={type}/>
-      </div>
+      {hasIcon && (
+        <div className="storybook-alertIconDiv">
+          <img
+            src={alertIcon}
+            color={iconColor}
+            className="storybook-alertIcon"
+            alt={type}
+          />
+        </div>
+      )}
 
-      <div className='storybook-alertBody'>
-        {hasHeader &&
-          <div className='storybook-alertHeader'>
+      <div className="storybook-alertBody">
+        {hasHeader && (
+          <div className="storybook-alertHeader" style={{color:headerColor}}>
             <p>{headerLabel}</p>
           </div>
-        }
-        <div className='storybook-alertBodyText'>
+        )}
+        <div className="storybook-alertBodyText" style={{color:textColor}}>
           <p>{alertText}</p>
         </div>
-        {hasButton &&
-          <div className='storybook-alertButtonDiv'>
-            {/* <p>Button</p> */}
-            <button className='storybook-alertButton' onClick={onClick}>{buttonLabel}</button>
+        {hasButton && (
+          <div className="storybook-alertButtonDiv">
+            <Button
+              onClick={onClick}
+              label={buttonLabel}
+              variant="tertiary"
+              className="storybook-alertButton"
+              style={{color:buttonColor}}
+            />
           </div>
-        }
+        )}
       </div>
 
       <div className="storybook-alertXDiv">
         <button className="storybook-alertXButton">
-          <img 
-            src={Times} 
-            className="storybook-alertXIcon" 
-            alt='close' 
-            /> 
+          <img src={Times} className="storybook-alertXIcon" alt="close" onClick={onCloseClick}/>
         </button>
       </div>
-
     </div>
-  )
+  );
 };
-  
-Alert.propTypes = {
 
+Alert.propTypes = {
   /**
    * What type of alert
    */
-    type: PropTypes.string,
-
+  type: PropTypes.string,
   /**
-  * What type of alert
-  */
-  iconColor: PropTypes.string,
-
-  /**
-   * What background color to use
+   * Width of alert box
    */
-  backgroundColor: PropTypes.string,
-
+  width: PropTypes.number,
   /**
-   * What background color to use
+   * Height of alert box
    */
-  borderColor: PropTypes.string,
-
-  /**
-   * Boolean value for whether the alert has a button or not.
-   */
-  hasButton: PropTypes.bool,
-
-  /**
-   * Label of the button (if it has one)
-   */
-  buttonLabel: PropTypes.string,
-
-  /**
-   * Boolean value for whether the alert has a button or not.
-   */
-    hasHeader: PropTypes.bool,
-
-  /**
-  * Label of the button (if it has one)
-  */
-  headerLabel: PropTypes.string,
-
+  height: PropTypes.number,
   /**
    * Alert message
    */
   alertText: PropTypes.string,
-
+  /**
+   * Alert icon as svg
+   */
+  icon: PropTypes.element,
+  /**
+   * Button label
+   */
+  buttonLabel: PropTypes.string,
+  /**
+   * Header label
+   */
+  headerLabel: PropTypes.string,
   /**
    * Button action
    */
   onClick: PropTypes.func,
+  /**
+   * Close Button action
+   */
+  onCloseClick: PropTypes.func,
+  /**
+   * Background color
+   */
+  backgroundColor: PropTypes.string,
+  /**
+   * Border color
+   */
+  borderColor: PropTypes.string,
+  /**
+   * Header color
+   */
+  headerColor: PropTypes.string,
+  /**
+   * Message color
+   */
+  textColor: PropTypes.string,
+  /**
+   * Button text color
+   */
+  buttonColor: PropTypes.string,
+  /**
+   * Icon color
+   */
+  iconColor: PropTypes.string,
+  /**
+   * Boolean value for whether the alert has an icon or not.
+   */
+  hasIcon: PropTypes.bool,
+  /**
+   * Boolean value for whether the alert has a button or not.
+   */
+  hasButton: PropTypes.bool,
+  /**
+   * Boolean value for whether the alert has a header or not.
+   */
+  hasHeader: PropTypes.bool,
+  /**
+   * Corner Radius
+   */
+  cornerRadius: PropTypes.number,
 };
 
 Alert.defaultProps = {
-  type: 'success',
-  iconColor: '#13B461',
-  backgroundColor: '#E3FCEF',
-  borderColor: '',
-  size: 'regular',
-  hasButton: false,
-  hasHeader: false,
-  buttonLabel: 'Button',
-  alertText: 'This is a description of something that has happened + what you can do.', 
-  onClick: undefined,
+  type: "success",
+  width: 600,
+  alertText:
+    "This is a description of something that has happened + what you can do.",
+  buttonLabel: "Button",
+  backgroundColor: "#E3FCEF",
+  borderColor: "transparent",
+  headerColor: "",
+  textColor: "",
+  buttonColor: "",
+  iconColor: "#13B461",
+  hasIcon: true,
+  hasButton: true,
+  hasHeader: true,
+  cornerRadius: 4,
 };
 
 export default Alert;
