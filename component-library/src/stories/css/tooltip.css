@@ -48,11 +48,7 @@
     background-color: #36306E;
     color: white;
     text-transform: uppercase;
-}
-
-.style--capitalized .tooltip-text {
     font-family: "VisbyCF";
-    font-size: 8px;
 }
 
 
