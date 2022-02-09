@@ -57,8 +57,7 @@
 
 .style--capitalized .tooltip-text {
     font-family: 'VisbyCF-ExtraBold';
-    /* font-weight: 800; */
-    font-size: 8px;
+    margin: 6px;
 }
 
 
