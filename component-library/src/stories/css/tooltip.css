@@ -8,6 +8,11 @@
     src: url('../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'VisbyCF-ExtraBold';
+    src: url('../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf') format('truetype');
+}
+
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -51,7 +56,8 @@
 }
 
 .style--capitalized .tooltip-text {
-    font-family: "VisbyCF";
+    font-family: 'VisbyCF-ExtraBold';
+    /* font-weight: 800; */
     font-size: 8px;
 }
 
