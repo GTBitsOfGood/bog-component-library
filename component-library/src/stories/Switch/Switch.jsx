@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/switch.css';
+import './switch.css';
 
  const Switch = ({ disabled, hasLabel, label, ...props }) => {
   

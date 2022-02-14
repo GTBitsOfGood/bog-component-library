@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {useState} from "react";
-import '../css/input.css';
+import './input.css';
 
 /**
  * Primary UI component for user interaction
