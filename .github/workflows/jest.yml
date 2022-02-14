@@ -1,4 +1,4 @@
-name: ci
+name: JEST Tests
 on:
   push:
     branches: [main]
