@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Checkbox from './components/Checkbox';
+import Checkbox from './Checkbox';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {

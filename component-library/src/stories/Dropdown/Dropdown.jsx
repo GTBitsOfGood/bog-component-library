@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {useState} from "react";
-import '../css/dropdown.css';
-import Checkbox from './Checkbox.jsx';
-import RadioButton from './RadioButton.jsx';
+import './dropdown.css';
+import Checkbox from '../Checkbox/Checkbox.jsx';
+import RadioButton from '../RadioButton/RadioButton.jsx';
 
 /**
  * Primary UI component for user interaction
