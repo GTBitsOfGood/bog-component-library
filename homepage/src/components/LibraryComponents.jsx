@@ -3,7 +3,7 @@ import Card from './Card.jsx';
 import TextDescription from './TextDescription.jsx';
 import FigmaButton from './FigmaButton';
 import '../css/LibraryComponents.css';
-import useImage from '../ImageContext';
+import useImage from '../imageRendering/ImageContext';
 
 
 

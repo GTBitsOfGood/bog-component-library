@@ -6,7 +6,7 @@ import axios from 'axios'
  * @param {*} setImageURLS - setting the array of imageObjects
  * @param {*} setIsLoading - checking if the images are still loading
  */
-export async function fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading) {
+export default async function fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading) {
     try {
         const imageURLSDict = {}
         const resultJson = (await axios.get(process.env.REACT_APP_DELIVERY_ENDPOINT)).data;

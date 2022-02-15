@@ -4,11 +4,11 @@ import FigmaButton from './FigmaButton';
 import GithubButton from './GithubButton';
 import StorybookButton from './StorybookButton';
 import '../css/Home.css';
-import useImage from '../ImageContext';
+import useImage from '../imageRendering/ImageContext';
 
 function Home(props) {
-
   const {imageURLS} = useImage();
+  
   return (
     <div className="home-container">
       {/* Gets the image from the github and displays it on the component */}

@@ -1,6 +1,8 @@
 import '../css/GithubButton.css';
+import useImage from '../imageRendering/ImageContext';
 
-function Button(props) {
+function Button() {
+  const {imageURLS} = useImage();
   return (
       <a 
         href="https://github.com/GTBitsOfGood/bog-component-library"
@@ -10,7 +12,7 @@ function Button(props) {
         rel="noreferrer"
       >
         View on
-        <img src={props.logo} className="github-button-image" alt="github_logo"/>
+        <img src={imageURLS["GithubLogo"]} className="github-button-image" alt="github_logo"/>
         Github
       </a>
   );

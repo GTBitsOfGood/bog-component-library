@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {ImageProvider} from './ImageContext';
+import {ImageProvider} from './imageRendering/ImageContext';
 
 ReactDOM.render(
   <React.StrictMode>
