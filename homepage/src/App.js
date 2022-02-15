@@ -10,11 +10,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const {imageURLS, setImageURLS} = useImage(); 
 
-
-  useEffect(() => {
-    fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading);
-    // eslint-disable-next-line
-  }, []);
+    useEffect(() => {
+      if (Object.keys(imageURLS).length === 0) {
+        fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading);
+      }
+    }, [imageURLS, setImageURLS]);
+ 
 
   return (
     <>
