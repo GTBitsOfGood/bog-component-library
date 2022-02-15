@@ -12,7 +12,7 @@ function Button() {
         rel="noreferrer"
       >
         View on
-        <img src={imageURLS["GithubLogo"]} className="github-button-image" alt="github_logo"/>
+        <img src={imageURLS["GITHUB_LOGO"]} className="github-button-image" alt="github_logo"/>
         Github
       </a>
   );

@@ -12,7 +12,7 @@ function Home(props) {
   return (
     <div className="home-container">
       {/* Gets the image from the github and displays it on the component */}
-        <img src={imageURLS["HomepageMain"]} alt="homepage_main_image"/>
+        <img src={imageURLS["HOMEPAGE_MAIN"]} alt="homepage_main_image"/>
         <div className="text-container">
             <TextDescription heading={"What is a design System?"} content={"A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications."}/>
             <TextDescription heading={"Why does Bits of Good need one?"} content={"There is confusion across projects about what design guidelines and component libraries to use. Using multiple different libraries and kits makes it difficult to stay consistent during development and to maintain a product after shipping."}/>
@@ -20,11 +20,11 @@ function Home(props) {
             <div className="button-container">
                 <div>
                   <ConponentButton handle={props.handle}/>
-                  <GithubButton logo={imageURLS["GithubLogo"]}/>
+                  <GithubButton/>
                 </div>
                 <div>
-                  <StorybookButton logo={imageURLS["StorybookLogo"]}/>
-                  <FigmaButton logo={imageURLS["FigmaLogo"]}/>
+                  <StorybookButton/>
+                  <FigmaButton/>
                 </div>
             </div>
         </div>

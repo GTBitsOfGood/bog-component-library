@@ -13,7 +13,7 @@ function Button() {
         rel="noreferrer"
       >
         View on
-        <img src={imageURLS["FigmaLogo"]} className="button-image" alt="figma_logo"/>
+        <img src={imageURLS["FIGMA_LOGO"]} className="button-image" alt="figma_logo"/>
         Figma
       </a>
   );

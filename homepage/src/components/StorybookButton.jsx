@@ -12,7 +12,7 @@ function Button() {
         rel="noreferrer"
       >
         View on
-        <img src={imageURLS["StorybookLogo"]} className="button-image" alt="figma_logo"/>
+        <img src={imageURLS["STORYBOOK_LOGO"]} className="button-image" alt="figma_logo"/>
         Storybook
       </a>
   );
