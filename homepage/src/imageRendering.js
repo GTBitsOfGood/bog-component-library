@@ -8,15 +8,14 @@ import axios from 'axios'
  */
 export async function fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading) {
     try {
+        const imageURLSDict = {}
         const resultJson = (await axios.get(process.env.REACT_APP_DELIVERY_ENDPOINT)).data;
         resultJson.includes.Asset.forEach((asset) => {
-        const imageObject = {
-            title: asset.fields.title,
-            url: asset.fields.file.url
-        }
-        setImageURLS(imageURLS => [...imageURLS, imageObject]);
-      })
+          imageURLSDict[asset.fields.title] = asset.fields.file.url;
+        })
 
+      // only setting the imageURLS oneTime
+      setImageURLS(imageURLSDict);
       cacheImages(imageURLS, setIsLoading);
 
     } catch(e) {
@@ -29,13 +28,13 @@ export async function fetchContentfulAPI(imageURLS, setImageURLS, setIsLoading) 
  * @param {*} srcArray - the array of imageObjects
  * @param {*} setIsLoading - set to false after images being cached 
  */
-async function cacheImages(srcArray, setIsLoading) {
+async function cacheImages(srcDict, setIsLoading) {
   try {
-    const promises = await srcArray.map(image => {
+    const promises = await Object.keys(srcDict).map(image => {
       return new Promise((resolve, reject) => {
   
         const img = new Image();
-        img.src = image.url;
+        img.src = srcDict[image];
         img.onload = resolve();
         img.onerror = reject();
       })

@@ -1,6 +1,6 @@
 import '../css/GithubButton.css';
 
-function Button({logo}) {
+function Button(props) {
   return (
       <a 
         href="https://github.com/GTBitsOfGood/bog-component-library"
@@ -10,7 +10,7 @@ function Button({logo}) {
         rel="noreferrer"
       >
         View on
-        <img src={logo} className="github-button-image" alt="github_logo"/>
+        <img src={props.logo} className="github-button-image" alt="github_logo"/>
         Github
       </a>
   );
