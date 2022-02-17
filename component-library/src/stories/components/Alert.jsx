@@ -2,9 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../css/alert.css";
 import Button from "./Button.jsx";
-// import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
-// import { faInfoCircle, faExclamationTriangle, faCheckCircle, faTimes } from '@fontawesome/free-solid-svg-icons'
-// example: import Flow from './assets/flow.svg';
 import Times from "../assets/icons/close.svg";
 import InfoCircle from "../assets/icons/message.svg";
 import CheckCircle from "../assets/icons/success.svg";
@@ -36,13 +33,15 @@ const Alert = ({
   cornerRadius,
   ...props
 }) => {
-  var alertIcon;
-  if (type === "success") {
-    alertIcon = CheckCircle;
-  } else if (type === "failure") {
-    alertIcon = ErrorTriangle;
-  } else {
-    alertIcon = InfoCircle;
+  var alertIcon = icon;
+  if(alertIcon == null){
+    if (type === "success") {
+      alertIcon = CheckCircle;
+    } else if (type === "failure") {
+      alertIcon = ErrorTriangle;
+    } else {
+      alertIcon = InfoCircle;
+    }
   }
 
   return (

@@ -54,6 +54,7 @@
 }
 
 .storybook-alertButton {
+  font-family: "VisbyCF-ExtraBold", sans-serif;
   border: 0px;
   padding: 0px;
   background-color: transparent;
