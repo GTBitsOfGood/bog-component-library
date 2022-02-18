@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'VisbyCF-ExtraBold';
-  src: url('../_assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
+  src: url('../../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf')  format('truetype');
 }
 @font-face {
   font-family: 'OpenSans';
-  src: url('../_assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+  src: url('../../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
 }
 
 .switch-container {
