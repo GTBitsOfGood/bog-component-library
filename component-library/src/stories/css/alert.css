@@ -1,40 +1,98 @@
+@font-face {
+  font-family: "VisbyCF-Bold";
+  src: url("../assets/Fonts/VisbyCF/VisbyCF-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF-ExtraBold";
+  src: url("../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/Fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
 .storybook-alert {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 345px;
-    border: 0;
-    cursor: pointer;
-    border-radius: 0.4em;
-    line-height: 1;
-    padding: 20px 15px 20px 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-width: min-content;
-  }
-
-.storybook-alert a {
-    font-size: 18px;
-    color: rgb(112, 112, 112);
-    text-decoration: underline;
-
+  display: flex;
+  flex-direction: row;
+  /* min-width: min-content;
+    min-height: min-content; */
+  border: 1px solid;
+  border-color: transparent;
+  padding: 10px;
 }
 
-.storybook-alert a:hover {
-    opacity: 0.5;
-    transition: color 0.2s;
+.storybook-alertIconDiv {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 10px;
 }
 
-.storybook-alert button {
-    display: flex;
-    border: none;
+.storybook-alertBody {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+.storybook-alertHeader p {
+  font-family: "VisbyCF-ExtraBold", sans-serif;
+  font-size: 12px;
+  margin: 0px 0px 4px 0px;
+  letter-spacing: 1.5px;
 }
 
-.storybook-alert button:hover {
-    opacity: 0.5;
+.storybook-alertBodyText p {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
 }
 
-.storybook-alert img {
-    height: 25px;
-    margin: 0 2% 0 2%;
+.storybook-alertButtonDiv {
+  align-self: flex-end;
+  padding: 0px;
+  margin: 4px 0px 0px 0px;
+}
+
+.storybook-alertButton {
+  font-family: "VisbyCF-ExtraBold", sans-serif;
+  border: 0px;
+  padding: 0px;
+  background-color: transparent;
+  outline: none;
+}
+
+.storybook-alertButtonDiv:hover {
+  opacity: 0.5;
+}
+
+.storybook-alertIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.storybook-alertXDiv {
+  display: flex;
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.storybook-alertXDiv:hover {
+  opacity: 0.5;
+}
+
+.storybook-alertXButton {
+  background-color: transparent;
+  outline: none;
+  margin-left: 10px;
+  border: 0px;
+  padding: 0px;
+  align-self: flex-start;
+  height: 12px;
+  width: 12px;
+  
+}
+
+.storybook-alertXIcon {
+  height: 12px;
+  width: 12px;
 }
