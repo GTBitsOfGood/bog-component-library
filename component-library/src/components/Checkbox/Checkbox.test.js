@@ -6,7 +6,7 @@ import {
   fireEvent,
 } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
-import * as stories from './Checkbox.stories';
+import * as stories from '../../stories/Checkbox.stories';
 
 describe('Checkbox', () => {
   afterEach(() => {

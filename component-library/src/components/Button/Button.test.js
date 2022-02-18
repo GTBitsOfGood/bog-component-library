@@ -5,7 +5,7 @@ import {
   cleanup,
 } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
-import * as stories from './Button.stories';
+import * as stories from '../../stories/Button.stories';
 
 describe('Button', () => {
   afterEach(() => {
