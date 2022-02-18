@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Switch from './Switch';
+import Switch from '../components/Switch/Switch';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
