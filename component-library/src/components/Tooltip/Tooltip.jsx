@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/tooltip.css';
+import './tooltip.css';
 
 export const Tooltip = ({ size, text, style, arrowDirection, arrowPosition, ...props }) => {
 
