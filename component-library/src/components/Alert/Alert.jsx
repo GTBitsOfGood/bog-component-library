@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../css/alert.css";
-import Button from "./Button.jsx";
-import Times from "../assets/icons/close.svg";
-import InfoCircle from "../assets/icons/message.svg";
-import CheckCircle from "../assets/icons/success.svg";
-import ErrorTriangle from "../assets/icons/error.svg";
+import "./alert.css";
+import Button from "../Button/Button.jsx";
+import Times from "../../assets/icons/close.svg";
+import InfoCircle from "../../assets/icons/message.svg";
+import CheckCircle from "../../assets/icons/success.svg";
+import ErrorTriangle from "../../assets/icons/error.svg";
 
 /**
  * Props: backgroundColor: str, borderColor: str, alertText: str,
