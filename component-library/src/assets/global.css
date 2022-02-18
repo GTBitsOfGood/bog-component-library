@@ -180,3 +180,95 @@
     font-weight: 900;
     font-style: italic;
 }
+
+/* VisbyCF */
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-ThinOblique.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-LightOblique.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-MediumOblique.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-DemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-DemiBoldOblique.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-BoldOblique.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-ExtraBoldOblique.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-Heavy.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "VisbyCF";
+    src: url("./fonts/VisbyCF/VisbyCF-HeavyOblique.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
