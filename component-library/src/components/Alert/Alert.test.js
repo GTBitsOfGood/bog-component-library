@@ -2,6 +2,7 @@ import '@testing-library/jest-dom/extend-expect';
 import {
   render,
   cleanup,
+  fireEvent
 } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 import * as stories from '../../stories/Alert.stories';
@@ -28,4 +29,19 @@ describe("Alert", () => {
         const {queryByText} = render(<SuccessAlert hasHeader={true}/>);
         expect(queryByText(/I'm a Success/i)).toBeInTheDocument();
     })
+
+    it('render the icon if set', () => {
+        const {getByTestId} = render(<SuccessAlert hasIcon={true}/>);
+        const icon = getByTestId("alert-icon");
+        expect(icon).toBeInTheDocument();
+    })
+
+    it('checks if the onCloseClick works', () => {
+        const mockOnClick = jest.fn()
+        const { getByTestId } = render(<SuccessAlert onCloseClick={mockOnClick()} />)
+        const clickIndicator = getByTestId('close-button');
+        fireEvent.click(clickIndicator);
+        expect(mockOnClick).toHaveBeenCalledTimes(1);
+    })
+
 });

@@ -64,6 +64,7 @@ const Alert = ({
             color={iconColor}
             className="storybook-alertIcon"
             alt={type}
+            data-testid="alert-icon"
           />
         </div>
       )}
@@ -93,7 +94,7 @@ const Alert = ({
 
       <div className="storybook-alertXDiv">
         <button className="storybook-alertXButton">
-          <img src={Times} className="storybook-alertXIcon" alt="close" onClick={onCloseClick}/>
+          <img src={Times} className="storybook-alertXIcon" data-testid="close-button" alt="close" onClick={onCloseClick}/>
         </button>
       </div>
     </div>
