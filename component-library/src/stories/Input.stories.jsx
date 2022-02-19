@@ -15,14 +15,14 @@ export default {
       options: [true, false],
       control: {type: 'radio'},
     },
-    error: {
-        options: [true, false],
-        control: {type: 'radio'},
-    },
     success: {
         options: [true, false],
         control: {type: 'radio'},
-      }
+      },
+    hasBottomText: {
+      options: ['default','success', 'error'],
+      control: {type: 'select'},
+    },
   },
   parameters : {
     design: {

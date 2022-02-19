@@ -6,7 +6,7 @@ import './input.css';
 /**
  * Primary UI component for user interaction
  */
- const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisabled, rows, cols, error, success, onChange, ...props }) => {
+ const Input = ({ variant, label, placeholder, leftIcon, rightIcon, isDisabled, rows, cols, hasBottomText, onChange, ...props }) => {
   const [input, setInput] = useState(null);
   const handleChange =(newValue)=>{    
     setInput(newValue);
@@ -17,7 +17,7 @@ import './input.css';
       <label className={'storybook-input-label'}>{label}</label>
       {variant === 'textArea'? 
       (<textarea
-        className={['storybook-input','storybook-input--' + (isDisabled? 'disabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''),`storybook-input--${variant}`].join(' ')}
+        className={['storybook-input','storybook-input--' + (isDisabled? 'disabled':''),'storybook-input--' + ((hasBottomText==="default" ? "" : (hasBottomText==="success")? "success":"error")),`storybook-input--${variant}`].join(' ')}
         onChange={handleChange}
         placeholder={placeholder}
         disabled={isDisabled}
@@ -27,7 +27,7 @@ import './input.css';
       />):
       (
       <div 
-      className={['storybook-input','storybook-input--' + (isDisabled? 'isDisabled':''),'storybook-input--' + (error?'error':''), 'storybook-input--' + (success?'success':''), `storybook-input--${variant}`].join(' ')}
+      className={['storybook-input','storybook-input--' + (isDisabled? 'isDisabled':''),'storybook-input--' + ((hasBottomText==="default" ? "" : (hasBottomText==="success")? "success":"error")), `storybook-input--${variant}`].join(' ')}
       >
         {(variant === "leftIcon" ||  variant==="doubleIcon" ) && leftIcon ? <img className='input-icon--left' src={leftIcon}></img> : ''}
         <input
@@ -40,7 +40,7 @@ import './input.css';
         {(variant === "rightIcon" ||  variant==="doubleIcon" ) && rightIcon ? <img className='input-icon--right' src={rightIcon}></img> : ''}
       </div>
       )}
-      {error && 
+      {hasBottomText==="error" &&  
       (<div className={'storybook-input-label-error'}>
         {/* error icon */}
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -65,7 +65,7 @@ import './input.css';
           </svg>
         <label className="alert-message">Error Message</label>
       </div>)}
-      {success && 
+      {hasBottomText==="success" && 
       (<div className={'storybook-input-label-success'}>
         {/* success icon */}
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -82,6 +82,7 @@ import './input.css';
     </div>
   );
 };
+
 Input.propTypes = {
   /**
    * regular, leftIcon, rightIcon, doubleIcon, textArea input
@@ -118,11 +119,8 @@ Input.propTypes = {
   /**
    * Input cause error
    */
-  error: PropTypes.bool,
-  /**
-   * Input was successfull
-   */
-  success:PropTypes.bool,
+  
+  hasBottomText:PropTypes.string,
   /**
    * Optional Input handler
    */
@@ -134,8 +132,7 @@ Input.defaultProps = {
   label: 'Label',
   placeholder: 'Placeholder text',
   isDisabled: false,
-  error: false, 
-  success: false,
+  hasBottomText: "default",
   leftIcon: 'https://img.icons8.com/material-outlined/24/000000/planner.png',
   rightIcon: 'https://img.icons8.com/material-rounded/24/000000/chevron-down.png',
 };
