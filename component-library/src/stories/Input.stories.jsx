@@ -9,22 +9,18 @@ export default {
   argTypes: {
     variant: {
       options: ['regular', 'leftIcon', 'rightIcon', 'doubleIcon', 'textArea'],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
     },
     isDisabled: {
       options: [true, false],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
     },
-    success: {
-        options: [true, false],
-        control: {type: 'radio'},
-      },
     hasBottomText: {
-      options: ['default','success', 'error'],
-      control: {type: 'select'},
+      options: ['default', 'success', 'error'],
+      control: { type: 'select' },
     },
   },
-  parameters : {
+  parameters: {
     design: {
       type: "figma",
       url: "https://www.figma.com/file/DEfDgRT4G9732YxrqTqq8V/BoG-Design-System-(Working-File)?node-id=897%3A6012"
