@@ -15,8 +15,8 @@ describe('Button', () => {
   const { Primary } = composeStories(stories)
 
   it('should create a button', () => {
-    const { queryByText } = render(<Primary />)
-
-    expect(queryByText('Button')).toBeInTheDocument()
+    const { getByRole } = render(<Primary />)
+    const button = getByRole('button');
+    expect(button).toBeInTheDocument();
   })
 })

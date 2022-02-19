@@ -15,6 +15,6 @@ describe("Tooltip", () => {
 
     it('renders', () => {
         const {queryByText} = render(<Large/>);
-        expect(queryByText(/This is a description/i)).toBeInTheDocument();
+        expect(queryByText(/tooltip/i)).toBeInTheDocument();
     })
 });

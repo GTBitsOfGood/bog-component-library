@@ -85,6 +85,7 @@ const Alert = ({
               variant="tertiary"
               className="storybook-alertButton"
               style={{color:buttonColor}}
+              testId={"alert-button"}
             />
           </div>
         )}
