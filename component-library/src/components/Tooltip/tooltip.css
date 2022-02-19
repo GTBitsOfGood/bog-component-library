@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../../assets/Fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    src: url('../../assets/Fonts/VisbyCF/VisbyCF-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF-ExtraBold';
+    src: url('../../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf') format('truetype');
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: "OpenSans";
+    border-radius: 1px;
+    max-width: 20%;
+    text-align: center;
+}
+
+.tooltip--large {
+    padding: 6px;
+    font-size: 12px;
+}
+
+.tooltip--small {
+    padding: 3px 6px 3px 6px;
+    font-size: 8px;
+}
+
+.style--dark {
+    background-color: #666666;
+    color: white;
+    border-color: #666666 transparent transparent transparent;
+}
+
+.style--light {
+    background-color: #F2F2F2;
+    color: black;
+}
+
+.style--brand {
+    background-color: #F2F2F2;
+    color: #5A50B3;
+}
+
+.style--capitalized {
+    background-color: #36306E;
+    color: white;
+    text-transform: uppercase;
+}
+
+.style--capitalized .tooltip-text {
+    font-family: 'VisbyCF-ExtraBold';
+    margin: 6px;
+}
+
+
+/* Tooltip general styling */
+
+.tooltip-arrow--vertical::after {
+    content: " ";
+    position: absolute;
+    margin-top: -4px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.tooltip-arrow--horizontal::after {
+    content: " ";
+    position: absolute;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+
+/* Tooltip arrow positions on edge */
+
+.tooltip-position--horizontal-1::after {
+    left: 25%;
+}
+
+.tooltip-position--horizontal-2::after {
+    left: 50%;
+}
+
+.tooltip-position--horizontal-3::after {
+    left: 75%;
+}
+
+.tooltip-position--vertical-1::after {
+    top: 25%;
+}
+
+.tooltip-position--vertical-2::after {
+    top: 50%;
+}
+
+.tooltip-position--vertical-3::after {
+    top: 75%;
+}
+
+
+/* Tooltip arrow on bottom */
+
+.tooltip-arrow--dark-bottom::after {
+    top: 100%;
+    border-color: #666666 transparent transparent transparent;
+}
+
+.tooltip-arrow--light-bottom::after {
+    top: 100%;
+    border-color: #F2F2F2 transparent transparent transparent;
+}
+
+.tooltip-arrow--brand-bottom::after {
+    top: 100%;
+    border-color: #F2F2F2 transparent transparent transparent;
+}
+
+.tooltip-arrow--capitalized-bottom::after {
+    top: 100%;
+    border-color: #36306E transparent transparent transparent;
+}
+
+
+/* Tooltip arrow on right */
+
+.tooltip-arrow--dark-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #666666;
+}
+
+.tooltip-arrow--light-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #F2F2F2;
+}
+
+.tooltip-arrow--brand-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #F2F2F2;
+}
+
+.tooltip-arrow--capitalized-right::after {
+    left: 100%;
+    border-color: transparent transparent transparent #36306E;
+}
+
+
+/* Tooltip arrow on left */
+
+.tooltip-arrow--dark-left::after {
+    right: 100%;
+    border-color: transparent #666666 transparent transparent;
+}
+
+.tooltip-arrow--light-left::after {
+    right: 100%;
+    border-color: transparent #F2F2F2 transparent transparent;
+}
+
+.tooltip-arrow--brand-left::after {
+    right: 100%;
+    border-color: transparent #F2F2F2 transparent transparent;
+}
+
+.tooltip-arrow--capitalized-left::after {
+    right: 100%;
+    border-color: transparent #36306E transparent transparent;
+}
+
+
+/* Tooltip arrow on top */
+
+.tooltip-arrow--dark-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #666666 transparent;
+}
+
+.tooltip-arrow--light-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #F2F2F2 transparent;
+}
+
+.tooltip-arrow--brand-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #F2F2F2 transparent;
+}
+
+.tooltip-arrow--capitalized-top::after {
+    bottom: 100%;
+    border-color: transparent transparent #36306E transparent;
+}

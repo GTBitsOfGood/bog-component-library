@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Tooltip } from './components/Tooltip';
+import { Tooltip } from '../components/Tooltip/Tooltip';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {

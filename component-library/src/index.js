@@ -1,4 +1,4 @@
-import Alert from './stories/components/Alert.jsx';
+import Alert from './components/Alert/Alert.jsx';
 import Button from './stories/Button/Button.jsx';
 import Checkbox from './stories/Checkbox/Checkbox.jsx';
 import Dropdown from './stories/Dropdown/Dropdown.jsx';

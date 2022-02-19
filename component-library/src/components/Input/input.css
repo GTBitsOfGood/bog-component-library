@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'VisbyCF-ExtraBold';
+    src: url('../../assets/Fonts/VisbyCF/VisbyCF-ExtraBold.ttf')  format('truetype');
+  }
+@font-face {
+font-family: 'OpenSans';
+src: url('../../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+
+input{
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    width: 230px;
+    font-size: 16px;
+}
+
+.input-icon--left{
+    width: 20px;
+    height: auto;
+    padding-right: 8px;
+}
+.input-icon--right{
+    width: 20px;
+    height: auto;
+    padding-left: 8px;
+}
+
+.storybook-input-div {
+    font-family: 'OpenSans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    width: fit-content;
+    flex-basis: auto;
+    /* align-content: space-between; */
+
+}
+.storybook-input-label {
+    padding-bottom: 8px;
+}
+
+.storybook-input {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    width: 240px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    display: flex;
+    flex-direction: row;
+}
+
+.storybook-input:hover {
+    border: 1px solid rgba(90, 80, 179, 1);
+}
+.storybook-input:focus {
+    outline: none;
+    border: 1px solid rgba(90, 80, 179, 1);
+}
+
+.storybook-input--disabled {
+    border: 1px solid rgba(217, 217, 217, 1);
+    color: #D9D9D9;
+    background-color: #FAFBFC;
+}
+
+.storybook-input--disabled div:hover {
+    border: 1px solid rgba(217, 217, 217, 1);
+}
+.storybook-input--disabled div:focus {
+    outline: none;
+    border: 1px solid rgba(217, 217, 217, 1);
+}
+input[type="text"]:disabled {
+    background-color: #FAFBFC;
+}
+
+.storybook-input--error {
+    border: 1px solid rgba(255, 57, 57, 1);
+}
+
+.storybook-input-label-error {
+    color: rgba(255, 57, 57, 1);
+    font-size: 14px;
+    line-height: 12px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.storybook-input--success {
+    border: 1px solid rgba(19, 180, 97, 1);
+}
+.storybook-input-label-success {
+    color: rgba(19, 180, 97, 1);
+    font-size: 14px;
+    line-height: 12px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.alert-message {
+    padding-left: 8px;
+}
