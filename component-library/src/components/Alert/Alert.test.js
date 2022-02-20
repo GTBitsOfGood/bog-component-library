@@ -25,23 +25,22 @@ describe("Alert", () => {
         expect(button).toBeInTheDocument();
     })
 
-    it('render the header if set', () => {
+    it('renders the header if set', () => {
         const {queryByText} = render(<SuccessAlert hasHeader={true}/>);
         expect(queryByText(/I'm a Success/i)).toBeInTheDocument();
     })
 
-    it('render the icon if set', () => {
+    it('renders the icon if set', () => {
         const {getByTestId} = render(<SuccessAlert hasIcon={true}/>);
         const icon = getByTestId("alert-icon");
         expect(icon).toBeInTheDocument();
     })
 
-    it('checks if the onCloseClick works', () => {
+    it('checks if the onCloseClick event handler works', () => {
         const mockOnClick = jest.fn()
         const { getByTestId } = render(<SuccessAlert onCloseClick={mockOnClick()} />)
         const clickIndicator = getByTestId('close-button');
         fireEvent.click(clickIndicator);
         expect(mockOnClick).toHaveBeenCalledTimes(1);
     })
-
 });
