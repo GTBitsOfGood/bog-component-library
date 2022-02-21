@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './radio-button.css';
 
- const RadioButton = ({ id, groupName, value, label, isDisabled, isChecked }) => {
+ const RadioButton = ({ groupName, value, label, isDisabled, isChecked, id }) => {
     const disableStyle = isDisabled && "disable-button"
     return(
         <label className={`radio-container ${disableStyle}`}>
