@@ -354,3 +354,16 @@ const button = {
         },
     }), 
 }
+
+const theme = {
+    colors,
+    fonts,
+    fontWeights,
+    alert,
+    button,
+    letterSpacings,
+};
+
+export default theme;
+export { colors };
+  
