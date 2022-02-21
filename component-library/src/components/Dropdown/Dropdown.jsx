@@ -11,7 +11,7 @@ import RadioButton from "../RadioButton/RadioButton.jsx";
 const Dropdown = ({
   variant,
   label,
-  list,
+  items,
   placeholder,
   isDisabled,
   error,
@@ -26,6 +26,22 @@ const Dropdown = ({
   // const clearSelection = () => {
   //   setSelectedItem(null);
   // };
+
+  /**
+   * formats items into usable objects
+   */
+  let list = [];
+  const itemsArray = items.split(", ");
+  // console.log(itemsArray);
+  itemsArray.forEach((item, i) => {
+    list.push({
+      id: i ,
+      name: item ,
+      selected: false,
+    });
+  });
+  // console.log(list);
+
   const selectSingleItem = (item) => {
     if (selectedItem != null) {
       selectedItem.selected = false;
@@ -47,7 +63,7 @@ const Dropdown = ({
   };
 
   const selectMultiCheckboxItem = (item) => {
-    console.log(item);
+    // console.log(item);
     let newSelection = selectedItems;
     const findSelectedItem = list.find((i) => i.name === item.name);
     if (findSelectedItem.selected) {
@@ -58,9 +74,9 @@ const Dropdown = ({
     } else {
       findSelectedItem.selected = true;
       newSelection.push(findSelectedItem);
-      console.log("selected");
+      // console.log("selected");
     }
-    console.log(newSelection);
+    // console.log(newSelection);
     setSelectedItems(newSelection);
   };
 
@@ -121,7 +137,7 @@ const Dropdown = ({
               label={item.name}
               hasLabel={true}
               onChange={() => selectMultiCheckboxItem(item)}
-              checked={item.selected?item.selected:null}
+              checked={item.selected ? item.selected : null}
             />
           </div>
         );
@@ -193,7 +209,7 @@ const Dropdown = ({
           ></img>
         )}
       </button>
-      {isListOpen && list !== null && (
+      {items.length !== 0 && isListOpen && list !== null && (
         <div role="list" className="storybook-dropdown-list">
           {variant === "regular" && displayRegularOptions()}
           {variant === "radio" && displayRadioOptions()}
@@ -246,18 +262,10 @@ Dropdown.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * An array of objects formatted as:
-   * [
-   *      {
-   *          id: "unique id"
-   *          name: "Item Name"
-   *          selected: "has the item been selected"
-   *      },
-   *      {...},
-   *      ...
-   * ]
+   * An array of strings formatted as:
+   * [item, item1, item2]
    */
-  list: PropTypes.array,
+  items: PropTypes.string,
   /**
    * Input Placeholder text
    */
@@ -279,14 +287,7 @@ Dropdown.propTypes = {
 Dropdown.defaultProps = {
   variant: "regular",
   label: "Label",
-  list: [
-    { id: 0, name: "Sharath", selected: false },
-    { id: 1, name: "Alyson", selected: false },
-    { id: 2, name: "Lily", selected: false },
-    { id: 3, name: "Jade", selected: false },
-    { id: 4, name: "Eric", selected: false },
-    { id: 5, name: "Marlene", selected: false },
-  ],
+  items: "Sharath, Alyson, Lily, Jade, Eric, Marlene",
   placeholder: "Placeholder text",
   isDisabled: false,
   error: false,

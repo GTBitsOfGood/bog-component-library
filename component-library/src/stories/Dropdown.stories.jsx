@@ -18,7 +18,7 @@ export default {
     error: {
         options: [true, false],
         control: {type: 'radio'},
-    },
+    }
   },
   parameters : {
     design: {
