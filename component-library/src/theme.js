@@ -88,6 +88,9 @@ const colors = {
     ...baseColors,
     ...secondaryColors,
     ...typographyColors,
+    black: '#000000',
+    disabled: '#CCCCCC',
+    white: '#FFFFFF',
     bluePalette,
     darkPalette,
     greenPalette,
@@ -275,4 +278,79 @@ const typography = {
         fontSize: '14px',
         lineHeight: '19px',
     }
-  };
+};
+
+const button = {
+    sizingAndTypography: {
+        small: {
+          ...typography.buttonSmall,
+          padding: '6.5px 11px',
+        },
+        medium: {
+          ...typography.button,
+          padding: '6.5px 13px',
+        },
+        large: {
+          ...typography.buttonLarge,
+          padding: '7.5px 16px',
+        },
+    },
+
+    default: (colorPalette) => ({
+        bg: {
+            default: colorPalette[500],
+            hover: colorPalette[200],
+            focussed: colorPalette[200],
+            disabled: colors.disabled
+        },
+        border: {
+            default: 'transparent',
+            hover: 'transparent',
+            disabled: 'transparent',
+        },
+        fontColor: {
+            default: colors.white,
+            hover: colors.white,
+            disabled: colors.disabled,
+        },
+        shadow: {
+            default: 'none',
+            hover: 'none',
+            disabled: 'none',
+        },
+        secondary: {
+            bg: {
+              default: colors.white,
+              hover: colors.white,
+              disabled: colors.white,
+            },
+            border: {
+              default: colorPalette[500],
+              hover: colorPalette[200],
+              disabled: colors.disabled,
+            },
+            fontColor: {
+              default: colorPalette.primary,
+              hover: colorPalette.dark,
+              disabled: colors.disabled,
+            },
+            shadow: {
+              default: 'none',
+              hover: 'none',
+              disabled: 'none',
+            },
+        },
+        tertiary: {
+            fontColor: {
+                default: colorPalette[500],
+                hover: colorPalette[200],
+                disabled: colors.disabled,
+            },
+            border: {
+                default: 'none',
+                hover: 'none',
+                disabled: 'none',
+            },
+        },
+    }), 
+}
