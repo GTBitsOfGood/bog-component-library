@@ -9,7 +9,7 @@ export default {
   argTypes: {
     variant: {
       options: ['regular', 'radio', 'checkbox'],
-      control: {type: 'radio'},
+      control: {type: 'select'},
     },
     isDisabled: {
       options: [true, false],
