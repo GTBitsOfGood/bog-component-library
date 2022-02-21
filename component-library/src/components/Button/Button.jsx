@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
+import { getByTestId } from '@testing-library/react';
 
-const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, label, onClick, size, variant, ...props }) => {
+const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, label, onClick, size, variant, testId, ...props }) => {
   return (
     <button
       type="button"
@@ -11,6 +12,7 @@ const Button = ({ backgroundColor, hasIcon, icon, iconPosition, isDisabled, labe
       disabled={isDisabled}
       {...props}
       onClick={onClick}
+      data-testid={testId}
     >
       <div className={`button-content${iconPosition === 'right' ? '--right' : '--left'}`}>
         {label}
