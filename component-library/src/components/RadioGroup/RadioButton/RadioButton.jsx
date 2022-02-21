@@ -13,33 +13,34 @@ import './radio-button.css';
     )
 }
 
-RadioButton.propTypes = {
-    /*
-     * Radio button group
-     */
-    groupName: PropTypes.string,
-    /*
-     * Value of radio button
-     */
-    value: PropTypes.string,
-    /*
-     * Radio button label
-     */
-    label: PropTypes.string,
-    /*
-     * Disabled radio button
-     */
-    isDisabled: PropTypes.bool,
-     /*
-     * Checked radio button
-     */
-}
+// RadioButton.propTypes = {
+//     /*
+//      * Radio button group
+//      */
+//     groupName: PropTypes.string,
+//     /*
+//      * Value of radio button
+//      */
+//     value: PropTypes.string,
+//     /*
+//      * Radio button label
+//      */
+//     label: PropTypes.string,
+//     /*
+//      * Disabled radio button
+//      */
+//     isDisabled: PropTypes.bool,
+//      /*
+//      * Checked radio button
+//      */
+//     isChecked: PropTypes.bool
+// }
 
-RadioButton.defaultProps = {
-    groupName: "radioGroup",
-    inputValue: undefined,
-    label: 'Label',
-    isDisabled: false,
-}
+// RadioButton.defaultProps = {
+//     groupName: "radioGroup",
+//     inputValue: undefined,
+//     label: 'Label',
+//     isDisabled: false,
+// }
 
 export default RadioButton;

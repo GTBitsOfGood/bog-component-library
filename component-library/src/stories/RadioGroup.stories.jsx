@@ -1,19 +1,12 @@
 import React from 'react'
 
-import RadioButton from '../components/RadioGroup/RadioButton/RadioButton';
+import RadioGroup from '../components/RadioGroup/RadioGroup';
 import { useArgs } from '@storybook/client-api';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-    title: 'Components/RadioButton',
-    component: RadioButton,
-    argTypes: {
-      isDisabled: {
-        options: [true, false],
-        control: {type: 'radio'},
-        default: false,
-      },
-    },
+    title: 'Components/RadioGroup',
+    component: RadioGroup,
     parameters : {
       design: {
         type: "figma",
@@ -21,6 +14,21 @@ export default {
       },
     }
 };
+
+const defaultBtns = [
+  {
+    value: "radio1",
+    label: "Radio button 1",
+    isDisabled: false,
+    isChecked: false
+  },
+  {
+    value: "radio2",
+    label: "Radio button 2",
+    isDisabled: false,
+    isChecked: false
+  },
+]
 
 const Template = (args) => {
   const [_, updateArgs] = useArgs();
@@ -35,22 +43,12 @@ const Template = (args) => {
 
   return (
   <form onChange={handle}>
-    <RadioButton {...args[0]} />
-    <RadioButton {...args[1]} />
+    <RadioGroup groupName="radioGroup" buttons={defaultBtns} />
   </form>
 )};
 
 export const Primary = Template.bind();
-Primary.args = [{
-  id: 0,
-  groupName:"radioGroup",
-  value:"button1",
-  label:"Label 1",
-  isDisabled:false,
-}, {
-  id: 1,
-  groupName:"radioGroup",
-  value:"button2",
-  label:"Label 2",
-  isDisabled:false,
-}]
+Primary.args = {
+  groupName: "radioGroup",
+  buttons: defaultBtns,
+}
