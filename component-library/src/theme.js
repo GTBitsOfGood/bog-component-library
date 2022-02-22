@@ -357,7 +357,7 @@ const button = {
             default: colors.white,
             hover: colors.white,
             focussed: colors.white,
-            disabled: colors.disabled,
+            disabled: colors.white,
         },
     },
     secondary: {

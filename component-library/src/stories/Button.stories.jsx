@@ -17,6 +17,9 @@ export default {
     disabled: {
       control: {type: 'boolean'},
     },
+    children: {
+      control: {type: 'text'}
+    },
     onClick: { action: 'clicked' }
   },
   parameters : {
@@ -27,19 +30,22 @@ export default {
   }
 };
 
-const Template = (args) => <Button {...args}>Button</Button>;
+const Template = (args) => <Button {...args} />
 
 export const Primary = Template.bind({});
 Primary.args = {
   variant: "primary",
+  children: "Button"
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary",
+  children: "Button"
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   variant: "tertiary",
+  children: "Button"
 };
