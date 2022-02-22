@@ -28,25 +28,6 @@ const Dropdown = ({
   //   setSelectedItem(null);
   // };
 
-  /**
-   * formats items into usable objects
-   */
-  // const list = [];
-  // const setup = () => {
-  //   let listTemp = []
-  //   const itemsArray = items.split(", ");
-  //   // console.log(itemsArray);
-  //   itemsArray.forEach((item, i) => {
-  //     listTemp.push({
-  //       id: i,
-  //       name: item,
-  //       selected: false,
-  //     });
-  //   });
-  //   // console.log(list);
-  //   setList(listTemp);
-  // };
-
   const selectSingleItem = (item) => {
     if (selectedItem != null) {
       selectedItem.selected = false;
@@ -130,11 +111,11 @@ const Dropdown = ({
           onClick={() => selectSingleRadioItem(item)}
         >
           <RadioButton
-            role="radioButton"
             radioGroup={"dropdown"}
             label={item.name}
             isChecked={item.selected}
             alt={item.name + "Radio"}
+            role="radio"
           />
         </div>
       );

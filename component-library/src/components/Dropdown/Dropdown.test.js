@@ -17,24 +17,27 @@ describe('Dropdown', () => {
 
   //creating all types of dropdowns
   it('should create a regular dropdown', () => {
-    const { getByText, getAllByRole } = render(<RegularDropdown />)
+    const { getByText, getAllByRole, getByAltText } = render(<RegularDropdown />)
 
     expect(getByText('Placeholder text')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(1)
+    expect(getByAltText('open')).toBeInTheDocument()
   })
 
   it('should create a radio dropdown', () => {
-    const { getByText, getAllByRole } = render(<RadioDropdown />)
+    const { getByText, getAllByRole, getByAltText } = render(<RadioDropdown />)
 
     expect(getByText('Placeholder text')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(1)
+    expect(getByAltText('open')).toBeInTheDocument()
   })
 
   it('should create a checkbox dropdown', () => {
-    const { getByText, getAllByRole } = render(<CheckboxDropdown />)
+    const { getByText, getAllByRole, getByAltText } = render(<CheckboxDropdown />)
 
     expect(getByText('Placeholder text')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(1)
+    expect(getByAltText('open')).toBeInTheDocument()
   })
 
   //opening all types of dropdowns
@@ -57,7 +60,7 @@ describe('Dropdown', () => {
     fireEvent.click(dropdown)
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
-    expect(getAllByRole('radioButton')).toBeInTheDocument()
+    expect(getAllByRole('radio').length).toBe(6)
   })
 
   it('checkbox dropdown should be dropped down after clicking', () => {
@@ -68,7 +71,7 @@ describe('Dropdown', () => {
     fireEvent.click(dropdown)
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
-    expect(getAllByRole('checkbox')).toBeInTheDocument()
+    expect(getAllByRole('checkbox').length).toBe(6)
   })
 
   //opening, selecting, closing all types of dropdowns
@@ -81,8 +84,7 @@ describe('Dropdown', () => {
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(7)
-    expect(getByAltText('SharathButton')).toBeInTheDocument()
-    const sharathButton = getByAltText('SharathButton');
+    const sharathButton = getByText('Sharath');
     fireEvent.click(sharathButton)
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getByAltText('open')).toBeInTheDocument()
@@ -96,9 +98,8 @@ describe('Dropdown', () => {
     fireEvent.click(dropdown)
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
-    expect(getAllByRole('radioButton')).toBeInTheDocument()
-    expect(getByAltText('SharathRadio')).toBeInTheDocument()
-    const sharathRadio = getByAltText('SharathRadio');
+    expect(getAllByRole('radio').length).toBe(6)
+    const sharathRadio = getByText('Sharath');
     fireEvent.click(sharathRadio)
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getByAltText('open')).toBeInTheDocument()
@@ -112,9 +113,8 @@ describe('Dropdown', () => {
     fireEvent.click(dropdown)
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
-    expect(getAllByRole('checkbox')).toBeInTheDocument()
-    expect(getByAltText('SharathCheckbox')).toBeInTheDocument()
-    const SharathCheckbox = getByAltText('SharathCheckbox');
+    expect(getAllByRole('checkbox').length).toBe(6)
+    const SharathCheckbox = getByText('Sharath');
     fireEvent.click(SharathCheckbox)
     fireEvent.click(dropdown)
     expect(getByText('Sharath')).toBeInTheDocument()
@@ -131,15 +131,14 @@ describe('Dropdown', () => {
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(7)
-    expect(getByAltText('SharathButton')).toBeInTheDocument()
-    const sharathButton = getByAltText('SharathButton');
+    // expect(getByAltText('SharathButton')).toBeInTheDocument()
+    const sharathButton = getByText('Sharath');
     fireEvent.click(sharathButton)
     fireEvent.click(dropdown)
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Alyson')).toBeInTheDocument()
     expect(getAllByRole('button').length).toBe(7)
-    expect(getByAltText('AlysonButton')).toBeInTheDocument()
-    const alysonButton = getByAltText('AlysonButton');
+    const alysonButton = getByText('Alyson');
     fireEvent.click(alysonButton)
     expect(getByText('Alyson')).toBeInTheDocument()
     expect(getByText('Sharath')).toNotBeInTheDocument()
