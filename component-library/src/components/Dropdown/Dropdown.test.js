@@ -91,7 +91,7 @@ describe('Dropdown', () => {
   })
 
   it('radio dropdown should show selected item in selection box', () => {
-    const { getByText, getAllByRole, getByAltText } = render(<RadioDropdown />)
+    const { getByText, getAllByRole, getByAltText, getByLabelText } = render(<RadioDropdown />)
 
     const dropdown = getByText('Placeholder text')
     expect(getByAltText('open')).toBeInTheDocument()
@@ -99,7 +99,7 @@ describe('Dropdown', () => {
     expect(getByAltText('close')).toBeInTheDocument()
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getAllByRole('radio').length).toBe(6)
-    const sharathRadio = getByText('Sharath');
+    const sharathRadio = getByLabelText('Sharath');
     fireEvent.click(sharathRadio)
     expect(getByText('Sharath')).toBeInTheDocument()
     expect(getByAltText('open')).toBeInTheDocument()
@@ -128,10 +128,6 @@ describe('Dropdown', () => {
     const dropdown = getByText('Placeholder text')
     expect(getByAltText('open')).toBeInTheDocument()
     fireEvent.click(dropdown)
-    expect(getByAltText('close')).toBeInTheDocument()
-    expect(getByText('Sharath')).toBeInTheDocument()
-    expect(getAllByRole('button').length).toBe(7)
-    // expect(getByAltText('SharathButton')).toBeInTheDocument()
     const sharathButton = getByText('Sharath');
     fireEvent.click(sharathButton)
     fireEvent.click(dropdown)
@@ -141,8 +137,58 @@ describe('Dropdown', () => {
     const alysonButton = getByText('Alyson');
     fireEvent.click(alysonButton)
     expect(getByText('Alyson')).toBeInTheDocument()
-    expect(getByText('Sharath')).toNotBeInTheDocument()
     expect(getByAltText('open')).toBeInTheDocument()
+  })
 
+  it('radio dropdown should show last selected item in selection box', () => {
+    const { getByText, getAllByRole, getByAltText, getByLabelText } = render(<RadioDropdown />)
+
+    const dropdown = getByText('Placeholder text')
+    expect(getByAltText('open')).toBeInTheDocument()
+    fireEvent.click(dropdown)
+    const sharathRadio = getByLabelText('Sharath');
+    fireEvent.click(sharathRadio)
+    fireEvent.click(dropdown)
+    expect(getByAltText('close')).toBeInTheDocument()
+    expect(getByText('Alyson')).toBeInTheDocument()
+    expect(getAllByRole('radio').length).toBe(6)
+    const alysonRadio = getByLabelText('Alyson');
+    fireEvent.click(alysonRadio)
+    expect(getByText('Alyson')).toBeInTheDocument()
+    expect(getByAltText('open')).toBeInTheDocument()
+  })
+
+  it('checkbox dropdown should show all selected item in selection box', () => {
+    const { getByText, getAllByRole, getByAltText} = render(<CheckboxDropdown />)
+    
+    const dropdown = getByText('Placeholder text')
+    expect(getByAltText('open')).toBeInTheDocument()
+    fireEvent.click(dropdown)
+    const SharathCheckbox = getByText('Sharath');
+    fireEvent.click(SharathCheckbox)
+    fireEvent.click(dropdown)
+    fireEvent.click(dropdown)
+    expect(getByText('Alyson')).toBeInTheDocument()
+    expect(getAllByRole('checkbox').length).toBe(6)
+    const alysonCheckbox = getByText('Alyson');
+    fireEvent.click(alysonCheckbox)
+    fireEvent.click(dropdown)
+    expect(getByText('Sharath, Alyson')).toBeInTheDocument()
+    expect(getByAltText('open')).toBeInTheDocument()
+  })
+
+  it('checkbox dropdown should show all consecutively selected item in selection box', () => {
+    const { getByText, getByAltText} = render(<CheckboxDropdown />)
+    
+    const dropdown = getByText('Placeholder text')
+    expect(getByAltText('open')).toBeInTheDocument()
+    fireEvent.click(dropdown)
+    const SharathCheckbox = getByText('Sharath');
+    fireEvent.click(SharathCheckbox)
+    const alysonCheckbox = getByText('Alyson');
+    fireEvent.click(alysonCheckbox)
+    fireEvent.click(dropdown)
+    expect(getByText('Sharath, Alyson')).toBeInTheDocument()
+    expect(getByAltText('open')).toBeInTheDocument()
   })
 })

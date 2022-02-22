@@ -59,7 +59,7 @@ const Dropdown = ({
   };
 
   const selectMultiCheckboxItem = (item) => {
-    console.log(item);
+    // console.log(item);
     let newSelection = selectedItems;
     const findSelectedItem = list.find((i) => i.name === item.name);
     if (findSelectedItem.selected) {
@@ -70,9 +70,9 @@ const Dropdown = ({
     } else {
       findSelectedItem.selected = true;
       newSelection.push(findSelectedItem);
-      console.log("selected");
+      // console.log("selected");
     }
-    console.log(newSelection);
+    // console.log(newSelection);
     setSelectedItems(newSelection);
   };
 
@@ -109,12 +109,13 @@ const Dropdown = ({
           className="storybook-dropdown-list-item-radio"
           key={i}
           onClick={() => selectSingleRadioItem(item)}
+          id={item.name + "Radio"}
         >
           <RadioButton
             radioGroup={"dropdown"}
             label={item.name}
             isChecked={item.selected}
-            alt={item.name + "Radio"}
+            // alt={item.name + "Radio"}
             role="radio"
           />
         </div>
@@ -176,10 +177,8 @@ const Dropdown = ({
     );
   };
 
-  // setup();
   const firstRender = useMemo(() => {
-    console.log("first Render");
-    // setup();
+    // console.log("first Render");
     let listTemp = []
     const itemsArray = items.split(", ");
     // console.log(itemsArray);
