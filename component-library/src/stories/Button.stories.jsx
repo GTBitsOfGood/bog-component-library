@@ -1,4 +1,4 @@
-import Button from '../components/Button/Button';
+import { default as Button } from '../components/Button';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
@@ -6,8 +6,7 @@ export default {
   decorators: [withDesign],
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    size: {
+    type: {
       options: ['large', 'medium', 'small'],
       control: {type: 'select'},
     },
@@ -15,14 +14,7 @@ export default {
       options: ['primary', 'secondary', 'tertiary'],
       control: {type: 'select'},
     },
-    icon: {
-      control: {type: 'element'}
-    },
-    iconPosition: {
-      options: ['left', 'right'],
-      control: {type: 'radio'},
-    },
-    isDisabled: {
+    disabled: {
       control: {type: 'boolean'},
     },
     onClick: { action: 'clicked' }
@@ -35,7 +27,7 @@ export default {
   }
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args}>Button</Button>;
 
 export const Primary = Template.bind({});
 Primary.args = {
