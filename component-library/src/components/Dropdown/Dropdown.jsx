@@ -306,7 +306,7 @@ Dropdown.propTypes = {
 Dropdown.defaultProps = {
   variant: "regular",
   label: "Label",
-  items: "Sharath, Alyson, Lily, Jade, Eric, Marlene",
+  items: "Sharath, Alyson, Lily, Aiden, Jade, Marlene, Lidya, Tawsif, Eric",
   placeholder: "Placeholder text",
   isDisabled: false,
   error: false,
