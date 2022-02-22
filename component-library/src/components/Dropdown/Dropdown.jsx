@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./dropdown.css";
 import Checkbox from "../Checkbox/Checkbox.jsx";
 import RadioButton from "../RadioButton/RadioButton.jsx";
@@ -20,6 +20,7 @@ const Dropdown = ({
 }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [list, setList] = useState([])
   const [isListOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isListOpen);
   const close = () => setIsOpen(false);
@@ -30,25 +31,34 @@ const Dropdown = ({
   /**
    * formats items into usable objects
    */
-  let list = [];
-  const itemsArray = items.split(", ");
-  // console.log(itemsArray);
-  itemsArray.forEach((item, i) => {
-    list.push({
-      id: i ,
-      name: item ,
-      selected: false,
-    });
-  });
-  // console.log(list);
+  // const list = [];
+  // const setup = () => {
+  //   let listTemp = []
+  //   const itemsArray = items.split(", ");
+  //   // console.log(itemsArray);
+  //   itemsArray.forEach((item, i) => {
+  //     listTemp.push({
+  //       id: i,
+  //       name: item,
+  //       selected: false,
+  //     });
+  //   });
+  //   // console.log(list);
+  //   setList(listTemp);
+  // };
 
   const selectSingleItem = (item) => {
     if (selectedItem != null) {
       selectedItem.selected = false;
     }
     let findSelectedItem = list.find((i) => i.name === item.name);
-    findSelectedItem.selected = true;
-    setSelectedItem(findSelectedItem);
+    if (findSelectedItem.selected === true) {
+      findSelectedItem.selected = false;
+      setSelectedItem(null);
+    } else {
+      findSelectedItem.selected = true;
+      setSelectedItem(findSelectedItem);
+    }
     close();
   };
 
@@ -57,13 +67,18 @@ const Dropdown = ({
       selectedItem.selected = false;
     }
     let findSelectedItem = list.find((i) => i.name === item.name);
-    findSelectedItem.selected = true;
-    setSelectedItem(findSelectedItem);
+    if (findSelectedItem.selected === true) {
+      findSelectedItem.selected = false;
+      setSelectedItem(null);
+    } else {
+      findSelectedItem.selected = true;
+      setSelectedItem(findSelectedItem);
+    }
     close();
   };
 
   const selectMultiCheckboxItem = (item) => {
-    // console.log(item);
+    console.log(item);
     let newSelection = selectedItems;
     const findSelectedItem = list.find((i) => i.name === item.name);
     if (findSelectedItem.selected) {
@@ -74,9 +89,9 @@ const Dropdown = ({
     } else {
       findSelectedItem.selected = true;
       newSelection.push(findSelectedItem);
-      // console.log("selected");
+      console.log("selected");
     }
-    // console.log(newSelection);
+    console.log(newSelection);
     setSelectedItems(newSelection);
   };
 
@@ -97,6 +112,7 @@ const Dropdown = ({
           }
           key={i}
           onClick={() => selectSingleItem(item)}
+          alt={item.name + "Button"}
         >
           {item.name}
         </button>
@@ -114,9 +130,11 @@ const Dropdown = ({
           onClick={() => selectSingleRadioItem(item)}
         >
           <RadioButton
+            role="radioButton"
             radioGroup={"dropdown"}
             label={item.name}
             isChecked={item.selected}
+            alt={item.name + "Radio"}
           />
         </div>
       );
@@ -134,10 +152,12 @@ const Dropdown = ({
             key={i}
           >
             <Checkbox
+              role="checkbox"
               label={item.name}
               hasLabel={true}
               onChange={() => selectMultiCheckboxItem(item)}
               checked={item.selected ? item.selected : null}
+              alt={item.name + "Checkbox"}
             />
           </div>
         );
@@ -175,6 +195,24 @@ const Dropdown = ({
     );
   };
 
+  // setup();
+  const firstRender = useMemo(() => {
+    console.log("first Render");
+    // setup();
+    let listTemp = []
+    const itemsArray = items.split(", ");
+    // console.log(itemsArray);
+    itemsArray.forEach((item, i) => {
+      listTemp.push({
+        id: i,
+        name: item,
+        selected: false,
+      });
+    });
+    // console.log(list);
+    setList(listTemp);
+  }, [items]);
+
   return (
     <div
       id="storybook-dropdown"
@@ -185,6 +223,7 @@ const Dropdown = ({
         `storybook-dropdown-wrapper--${variant}`,
       ].join(" ")}
     >
+      {firstRender}
       <label className={"storybook-dropdown-label"}>{label}</label>
       <button
         type="button"
