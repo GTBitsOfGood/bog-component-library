@@ -1,3 +1,5 @@
+import './assets/global.css';
+
 function fontStack(fonts) {
     return fonts.map((font) => (font.includes(' ') ? `"${font}"` : font)).join(', ');
 }
@@ -146,14 +148,14 @@ const letterSpacings = {
 const typography = {
     // Display
     display: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '64px',
         letterSpacing: letterSpacings.negOne,
         lineHeight: '76.8px',
     },
     display2: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.bold,
         fontSize: '56px',
         letterSpacing: letterSpacings.negOne,
@@ -162,28 +164,28 @@ const typography = {
     
     // Heading
     h1: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '40px',
         letterSpacing: letterSpacings.negOne,
         lineHeight: '48px',
     },
     h2: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '32px',
         letterSpacing: letterSpacings.negOne,
         lineHeight: '38px',
     },
     h3: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '24px',
         letterSpacing: letterSpacings.negOne,
         lineHeight: '29px',
     },
     h4: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.bold,
         fontSize: '24px',
         letterSpacing: letterSpacings.negOne,
@@ -215,7 +217,7 @@ const typography = {
     },
 
     capitalized: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '24px',
         letterSpacing: letterSpacings.five,
@@ -223,7 +225,7 @@ const typography = {
         textTransform: 'uppercase',
     },
     capitalizedSmall: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.extrabold,
         fontSize: '8px',
         letterSpacing: letterSpacings.five,
@@ -241,19 +243,19 @@ const typography = {
 
     // Label Text
     largeLabel: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.regular,
         fontSize: '16px',
         lineHeight: '24px',
     },
     mediumLabel: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.regular,
         fontSize: '14px',
         lineHeight: '20px',
     },
     smallLabel: {
-        fontFamily: fonts.primary,
+        fontFamily: fonts.main,
         fontWeight: fontWeights.regular,
         fontSize: '12px',
         lineHeight: '16px',
@@ -261,19 +263,19 @@ const typography = {
 
     // Button
     button: {
-        fontFamily: fonts.primary, 
+        fontFamily: fonts.main, 
         fontWeight: fontWeights.extrabold,
         fontSize: '16px',
         lineHeight: '23px',
     },
     buttonLarge: {
-        fontFamily: fonts.primary, 
+        fontFamily: fonts.main, 
         fontWeight: fontWeights.extrabold,
         fontSize: '18px',
         lineHeight: '25px',
     },
     buttonSmall: {
-        fontFamily: fonts.primary, 
+        fontFamily: fonts.main, 
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
@@ -299,60 +301,99 @@ const button = {
     default: (colorPalette) => ({
         bg: {
             default: colorPalette[500],
-            hover: colorPalette[200],
-            focussed: colorPalette[200],
+            hover: colorPalette[300],
+            focussed: colorPalette[300],
             disabled: colors.disabled
         },
         border: {
-            default: 'transparent',
-            hover: 'transparent',
-            disabled: 'transparent',
+            default: 'none',
+            hover: 'none',
+            focussed: 'none',
+            disabled: 'none',
         },
         fontColor: {
             default: colors.white,
             hover: colors.white,
+            focussed: colors.white,
             disabled: colors.disabled,
-        },
-        shadow: {
-            default: 'none',
-            hover: 'none',
-            disabled: 'none',
         },
         secondary: {
             bg: {
-              default: colors.white,
-              hover: colors.white,
-              disabled: colors.white,
+                default: colors.white,
+                hover: colors.white,
+                focussed: colors.white,
+                disabled: colors.white,
             },
             border: {
-              default: colorPalette[500],
-              hover: colorPalette[200],
-              disabled: colors.disabled,
+                default: `1px solid ${colorPalette[500]}`,
+                hover: `1px solid ${colorPalette[300]}`,
+                focussed: `1px solid ${colorPalette[300]}`,
+                disabled: `1px solid ${colors.disabled}`,
             },
             fontColor: {
-              default: colorPalette.primary,
-              hover: colorPalette.dark,
-              disabled: colors.disabled,
-            },
-            shadow: {
-              default: 'none',
-              hover: 'none',
-              disabled: 'none',
+                default: colorPalette[500],
+                hover: colorPalette[300],
+                focussed: colorPalette[300],
+                disabled: colors.disabled,
             },
         },
         tertiary: {
+            bg: {
+                default: 'transparent',
+                hover: 'transparent',
+                focussed: 'transparent',
+                disabled: 'transparent',
+            },
             fontColor: {
                 default: colorPalette[500],
-                hover: colorPalette[200],
+                hover: colorPalette[300],
+                focussed: colorPalette[300],
                 disabled: colors.disabled,
-            },
-            border: {
-                default: 'none',
-                hover: 'none',
-                disabled: 'none',
             },
         },
     }), 
+    primary: {
+        fontColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.disabled,
+        },
+    },
+    secondary: {
+        bg: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        border: {
+            default: `1px solid ${midnightPalette[500]}`,
+            hover: `1px solid ${midnightPalette[300]}`,
+            focussed: `1px solid ${midnightPalette[300]}`,
+            disabled: `1px solid ${colors.disabled}`,
+        },
+        fontColor: {
+            default: midnightPalette[500],
+            hover: midnightPalette[300],
+            focussed: midnightPalette[300],
+            disabled: colors.disabled,
+        },
+    },
+    tertiary: {
+        bg: {
+            default: 'transparent',
+            hover: 'transparent',
+            focussed: 'transparent',
+            disabled: 'transparent',
+        },
+        fontColor: {
+            default: midnightPalette[500],
+            hover: midnightPalette[300],
+            focussed: midnightPalette[300],
+            disabled: colors.disabled,
+        },
+    },
 }
 
 const theme = {
@@ -362,6 +403,7 @@ const theme = {
     alert,
     button,
     letterSpacings,
+    typography
 };
 
 export default theme;
