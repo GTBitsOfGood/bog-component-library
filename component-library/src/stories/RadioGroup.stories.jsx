@@ -31,7 +31,7 @@ const defaultBtns = [
 ]
 
 const Template = (args) => {
-  const [_, updateArgs] = useArgs();
+  const [_, updateArgs] = useArgs(args);
 
   const handle = (event) => {
     let buttons = args.buttons;
