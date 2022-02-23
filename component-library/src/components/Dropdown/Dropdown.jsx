@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {useState} from "react";
 import './dropdown.css';
 import Checkbox from '../Checkbox/Checkbox.jsx';
-import RadioButton from '../RadioGroup/RadioButton/RadioButton.jsx';
+import RadioButton from '../RadioButton/RadioButton.jsx';
 
 /**
  * Primary UI component for user interaction
