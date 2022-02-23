@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RadioGroup from '../components/RadioGroup/RadioGroup';
+import RadioGroup from '../components/RadioButton/RadioGroup/RadioGroup';
 import { useArgs } from '@storybook/client-api';
 import { withDesign } from 'storybook-addon-designs'
 
@@ -34,16 +34,28 @@ const Template = (args) => {
   const [_, updateArgs] = useArgs();
 
   const handle = (event) => {
-    for (let a = 0; a < args.length; a++){
-      if (a !== event.target.id) args[a].isChecked = false
-      else args[a].isChecked = true
+    let buttons = args.buttons;
+    for (let i = 0; i < buttons.length; i++){
+      let btn = JSON.parse(JSON.stringify(buttons[i])); //deep copy of button object
+      if (i === event.target.id) {
+        if (buttons[i].isDisabled) {
+          return
+        } else {
+          btn.isChecked = true
+        }
+      } else {
+        btn.isChecked = false
+      }
+      buttons[i] = btn
     }
+
+    args.buttons = buttons;
     updateArgs(args);
   };
 
   return (
   <form onChange={handle}>
-    <RadioGroup groupName="radioGroup" buttons={defaultBtns} />
+    <RadioGroup { ...args}/>
   </form>
 )};
 
@@ -51,4 +63,5 @@ export const Primary = Template.bind();
 Primary.args = {
   groupName: "radioGroup",
   buttons: defaultBtns,
+  defaultSelection: -1,
 }
