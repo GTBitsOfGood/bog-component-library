@@ -31,28 +31,6 @@ const defaultBtns = [
 ]
 
 const Template = (args) => {
-  // const [_, updateArgs] = useArgs(args);
-
-  // const handle = (event) => {
-  //   let buttons = args.buttons;
-  //   for (let i = 0; i < buttons.length; i++){
-  //     let btn = JSON.parse(JSON.stringify(buttons[i])); //deep copy of button object
-  //     if (i === event.target.id) {
-  //       if (buttons[i].isDisabled) {
-  //         return
-  //       } else {
-  //         btn.isChecked = true
-  //       }
-  //     } else {
-  //       btn.isChecked = false
-  //     }
-  //     buttons[i] = btn
-  //   }
-
-  //   args.buttons = buttons;
-  //   updateArgs(args);
-  // };
-
   return (
   <form>
     <RadioGroup { ...args}/>

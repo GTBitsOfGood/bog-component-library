@@ -16,8 +16,6 @@ describe('RadioGroup', () => {
 
     it('should create a radio group', () => {
         const { getByRole } = render( < Primary / > )
-        const radioButton = getByRole('RadioButton');
-        expect(radioButton).toBeInTheDocument();
         const input = getByRole('input');
         expect(input).toBeInTheDocument();
     })
