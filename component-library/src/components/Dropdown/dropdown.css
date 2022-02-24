@@ -51,6 +51,7 @@ src: url('../../assets/Fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype'
 .storybook-dropdown-wrapper button:disabled{
     background-color: rgba(250, 251, 252, 1);
     color: rgba(217, 217, 217, 1);
+    cursor: default;
 }
 
 .storybook-dropdown-wrapper button:disabled:hover{
