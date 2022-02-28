@@ -54,7 +54,7 @@ const ButtonBase = styled.button`
 
 
 const Button = ({ 
-  className, onClick, variant, theme: propTheme, ...props 
+  className, onClick, variant, testId, theme: propTheme, ...props 
 }) => {
   
   const colorVariants = propTheme.colors.variants;
@@ -98,6 +98,7 @@ const Button = ({
       onClick={onClick}
       theme={theme}
       variant={variant}
+      data-testid={testId}
       {...props}
     />
   );
