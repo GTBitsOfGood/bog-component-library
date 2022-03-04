@@ -1,26 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { variant as styledVariant } from "styled-system";
 import theme from "../../theme";
 import { lodashGet } from "../../utils";
 import { COMMON } from "../../constants";
+import { Tooltip } from "../Tooltip/Tooltip";
 
 const SliderBase = styled.div`
-  input[type="range"] {
+  .slider {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  .slider-parent {
+      position: relative;
+  }
+  
+  .tooltip-container {
+      position: absolute;
+  }
+
+  .slider::-webkit-slider-thumb:hover + tooltip-container {
+      transform:translateX(-50%);
+      display: block;
+      border-radius: 20px;
+  }
+
+  .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
   }
 
-  input[type="range"]:focus {
+  .slider:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
 
-  input[type="range"]::-ms-track {
+  .slider::-ms-track {
     width: 100%;
     cursor: pointer;
 
@@ -30,7 +45,8 @@ const SliderBase = styled.div`
     color: transparent;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+
+  .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 2px solid #473f91;
     height: 24px;
@@ -42,7 +58,12 @@ const SliderBase = styled.div`
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  .slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 5px 5px #B0A9F5;
+
+  }
+
+  .slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 4px;
     cursor: pointer;
@@ -69,22 +90,34 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
   const [value, setValue] = useState(definedValue);
 
   const onChange = (e) => setValue(e.target.value);
+      
 
   return (
     <SliderBase>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        value={value}
-        className="slider"
-        onChange={onChange}
-      />
-      <div className="information">
-        <div className="minimum">{min}</div>
-        <div className="value">{value}</div>
-        <div className="maximum">{max}</div>
-      </div>
+        <div className="slider-parent">
+            <input
+                type="range"
+                min={min}
+                max={max}
+                value={value}
+                className="slider"
+                onChange={onChange}
+            />
+
+            <Tooltip text={value} arrowDirection="top" />   
+
+            
+            
+        </div>
+      
+
+      
+
+        <div className="information">
+            <div className="minimum">{min}</div>
+            <div className="value">{value}</div>
+            <div className="maximum">{max}</div>
+        </div>
     </SliderBase>
   );
 };
