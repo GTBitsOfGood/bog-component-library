@@ -16,6 +16,10 @@ const SliderBase = styled.div`
   .slider-parent {
       position: relative;
   }
+
+  .slider::-webkit-slider-thumb:active + .slider::-webkit-slider-thumb:hover {
+      background: transparent;
+  }
   
   .tooltip-container {
       position: absolute;
@@ -90,6 +94,14 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
   const [value, setValue] = useState(definedValue);
 
   const onChange = (e) => setValue(e.target.value);
+
+  useEffect(() => {
+      const element = document.querySelector('.slider');
+      const parent = document.querySelector('.slider-parent');
+      const tooltip = document.querySelector('.tooltip-container');
+    //   let stl = window.getComputedStyle(element, ":-webkit-slider-thumb:")
+      tooltip.style.left = (element.value / max * 100) + "%"; // get pixel width
+  })
       
 
   return (
@@ -103,7 +115,7 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
                 className="slider"
                 onChange={onChange}
             />
-
+        
             <Tooltip text={value} arrowDirection="top" />   
 
             
