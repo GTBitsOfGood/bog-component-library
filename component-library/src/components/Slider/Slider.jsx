@@ -11,6 +11,7 @@ const SliderBase = styled.div`
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
+    --webkitProgressPercent: 0%;
   }
 
   .slider-parent {
@@ -67,11 +68,12 @@ const SliderBase = styled.div`
 
   }
 
+  // #473f91
   .slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 4px;
     cursor: pointer;
-    background: #473f91;
+    background-image: linear-gradient(to right, #473f91 ${(props) => props.value / props.max * 100}%, rgba(71, 63, 145, .38) ${(props) => props.value / props.max * 100}%);
     top: 10px;
   }
   
@@ -99,13 +101,21 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
       const element = document.querySelector('.slider');
       const parent = document.querySelector('.slider-parent');
       const tooltip = document.querySelector('.tooltip-container');
-    //   let stl = window.getComputedStyle(element, ":-webkit-slider-thumb:")
+      let stl = window.getComputedStyle(element, "::-webkit-slider-runnable-track");
       tooltip.style.left = (element.value / max * 100) + "%"; // get pixel width
   })
+
+
+//   slider.style.background = `linear-gradient(to right, red 0%, red ${(value-min)/(max-min)*100}%, #DEE2E6 ${(value-min)/(max-min)*100}%, #DEE2E6 100%)`
+
+// slider.oninput = function() {
+//   this.style.background = `linear-gradient(to right, red 0%, red
+//     ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 
+//     ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 100%)`
       
 
   return (
-    <SliderBase>
+    <SliderBase value={value} max={max}>
         <div className="slider-parent">
             <input
                 type="range"
@@ -117,9 +127,6 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
             />
         
             <Tooltip text={value} arrowDirection="top" />   
-
-            
-            
         </div>
       
 
@@ -133,3 +140,5 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
     </SliderBase>
   );
 };
+
+// sm
