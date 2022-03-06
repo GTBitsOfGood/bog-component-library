@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Input from '../components/Input/Input';
-import { withDesign } from 'storybook-addon-designs'
+// import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Components/Input',
@@ -9,22 +9,18 @@ export default {
   argTypes: {
     variant: {
       options: ['regular', 'leftIcon', 'rightIcon', 'doubleIcon', 'textArea'],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
     },
     isDisabled: {
       options: [true, false],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
     },
-    error: {
-        options: [true, false],
-        control: {type: 'radio'},
+    hasBottomText: {
+      options: ['default', 'success', 'error'],
+      control: { type: 'select' },
     },
-    success: {
-        options: [true, false],
-        control: {type: 'radio'},
-      }
   },
-  parameters : {
+  parameters: {
     design: {
       type: "figma",
       url: "https://www.figma.com/file/DEfDgRT4G9732YxrqTqq8V/BoG-Design-System-(Working-File)?node-id=897%3A6012"
@@ -34,8 +30,8 @@ export default {
 
 const Template = (args) => <Input {...args} />;
 
-export const Regular = Template.bind({});
-Regular.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   variant: "regular",
   label: 'Input',
 };
