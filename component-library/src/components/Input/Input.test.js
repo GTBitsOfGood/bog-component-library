@@ -6,3 +6,18 @@ import {
 } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 import * as stories from '../../stories/Input.stories';
+
+
+describe('Input', () => {
+    afterEach(() => {
+      cleanup()
+    })
+
+    const { Primary } = composeStories(stories)
+  
+    it('should create an input', () => {
+      const { queryByText } = render(<Primary />)
+  
+      expect(queryByText('Input')).toBeInTheDocument()
+    })
+  })
