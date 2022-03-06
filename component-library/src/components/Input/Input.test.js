@@ -7,7 +7,6 @@ import {
 import { composeStories } from '@storybook/testing-react';
 import * as stories from '../../stories/Input.stories';
 
-
 describe('Input', () => {
     afterEach(() => {
       cleanup()
@@ -16,8 +15,10 @@ describe('Input', () => {
     const { Primary } = composeStories(stories)
   
     it('should create an input', () => {
-      const { queryByText } = render(<Primary />)
-  
-      expect(queryByText('Input')).toBeInTheDocument()
+      const { getByRole } = render(<Primary />)
+      const input = getByRole('textbox');
+      expect(input).toBeInTheDocument();
     })
   })
+
+  

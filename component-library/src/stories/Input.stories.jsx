@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Input from '../components/Input/Input';
-import { withDesign } from 'storybook-addon-designs'
+// import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Components/Input',
@@ -30,8 +30,8 @@ export default {
 
 const Template = (args) => <Input {...args} />;
 
-export const Regular = Template.bind({});
-Regular.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   variant: "regular",
   label: 'Input',
 };
