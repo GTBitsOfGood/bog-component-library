@@ -6,7 +6,7 @@ import theme from '../../theme';
 import { lodashGet } from '../../utils';
 import { COMMON } from '../../constants';
 
-const ButtonBase = styled.button`
+const AvatarBase = styled.avatar`
   // Pointer
   cursor: pointer;
 
@@ -20,7 +20,7 @@ const ButtonBase = styled.button`
   // Size & Typography
   ${styledVariant({
     prop: 'type',
-    scale: 'button.sizingAndTypography',
+    scale: 'avatar.sizingAndTypography',
   })}
 
   // Display
@@ -52,34 +52,34 @@ const ButtonBase = styled.button`
   ${COMMON};
 `
 
-const Button = ({ 
+const Avatar = ({ 
   className, onClick, variant, theme: propTheme, ...props 
 }) => {
   
   const colorVariants = propTheme.colors.variants;
-  const buttonColorPalette = colorVariants[variant];
-  const buttonTheme = propTheme.button[variant];
-  const buttonDefaultTheme = propTheme.button.default(buttonColorPalette);
+  const avatarColorPalette = colorVariants[variant];
+  const avatarTheme = propTheme.avatar[variant];
+  const avatarDefaultTheme = propTheme.avatar.default(avatarColorPalette);
 
   let background = {
-    default: lodashGet(buttonTheme, 'bg.default', buttonDefaultTheme.bg.default),
-    hover: lodashGet(buttonTheme, 'bg.hover', buttonDefaultTheme.bg.hover),
-    focussed: lodashGet(buttonTheme, 'bg.focussed', buttonDefaultTheme.bg.focussed),
-    disabled: lodashGet(buttonTheme, 'bg.disabled', buttonDefaultTheme.bg.disabled),
+    default: lodashGet(avatarTheme, 'bg.default', avatarDefaultTheme.bg.default),
+    hover: lodashGet(avatarTheme, 'bg.hover', avatarDefaultTheme.bg.hover),
+    focussed: lodashGet(avatarTheme, 'bg.focussed', avatarDefaultTheme.bg.focussed),
+    disabled: lodashGet(avatarTheme, 'bg.disabled', avatarDefaultTheme.bg.disabled),
   };
 
   let border = {
-    default: lodashGet(buttonTheme, 'border.default', buttonDefaultTheme.border.default),
-    hover: lodashGet(buttonTheme, 'border.hover', buttonDefaultTheme.border.hover),
-    focussed: lodashGet(buttonTheme, 'border.focussed', buttonDefaultTheme.border.focussed),
-    disabled: lodashGet(buttonTheme, 'border.disabled', buttonDefaultTheme.border.disabled),
+    default: lodashGet(avatarTheme, 'border.default', avatarDefaultTheme.border.default),
+    hover: lodashGet(avatarTheme, 'border.hover', avatarDefaultTheme.border.hover),
+    focussed: lodashGet(avatarTheme, 'border.focussed', avatarDefaultTheme.border.focussed),
+    disabled: lodashGet(avatarTheme, 'border.disabled', avatarDefaultTheme.border.disabled),
   };
 
   let fontColor = {
-    default: lodashGet(buttonTheme, 'fontColor.default', buttonDefaultTheme.fontColor.default),
-    hover: lodashGet(buttonTheme, 'fontColor.hover', buttonDefaultTheme.fontColor.hover),
-    focussed: lodashGet(buttonTheme, 'fontColor.focussed', buttonDefaultTheme.fontColor.focussed),
-    disabled: lodashGet(buttonTheme, 'fontColor.disabled', buttonDefaultTheme.fontColor.disabled),
+    default: lodashGet(avatarTheme, 'fontColor.default', avatarDefaultTheme.fontColor.default),
+    hover: lodashGet(avatarTheme, 'fontColor.hover', avatarDefaultTheme.fontColor.hover),
+    focussed: lodashGet(avatarTheme, 'fontColor.focussed', avatarDefaultTheme.fontColor.focussed),
+    disabled: lodashGet(avatarTheme, 'fontColor.disabled', avatarDefaultTheme.fontColor.disabled),
   };
 
   console.log(propTheme)
@@ -91,7 +91,7 @@ const Button = ({
   }
 
   return (
-    <ButtonBase
+    <AvatarBase
       {...styling}
       className={className}
       onClick={onClick}
@@ -102,7 +102,7 @@ const Button = ({
   );
 };
 
-Button.propTypes = {
+Avatar.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.node,
@@ -113,10 +113,10 @@ Button.propTypes = {
   ...COMMON.propTypes,
 };
 
-Button.defaultProps = {
+Avatar.defaultProps = {
   variant: 'primary',
   type: 'medium',
   theme,
 };
 
-export default Button;
+export default Avatar;

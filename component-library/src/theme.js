@@ -396,12 +396,17 @@ const button = {
     },
 }
 
+const avatar = {
+    //lol put some code here
+}
+
 const theme = {
     colors,
     fonts,
     fontWeights,
     alert,
     button,
+    avatar,
     letterSpacings,
     typography
 };
