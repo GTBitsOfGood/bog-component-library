@@ -44,6 +44,10 @@ const SliderBase = styled.div`
     border-color: transparent;
     color: transparent;
   }
+  
+  .value-input {
+      background: pink;
+  }
 
 
   .slider::-webkit-slider-thumb {
@@ -109,7 +113,7 @@ export const Slider = ({ min, max, definedValue, width, ...props }) => {
             <Tooltip className=".tooltip" arrowDirection="top" />   
         </div>
       
-
+        <input type="text" name="name" className="value-input" value={value} onChange={(e) => setValue(e.target.value)} />
       
 
         <div className="information">
