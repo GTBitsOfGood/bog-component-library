@@ -9,7 +9,7 @@ export default {
   argTypes: {
     variant: {
       options: ['regular', 'radio', 'checkbox'],
-      control: {type: 'radio'},
+      control: {type: 'select'},
     },
     isDisabled: {
       options: [true, false],
@@ -18,7 +18,7 @@ export default {
     error: {
         options: [true, false],
         control: {type: 'radio'},
-    },
+    }
   },
   parameters : {
     design: {
@@ -30,8 +30,20 @@ export default {
 
 const Template = (args) => <Dropdown {...args} />;
 
-export const Regular = Template.bind({});
-Regular.args = {
+export const RegularDropdown = Template.bind({});
+RegularDropdown.args = {
   variant: "regular",
+  label: 'Dropdown',
+};
+
+export const RadioDropdown = Template.bind({});
+RadioDropdown.args = {
+  variant: "radio",
+  label: 'Dropdown',
+};
+
+export const CheckboxDropdown = Template.bind({});
+CheckboxDropdown.args = {
+  variant: "checkbox",
   label: 'Dropdown',
 };
