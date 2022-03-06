@@ -14,16 +14,14 @@ const SliderBase = styled.div`
     --webkitProgressPercent: 0%;
   }
 
-  .slider-parent {
-      position: relative;
-  }
 
   .slider::-webkit-slider-thumb:active + .slider::-webkit-slider-thumb:hover {
       background: transparent;
   }
   
   .tooltip-container {
-      position: absolute;
+      --tooltip-position: calc(${(props) => props.value / props.max * 100}% + ${(props) => 8 - (props.value / props.max * 100) * 0.37}px);
+      left: var(--tooltip-position);
   }
 
   .slider::-webkit-slider-thumb:hover + tooltip-container {
@@ -97,22 +95,7 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
 
   const onChange = (e) => setValue(e.target.value);
 
-  useEffect(() => {
-      const element = document.querySelector('.slider');
-      const parent = document.querySelector('.slider-parent');
-      const tooltip = document.querySelector('.tooltip-container');
-      let stl = window.getComputedStyle(element, "::-webkit-slider-runnable-track");
-      tooltip.style.left = (element.value / max * 100) + "%"; // get pixel width
-  })
 
-
-//   slider.style.background = `linear-gradient(to right, red 0%, red ${(value-min)/(max-min)*100}%, #DEE2E6 ${(value-min)/(max-min)*100}%, #DEE2E6 100%)`
-
-// slider.oninput = function() {
-//   this.style.background = `linear-gradient(to right, red 0%, red
-//     ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 
-//     ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 100%)`
-      
 
   return (
     <SliderBase value={value} max={max}>
@@ -126,7 +109,7 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
                 onChange={onChange}
             />
         
-            <Tooltip text={value} arrowDirection="top" />   
+            <Tooltip arrowDirection="top" />   
         </div>
       
 
