@@ -9,26 +9,23 @@ import { Tooltip } from "../Tooltip/Tooltip";
 const SliderBase = styled.div`
   .slider {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
+    width: ${(props) => props.width}%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
     --webkitProgressPercent: 0%;
-  }
-
-
-  .slider::-webkit-slider-thumb:active + .slider::-webkit-slider-thumb:hover {
-      background: transparent;
+    
   }
   
   .tooltip-container {
       --tooltip-position: calc(${(props) => props.value / props.max * 100}% + ${(props) => 8 - (props.value / props.max * 100) * 0.37}px);
       left: var(--tooltip-position);
+      display: none;
   }
 
-  .slider::-webkit-slider-thumb:hover + tooltip-container {
-      transform:translateX(-50%);
-      display: block;
-      border-radius: 20px;
-  }
+
+  .slider::-webkit-slider-thumb:hover + .tooltip-container {
+    display: block;
+    }
+
 
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -68,7 +65,7 @@ const SliderBase = styled.div`
 
   // #473f91
   .slider::-webkit-slider-runnable-track {
-    width: 100%;
+    width: ${(props) => props.width}%;
     height: 4px;
     cursor: pointer;
     background-image: linear-gradient(to right, #473f91 ${(props) => props.value / props.max * 100}%, rgba(71, 63, 145, .38) ${(props) => props.value / props.max * 100}%);
@@ -90,7 +87,7 @@ const SliderBase = styled.div`
 
 // how to define width and height?
 // we have themes for the colours
-export const Slider = ({ min, max, definedValue, ...props }) => {
+export const Slider = ({ min, max, definedValue, width, ...props }) => {
   const [value, setValue] = useState(definedValue);
 
   const onChange = (e) => setValue(e.target.value);
@@ -98,7 +95,7 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
 
 
   return (
-    <SliderBase value={value} max={max}>
+    <SliderBase value={value} max={max} width={width}>
         <div className="slider-parent">
             <input
                 type="range"
@@ -109,7 +106,7 @@ export const Slider = ({ min, max, definedValue, ...props }) => {
                 onChange={onChange}
             />
         
-            <Tooltip arrowDirection="top" />   
+            <Tooltip className=".tooltip" arrowDirection="top" />   
         </div>
       
 

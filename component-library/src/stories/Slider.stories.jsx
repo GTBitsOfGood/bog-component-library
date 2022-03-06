@@ -18,5 +18,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     min: 0,
     max: 255,
-    startingValue: 100
+    startingValue: 100,
+    width: 100
 }
