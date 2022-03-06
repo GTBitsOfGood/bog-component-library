@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Checkbox from '../components/Checkbox/Checkbox';
+import { default as Checkbox } from '../components/Checkbox';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
     title: 'Components/Checkbox',
     component: Checkbox,
     argTypes: {
-        label: {
+        children: {
             type: { 
               summary: 'string', 
               detail: 'checkbox label' 
