@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components';
-import { variant as styledVariant } from 'styled-system';
 import theme from '../../theme';
-import { get } from '../../utils/utils';
-import { COMMON } from '../../utils/constants';
+import { lodashGet, get } from '../../utils';
+import { COMMON } from '../../constants';
 
 const verticalStyle = css`
   display: block;
@@ -22,12 +21,23 @@ const LabelBase = styled.label`
   ${(props) => props.vertical && verticalStyle}
 
   & input:checked ~ span {
-    ${styledVariant({
-      prop: 'error',
-      scale: 'checkbox.checked',
-    })};
-    border-radius: 3px;
-    display: block;s
+    ${get('checkbox.checked')}
+    display: block;
+  }
+
+  & input:indeterminate ~ span {
+    ${get('checkbox.indeterminate')}
+    display: block;
+  }
+
+  & input:hover ~ span {
+    ${get('checkbox.hover')}
+    display: block;
+  }
+
+  & input:disabled ~ span {
+    ${get('checkbox.disabled')}
+    display: block;
   }
 
   & input:checked ~ span svg {
@@ -69,67 +79,65 @@ const CheckboxBase = styled.span`
   }
 `;
 
-const StyledSVG = styled.svg`
-  &[disabled] {
-    stroke: ${get('colors.lightGrey')};
-  }
-`
-
 const Checkbox = ({
   checked,
   children,
   defaultChecked,
   disabled,
   id,
-  intermediate,
+  indeterminate,
   name,
   onChange,
   theme: propTheme,
   value,
   vertical,
   ...props
-}) => (
-  <LabelBase
-    htmlFor={id}
-    disabled={disabled}
-    theme={propTheme}
-    vertical={vertical}
-    {...props}
-  >
-    {children}
-    <InputBase
-      checked={checked}
-      defaultChecked={defaultChecked}
+}) => {
+    const checkmarkColor = disabled ? lodashGet(theme, 'colors.disabled', '#FAFBFC') : lodashGet(theme, 'colors.white', '#FFFFFF')
+  return (
+    <LabelBase
+      htmlFor={id}
       disabled={disabled}
-      id={id}
-      name={name}
-      onChange={onChange}
-      type="checkbox"
-      value={value}
-    />
-    <CheckboxBase disabled={disabled} theme={propTheme} vertical={vertical}>
-      {intermediate ? 
-        <svg width="11" height="3" viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path 
-            d="M1.5 1.56165H9.5" 
-            stroke="white"
-            stroke-width="1.5" 
-            stroke-linecap="round"
-          />
-        </svg> : 
-       <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path 
-            d="M1 3.81165L4.5 7.31165L11 0.811646" 
-            stroke="white" 
-            stroke-width="1.5" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"
-          />
-       </svg>
-      }
-    </CheckboxBase>
-  </LabelBase>
-);
+      theme={propTheme}
+      vertical={vertical}
+      {...props}
+    >
+      {children}
+      <InputBase
+        checked={checked}
+        defaultChecked={defaultChecked || indeterminate}
+        disabled={disabled}
+        id={id}
+        indeterminate={indeterminate}
+        name={name}
+        onChange={onChange}
+        type="checkbox"
+        value={value}
+      />
+      <CheckboxBase disabled={disabled} theme={propTheme} vertical={vertical}>
+        {indeterminate ? 
+          <svg width="11" height="3" viewBox="0 0 10.5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path 
+              d="M1.5 1.56165H9.5" 
+              strokeWidth="1.5" 
+              strokeLinecap="round"
+              stroke={checkmarkColor}
+            />
+          </svg> : 
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path 
+                d="M1 3.81165L4.5 7.31165L11 0.811646" 
+                strokeWidth="1.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+                stroke={checkmarkColor}
+              />
+          </svg>
+        }
+      </CheckboxBase>
+    </LabelBase>
+  )
+};
 
 Checkbox.defaultProps = { theme };
 
@@ -139,6 +147,7 @@ Checkbox.propTypes = {
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  indeterminate: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
   theme: PropTypes.object,

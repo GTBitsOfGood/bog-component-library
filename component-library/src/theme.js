@@ -407,17 +407,16 @@ const button = {
 const checkbox = {
     border: `1px solid ${colors.lightPalette[500]}`,
     borderRadius: '4px',
-    hover: {
-        background: `${colors.lightGray}`,
-        border: `1px solid ${colors.midnightPalette[300]}`,
+    checked: {
+        background: `${colors.midnightPalette[500]}`,
+        border: `1px solid ${colors.midnightPalette[500]}`,
     },
     disabled: {
         background: `${colors.lightGray}`,
         border: `1px solid ${colors.lightPalette[500]}`,
     },
-    checked: {
-        background: `${colors.midnightPalette[500]}`,
-        border: `1px solid ${colors.midnightPalette[500]}`,
+    hover: {
+        border: `1px solid ${colors.midnightPalette[300]}`,
     },
 };
 
