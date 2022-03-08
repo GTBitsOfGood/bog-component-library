@@ -93,6 +93,7 @@ const colors = {
     black: '#000000',
     disabled: '#CCCCCC',
     white: '#FFFFFF',
+    lightGray: '#FAFBFC',
     bluePalette,
     darkPalette,
     greenPalette,
@@ -143,7 +144,6 @@ const letterSpacings = {
     negOne: '-0.01em',
     negTwo: '-0.02em',
 };
-
   
 const typography = {
     // Display
@@ -279,7 +279,15 @@ const typography = {
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
-    }
+    },
+
+    // Checkbox
+    checkbox: {
+        fontFamily: fonts.secondary,
+        fontWeight: fontWeights.regular,
+        fontSize: '16px',
+        lineHeight: '24px',
+    },
 };
 
 const button = {
@@ -396,12 +404,28 @@ const button = {
     },
 }
 
+const checkbox = {
+    border: `1px solid ${colors.lightPalette[500]}`,
+    borderRadius: '4px',
+    checked: {
+        background: `${colors.midnightPalette[500]}`,
+        border: `1px solid ${colors.midnightPalette[500]}`,
+    },
+    disabled: {
+        background: `${colors.lightGray}`,
+        border: `1px solid ${colors.lightPalette[500]}`,
+    },
+    hover: {
+        border: `1px solid ${colors.midnightPalette[300]}`,
+    },
+};
+
 const theme = {
     colors,
     fonts,
     fontWeights,
-    alert,
     button,
+    checkbox,
     letterSpacings,
     typography
 };

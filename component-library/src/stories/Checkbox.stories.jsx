@@ -1,19 +1,19 @@
 import React from 'react';
 
-import Checkbox from '../components/Checkbox/Checkbox';
+import { default as Checkbox } from '../components/Checkbox';
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
     title: 'Components/Checkbox',
     component: Checkbox,
     argTypes: {
-        label: {
-            type: { 
-              summary: 'string', 
-              detail: 'checkbox label' 
-            }
-          },
-        },
+      children: {
+        control: {type: 'text'}
+      },
+      indeterminate: {
+        control: {type: 'boolean'}
+      }
+    },
     parameters : {
       design: {
         type: "figma",
@@ -22,7 +22,7 @@ export default {
     }
 };
 
-const Template = (args) => <Checkbox{...args} />;
+const Template = (args) => <Checkbox {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};
