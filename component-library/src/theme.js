@@ -64,7 +64,6 @@ const bluePalette = {
     700: secondaryColors.blue[4],
 };
 
-
 const typographyColors = {
     light: ['#FFFFFF', '#F2F2F2', '#E5E5E5', '#D9D9D9', '#CCCCCC'],
     dark: ['#BFBFBF', '#8C8C8C', '#666666', '#3F3F3F', '#000000']
@@ -397,7 +396,83 @@ const button = {
 }
 
 const avatar = {
-    //lol put some code here
+    // sizingAndTypography: {
+    //     small: {
+    //       ...typography.avatarSmall,
+    //       padding: '6.5px 11px',
+    //     },
+    //     medium: {
+    //       ...typography.avatar,
+    //       padding: '6.5px 13px',
+    //     },
+    //     large: {
+    //       ...typography.avatarLarge,
+    //       padding: '7.5px 16px',
+    //     },
+    // },
+
+    // default: (colorPalette) => ({
+    //     bg: {
+    //         default: colorPalette[500],
+    //         hover: colorPalette[300],
+    //         focussed: colorPalette[300],
+    //         disabled: colors.disabled
+    //     },
+    //     border: {
+    //         default: 'none',
+    //         hover: 'none',
+    //         focussed: 'none',
+    //         disabled: 'none',
+    //     },
+    //     fontColor: {
+    //         default: colors.white,
+    //         hover: colors.white,
+    //         focussed: colors.white,
+    //         disabled: colors.disabled,
+    //     },
+    //     secondary: {
+    //         bg: {
+    //             default: colors.white,
+    //             hover: colors.white,
+    //             focussed: colors.white,
+    //             disabled: colors.white,
+    //         },
+    //         border: {
+    //             default: `1px solid ${colorPalette[500]}`,
+    //             hover: `1px solid ${colorPalette[300]}`,
+    //             focussed: `1px solid ${colorPalette[300]}`,
+    //             disabled: `1px solid ${colors.disabled}`,
+    //         },
+    //         fontColor: {
+    //             default: colorPalette[500],
+    //             hover: colorPalette[300],
+    //             focussed: colorPalette[300],
+    //             disabled: colors.disabled,
+    //         },
+    //     },
+    //     tertiary: {
+    //         bg: {
+    //             default: 'transparent',
+    //             hover: 'transparent',
+    //             focussed: 'transparent',
+    //             disabled: 'transparent',
+    //         },
+    //         fontColor: {
+    //             default: colorPalette[500],
+    //             hover: colorPalette[300],
+    //             focussed: colorPalette[300],
+    //             disabled: colors.disabled,
+    //         },
+    //     },
+    // }), 
+    // primary: {
+    //     fontColor: {
+    //         default: colors.white,
+    //         hover: colors.white,
+    //         focussed: colors.white,
+    //         disabled: colors.white,
+    //     },
+    // },
 }
 
 const theme = {
