@@ -1,8 +1,8 @@
-import TextDescription from './TextDescription';
-import ConponentButton from './ComponentButton';
-import FigmaButton from './FigmaButton';
-import GithubButton from './GithubButton';
-import StorybookButton from './StorybookButton';
+import TextDescription from '../components/TextDescription';
+import ComponentButton from '../components/ComponentButton';
+import FigmaButton from '../components/FigmaButton';
+import GithubButton from '../components/GithubButton';
+import StorybookButton from '../components/StorybookButton';
 import '../css/Home.css';
 import useImage from '../imageRendering/ImageContext';
 
@@ -19,7 +19,7 @@ function Home(props) {
             <TextDescription heading="Get Started"/>
             <div className="button-container">
                 <div>
-                  <ConponentButton handle={props.handle}/>
+                  <ComponentButton/>
                   <GithubButton/>
                 </div>
                 <div>

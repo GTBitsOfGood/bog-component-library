@@ -1,12 +1,17 @@
 import { useEffect, useState} from 'react';
-import Home from './components/Home';
-import LibraryComponents from './components/LibraryComponents';
+import Home from './routes/Home';
+import LibraryComponents from './routes/LibraryComponents';
 import ClipLoader from 'react-spinners/ClipLoader';
 import fetchContentfulAPI from './imageRendering/imageRendering';
 import useImage from "./imageRendering/ImageContext";
+import {
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 
 function App() {
-  const [isHome, setIsHome] = useState(true);
+
   const [isLoading, setIsLoading] = useState(true);
   const {imageURLS, setImageURLS} = useImage(); 
 
@@ -22,8 +27,11 @@ function App() {
       {isLoading ? <ClipLoader isLoading={isLoading} />
         :
         <>
-        {isHome && <Home handle={setIsHome}/>}
-        {!isHome && <LibraryComponents handle={setIsHome}/>}
+          <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/library-components" element={<LibraryComponents/>} />
+          </Routes>
+          
         </>
       }
     </>

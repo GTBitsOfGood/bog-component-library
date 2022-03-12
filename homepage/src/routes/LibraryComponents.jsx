@@ -1,7 +1,7 @@
-import LibraryDrawer from './LibraryDrawer.jsx';
-import Card from './Card.jsx';
-import TextDescription from './TextDescription.jsx';
-import FigmaButton from './FigmaButton';
+import LibraryDrawer from '../components/LibraryDrawer.jsx';
+import Card from '../components/Card.jsx';
+import TextDescription from '../components/TextDescription.jsx';
+import FigmaButton from '../components/FigmaButton';
 import '../css/LibraryComponents.css';
 import useImage from '../imageRendering/ImageContext';
 

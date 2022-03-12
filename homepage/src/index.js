@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ImageProvider} from './imageRendering/ImageContext';
+import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ImageProvider>
-      <App />
-    </ImageProvider>
+    <BrowserRouter>
+      <ImageProvider>
+        <App />
+      </ImageProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
