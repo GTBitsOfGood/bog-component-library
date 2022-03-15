@@ -5,7 +5,7 @@ import GithubButton from '../components/GithubButton';
 import StorybookButton from '../components/StorybookButton';
 import '../css/Home.css';
 import useImage from '../imageRendering/ImageContext';
-import {Link} from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 function Home(props) {
   const {imageURLS} = useImage();
@@ -13,21 +13,7 @@ function Home(props) {
   return (
      
     <div className="home-container">
-      <div className="nav-bar">
-        
-        <div className="nav-image">
-          <img src={imageURLS["MAIN_LOGO"]} alt="homepage_main_image"/>
-        </div>
-      
-        {/* Need custom component + react routes for these links */}
-        <div className="link-container">
-          <Link to="/library-components">Components</Link>
-          <Link to="/foundations">Foundations</Link>
-          <Link to="/design-patterns">Design Paterns</Link>
-          <Link to="/support">Support</Link>
-        </div>
-       
-      </div>
+      <NavBar className="nav-bar" />
       <div className="content-container">
         {/* Gets the image from the github and displays it on the component */}
         <img src={imageURLS["HOMEPAGE_MAIN"]} alt="homepage_main_image"/>

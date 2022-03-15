@@ -1,7 +1,6 @@
 import { useEffect, useState} from 'react';
 import Home from './routes/Home';
-import HomeNew from './routes/HomeNew'
-import LibraryComponents from './routes/LibraryComponents';
+import DesignPatterns from './routes/DesignPatterns';
 import ClipLoader from 'react-spinners/ClipLoader';
 import fetchContentfulAPI from './imageRendering/imageRendering';
 import useImage from "./imageRendering/ImageContext";
@@ -29,8 +28,8 @@ function App() {
         <>
           <Routes>
             <Route exact path="/" element={<Home/>} />
-            <Route exact path="/library-components" element={<LibraryComponents/>} />
-            <Route exact path="/home-test" element={<HomeNew/>} />
+            {/* <Route exact path="/library-components" element={<LibraryComponents/>} /> */}
+            <Route exact path="/design-patterns" element={<DesignPatterns/>} />
           </Routes>
           
         </>

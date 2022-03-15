@@ -1,0 +1,23 @@
+.nav-bar {
+    border: 1px solid #D9D9D9;
+    border-width: 0px 1px 1px 1px;
+}
+
+.nav-bar img {
+    margin: 25px 0px 10px 40px;
+}
+
+.nav-image {
+    border: 1px solid #D9D9D9;
+    border-width: 1px 0;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    font-size: calc(10px + 2vmin);
+}
+
