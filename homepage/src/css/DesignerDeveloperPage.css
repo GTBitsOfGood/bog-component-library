@@ -1,0 +1,48 @@
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+}
+
+.page-content {
+    display: flex;
+    flex: 3;
+    border: 1px solid #D9D9D9;
+    border-width: 1px 0px 0px 0px;
+    margin-top: 79.5px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.text-container {
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 0px;
+
+}
+.text-container > * {
+    width: 700px;
+    white-space: pre-wrap;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-self: stretch;
+}
+
+.figma-button {
+    position: absolute;
+    top: 50px;
+    left: 750px;
+}
+
+.storybook-button {
+    position: absolute;
+    top: 50px;
+    left: 750px;
+}
+
+
+

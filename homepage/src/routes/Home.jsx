@@ -20,17 +20,6 @@ function Home(props) {
         <div className="text-container">
             <TextDescription heading={"What's this project about"} content={"A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications."}/>
             <TextDescription heading={"Who is it for"} content={"There is confusion across projects about what design guidelines and component libraries to use. Using multiple different libraries and kits makes it difficult to stay consistent during development and to maintain a product after shipping."}/>
-            {/* <TextDescription heading="Get Started"/>
-            <div className="button-container">
-                <div>
-                  <ComponentButton/>
-                  <GithubButton/>
-                </div>
-                <div>
-                  <StorybookButton/>
-                  <FigmaButton/>
-                </div>
-            </div> */}
         </div>
       </div>    
     </div>
