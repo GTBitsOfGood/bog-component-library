@@ -279,6 +279,12 @@ const typography = {
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
+    },
+    slider: {
+        fontFamily: fonts.secondary, 
+        fontWeight: fontWeights.regular,
+        fontSize: '14px',
+        lineHeight: '20px',
     }
 };
 
@@ -396,12 +402,21 @@ const button = {
     },
 }
 
+const slider = {
+    sizingAndTypography: {
+        regular: {
+          ...typography.slider,
+        },
+    },
+}
+
 const theme = {
     colors,
     fonts,
     fontWeights,
     alert,
     button,
+    slider,
     letterSpacings,
     typography
 };

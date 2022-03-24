@@ -52,11 +52,11 @@ const ButtonBase = styled.button`
   ${COMMON};
 `
 
-
 const Button = ({ 
-  className, onClick, variant, theme: propTheme, ...props 
+  className, onClick, variant, testId, theme: propTheme, ...props 
 }) => {
   
+  // these are all of the props being passed into the button!!!
   const colorVariants = propTheme.colors.variants;
   const buttonColorPalette = colorVariants[variant];
   const buttonTheme = propTheme.button[variant];
@@ -98,6 +98,7 @@ const Button = ({
       onClick={onClick}
       theme={theme}
       variant={variant}
+      data-testid={testId}
       {...props}
     />
   );
