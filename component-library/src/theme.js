@@ -279,7 +279,15 @@ const typography = {
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
-    }
+    },
+
+    //Scrolling Table of Contents
+    scrollingTableOfContents: {
+        fontFamily: fonts.secondary, 
+        fontWeight: fontWeights.regular,
+        fontSize: '16px',
+        lineHeight: '24px',
+    },
 };
 
 const button = {
