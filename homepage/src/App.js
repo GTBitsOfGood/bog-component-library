@@ -1,8 +1,8 @@
 import { useEffect, useState} from 'react';
 import Home from './routes/Home';
 import DesignPatterns from './routes/DesignPatterns';
-import DesignerPage from './routes/DesignerPage';
-import DeveloperPage from './routes/DeveloperPage';
+import Designers from './routes/Designer';
+import Developers from './routes/Developers';
 import ClipLoader from 'react-spinners/ClipLoader';
 import fetchContentfulAPI from './imageRendering/imageRendering';
 import useImage from "./imageRendering/ImageContext";
@@ -31,9 +31,14 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home/>} />
             {/* <Route exact path="/library-components" element={<LibraryComponents/>} /> */}
+            
+            <Route exact path="/designers" element={<Designers/>} />
+            <Route exact path="/developers" element={<Developers/>} />
+            {/* <Route exact path="/components" element={<Components/>} /> */}
+            {/* <Route exact path="/foundations" element={<Foundations/>} /> */}
             <Route exact path="/design-patterns" element={<DesignPatterns/>} />
-            <Route exact path="/designers" element={<DesignerPage/>} />
-            <Route exact path="/developers" element={<DeveloperPage/>} />
+            {/* <Route exact path="/support" element={<Support/>} /> */}
+
           </Routes>
           
         </>

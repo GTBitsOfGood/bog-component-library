@@ -1,9 +1,9 @@
 import NavBar from "../components/NavBar";
-import "../css/DesignerDeveloperPage.css";
+import "../css/DesignerDeveloper.css";
 import TextDescription from "../components/TextDescription";
 import StorybookButton from "../components/StorybookButton";
 
-export default function DesignerPage(props) {
+export default function Designers(props) {
 
     return (
         <div className="page-container">
