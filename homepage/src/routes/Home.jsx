@@ -1,8 +1,8 @@
 import TextDescription from '../components/TextDescription';
-import ComponentButton from '../components/ComponentButton';
-import FigmaButton from '../components/FigmaButton';
-import GithubButton from '../components/GithubButton';
-import StorybookButton from '../components/StorybookButton';
+// import ComponentButton from '../components/ComponentButton';
+// import FigmaButton from '../components/FigmaButton';
+// import GithubButton from '../components/GithubButton';
+// import StorybookButton from '../components/StorybookButton';
 import '../css/Home.css';
 import useImage from '../imageRendering/ImageContext';
 import NavBar from '../components/NavBar';
