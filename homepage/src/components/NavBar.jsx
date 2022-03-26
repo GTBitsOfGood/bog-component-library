@@ -15,8 +15,8 @@ export default function NavBar(props) {
             <div className="link-container">
                 <Link to="/designers">For Designers</Link>
                 <Link to="/developers">For Developers</Link>
-                <Link to="/library-components">Components</Link>
                 <Link to="/foundations">Foundations</Link>
+                <Link to="/library-components">Components</Link>
                 <Link to="/design-patterns">Design Paterns</Link>
                 <Link to="/support">Support</Link>
             </div>
