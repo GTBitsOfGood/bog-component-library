@@ -6,8 +6,6 @@ export default function NavBar(props) {
     const {imageURLS} = useImage();
     const navigate = useNavigate();
 
-
-
     return (
         <div className="nav-bar">
             <div className="nav-image">

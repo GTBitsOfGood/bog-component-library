@@ -1,10 +1,8 @@
 import NavBar from "../components/NavBar";
-// import '../css/DesignerDeveloper.css';
-// where tf is styling coming from???
 import TextDescription from "../components/TextDescription";
 import FigmaButton from "../components/FigmaButton";
 
-export default function Support(props) {
+export default function Components(props) {
 
     return (
         <div className="page-container">
