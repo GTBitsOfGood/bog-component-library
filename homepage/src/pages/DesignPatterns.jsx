@@ -3,7 +3,7 @@ import TextDescription from '../components/TextDescription.jsx';
 import FigmaButton from '../components/FigmaButton';
 import '../css/DesignPatterns.css';
 import useImage from '../imageRendering/ImageContext';
-import NavBar from '../components/NavBar.jsx';
+// import NavBar from '../components/NavBar.jsx';
 
 
 
@@ -24,8 +24,8 @@ function LibraryComponents(props) {
   
   return (
     <div className="library-container">
-      <NavBar className="navbar-container">
-      </NavBar>
+      {/* <NavBar className="navbar-container">
+      </NavBar> */}
 
       <div className="library-content-container">
             <TextDescription special={true} heading="Design Patterns" content="These components are the building blocks for our design system. Our designers work and Figma and so we tried to take full advantage of its features. Each component is flexible and can be adjusted to fit the specific branding of a non-profit partner."/>

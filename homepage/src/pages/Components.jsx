@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 import TextDescription from "../components/TextDescription";
 import StorybookEmbed from "../components/StorybookEmbed";
 import FigmaButton from "../components/FigmaButton";
@@ -7,7 +7,7 @@ export default function Components(props) {
 
     return (
         <div className="page-container">
-            <NavBar className="navbar-container"/>
+            {/* <NavBar className="navbar-container"/> */}
 
             <div className="page-content">
                 <div className="text-container">
