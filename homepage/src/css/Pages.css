@@ -11,8 +11,8 @@
     flex: 3;
     border: 1px solid #D9D9D9;
     border-width: 1px 0px 0px 0px;
-    margin-top: 64px;
-    padding-bottom: 40px;
+    margin-top: 4rem;
+    padding-bottom: 2.5rem;
     position: relative;
     flex-direction: column;
 } 
@@ -50,7 +50,7 @@
 .storybook-embed-container {
     height: 723px;
     width: 940px;
-    margin-left:
+    /* margin-left: 0px */
 }
 
 
