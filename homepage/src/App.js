@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <NavBar/>
+      <NavBar />
       <>
         {isLoading ? <ClipLoader isLoading={isLoading} />
           :
