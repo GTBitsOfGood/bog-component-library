@@ -1,6 +1,6 @@
 .nav-bar {
     border: 1px solid #D9D9D9;
-    border-width: 0px 1px 1px 1px;
+    border-width: 0px 1px 0px 1px;
 }
 
 .nav-bar img {
@@ -10,7 +10,7 @@
 
 .nav-image {
     border: 1px solid #D9D9D9;
-    border-width: 1px 0;
+    border-width: 0px 0px 1px 0px;
 }
 
 .link-container {

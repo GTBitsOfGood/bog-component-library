@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     font-size: calc(10px + 2vmin);
+    border: 1px solid #D9D9D9;
 }
 
 .page-content {
@@ -9,10 +10,10 @@
     flex: 3;
     border: 1px solid #D9D9D9;
     border-width: 1px 0px 0px 0px;
-    margin-top: 79.5px;
+    margin-top: 78.5px;
     padding-bottom: 40px;
     position: relative;
-}
+} 
 
 .text-container {
     flex-direction: column;
