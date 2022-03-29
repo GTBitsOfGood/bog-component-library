@@ -2,6 +2,7 @@
 import StorybookEmbed from "../components/StorybookEmbed";
 import TextDescription from "../components/TextDescription";
 import FigmaButton from "../components/FigmaButton";
+import '../css/Pages.css';
 
 export default function Support(props) {
 

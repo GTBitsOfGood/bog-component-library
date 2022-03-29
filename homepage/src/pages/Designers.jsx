@@ -1,5 +1,5 @@
 // import NavBar from "../components/NavBar";
-import '../css/DesignerDeveloper.css';
+import '../css/Pages.css';
 import TextDescription from "../components/TextDescription";
 import FigmaButton from "../components/FigmaButton";
 

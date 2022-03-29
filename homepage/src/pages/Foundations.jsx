@@ -1,5 +1,5 @@
 // import NavBar from "../components/NavBar";
-// import '../css/DesignerDeveloper.css';
+import '../css/Pages.css';
 // where tf is styling coming from???
 import TextDescription from "../components/TextDescription";
 import FigmaButton from "../components/FigmaButton";
