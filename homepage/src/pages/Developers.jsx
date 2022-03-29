@@ -1,13 +1,13 @@
-import NavBar from "../components/NavBar";
-import "../css/DesignerDeveloperPage.css";
+// import NavBar from "../components/NavBar";
+import "../css/DesignerDeveloper.css";
 import TextDescription from "../components/TextDescription";
 import StorybookButton from "../components/StorybookButton";
 
-export default function DesignerPage(props) {
+export default function Designers(props) {
 
     return (
         <div className="page-container">
-            <NavBar className="nav-bar-container"/>
+            {/* <NavBar className="nav-bar-container"/> */}
 
             <div className="page-content">
                 <div className="text-container">

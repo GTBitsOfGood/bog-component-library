@@ -1,11 +1,11 @@
 import TextDescription from '../components/TextDescription';
-import ComponentButton from '../components/ComponentButton';
-import FigmaButton from '../components/FigmaButton';
-import GithubButton from '../components/GithubButton';
-import StorybookButton from '../components/StorybookButton';
+// import ComponentButton from '../components/ComponentButton';
+// import FigmaButton from '../components/FigmaButton';
+// import GithubButton from '../components/GithubButton';
+// import StorybookButton from '../components/StorybookButton';
 import '../css/Home.css';
 import useImage from '../imageRendering/ImageContext';
-import NavBar from '../components/NavBar';
+// import NavBar from '../components/NavBar';
 
 function Home(props) {
   const {imageURLS} = useImage();
@@ -13,7 +13,7 @@ function Home(props) {
   return (
      
     <div className="home-container">
-      <NavBar className="nav-bar" />
+      {/* <NavBar className="nav-bar" /> */}
       <div className="content-container">
         {/* Gets the image from the github and displays it on the component */}
         <img src={imageURLS["HOMEPAGE_MAIN"]} alt="homepage_main_image"/>
