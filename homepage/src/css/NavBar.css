@@ -1,15 +1,16 @@
 .nav-bar {
     border: 1px solid #D9D9D9;
-    border-width: 0px 1px 0px 1px;
+    border-width: 0px 0px 0px 1px;
     flex: 332;
 }
 
 .nav-bar img {
-    margin: 25px 0px 10px 40px;
     cursor: pointer;
 }
 
 .nav-image {
+    margin: 0px 0px 0px 0px;
+    padding: 6px 0px 6px 48px;
     border: 1px solid #D9D9D9;
     border-width: 0px 0px 1px 0px;
 }
