@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import '../css/StorybookEmbed.css';
+import '../css/Pages.css';
 
 function StorybookEmbed(props) {
   return (
-    <iframe src="https://6193f7d7f0559c003a605d4f-ysjolyadgi.chromatic.com/" />
+    <iframe className="storybook-embed-container" src="https://6193f7d7f0559c003a605d4f-ysjolyadgi.chromatic.com/" />
   );
 }
 
