@@ -413,6 +413,7 @@ const verticalTabList = {
         hover: lightPalette[500],
         selected: midnightPalette[300],
     }
+}
 
 const tag = {
     variants: {
