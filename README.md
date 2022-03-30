@@ -15,9 +15,10 @@ A reusable, easily readable, easily integrated, and widely used component librar
 
 ### Instructions to run the homepage
 Optional: If you're still in the component-library directory, run `cd ..` to navigate to the repo's base directory.
-1. Run `cd homepage` to navigate to the component library directory.
-2. Run `yarn` to install all dependencies. 
-3. Run `yarn start` to run the application and prompt the homepage.
+1. Download the `.env` file from [Bitwarden](https://vault.bitwarden.com/) and store it in the homepage directory. 
+2. Run `cd homepage` to navigate to the component library directory.
+3. Run `yarn` to install all dependencies. 
+4. Run `yarn start` to run the application and prompt the homepage.
 
 Note: You can run both directories simultaneously (as they run on different ports)
 
