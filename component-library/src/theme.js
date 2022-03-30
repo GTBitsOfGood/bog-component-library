@@ -1,3 +1,4 @@
+import { fontWeight } from 'styled-system';
 import './assets/global.css';
 
 function fontStack(fonts) {
@@ -396,6 +397,30 @@ const button = {
     },
 }
 
+const tag = {
+    variants: {
+        info: {background: colors.bluePalette[100]},
+        danger: {background: colors.redPalette[300]},
+        success: {background: colors.greenPalette[100]},
+        warning: {background: colors.yellowPalette[100]},
+        archived: {background: colors.lightPalette[300]},
+    },
+    sizingAndTypography: {
+        large: {
+            fontSize: '16px',
+            lineHeight: '24px',
+        },
+        medium: {
+            fontSize: '14px',
+            lineHeight: '20px',
+        },
+        small: {
+            fontSize: '12px',
+            lineHeight: '16px',
+        },
+    },
+}
+
 const theme = {
     colors,
     fonts,
@@ -403,7 +428,8 @@ const theme = {
     alert,
     button,
     letterSpacings,
-    typography
+    typography,
+    tag
 };
 
 export default theme;
