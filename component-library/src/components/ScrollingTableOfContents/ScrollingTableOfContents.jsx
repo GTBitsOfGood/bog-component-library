@@ -86,9 +86,9 @@ const ScrollingTableOfContents = ({
     active: lodashGet(scrollTheme, 'fontColor.active', scrollDefaultTheme.fontColor.active),
   };
 
-  console.log(propTheme)
-  console.log(scrollTheme)
-  console.log(scrollDefaultTheme)
+  // console.log(propTheme)
+  // console.log(scrollTheme)
+  // console.log(scrollDefaultTheme)
 
   const styling = {
     border,
@@ -127,9 +127,17 @@ const listItems = () => {
 };
 
 ScrollingTableOfContents.propTypes = {
+    /**
+     * what side is the tracking bar on?
+     */
     side: PropTypes.string,
-    theme: PropTypes.object,
+    /**
+     * Works by the IDs for the sections
+     * Each section must be formated in the following manner:
+     * {title: <title of section>, id: <id of section>}
+     */
     sections: PropTypes.array,
+    theme: PropTypes.object,
     ...COMMON.propTypes,
 };
   
