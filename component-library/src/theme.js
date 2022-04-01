@@ -462,7 +462,7 @@ const scrollingTableOfContents = {
             active: midnightPalette[300],
         },
         borderWidth: '0px 2px 0px 0px'},
-
+    }
    
 
 const tag = {
