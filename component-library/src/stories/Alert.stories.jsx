@@ -8,7 +8,7 @@ export default {
   argTypes: {
     type: {
       options: ['success', 'failure', 'message', 'brand message'],
-      control: {type: 'radio'},
+      control: {type: 'select'},
     },
     backgroundColor: { control: 'color' },
     borderColor: { control: 'color' },

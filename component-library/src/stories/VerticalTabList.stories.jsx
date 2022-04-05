@@ -12,7 +12,6 @@ export default {
         control: {type: 'select'},
       },
       children: {
-        control: null,
         description: "Click on 'Show code' for more details."
       }
     },
