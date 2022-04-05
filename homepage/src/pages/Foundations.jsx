@@ -2,7 +2,7 @@
 import '../css/Pages.css';
 // where tf is styling coming from???
 import TextDescription from "../components/TextDescription";
-import FigmaButton from "../components/FigmaButton";
+// import FigmaButton from "../components/FigmaButton";
 
 export default function Foundations(props) {
 
