@@ -397,6 +397,24 @@ const button = {
     },
 }
 
+const verticalTabList = {
+    tabColor: {
+        default: lightPalette[300],
+        hover: lightPalette[300],
+        selected: midnightPalette[100],
+    },
+    fontColor: {
+        default: darkPalette[700],
+        hover: midnightPalette[300],
+        selected: midnightPalette[300],
+    },
+    lineColor: {
+        default: lightPalette[500],
+        hover: lightPalette[500],
+        selected: midnightPalette[300],
+    }
+}
+
 const tag = {
     variants: {
         info: {background: colors.bluePalette[100]},
@@ -429,6 +447,7 @@ const theme = {
     button,
     letterSpacings,
     typography,
+    verticalTabList,
     tag
 };
 
