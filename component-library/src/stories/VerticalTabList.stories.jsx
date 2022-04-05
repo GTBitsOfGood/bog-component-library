@@ -11,6 +11,10 @@ export default {
         options: ['lineTabs', 'filledTabs'],
         control: {type: 'select'},
       },
+      children: {
+        control: null,
+        description: "Click on 'Show code' for more details."
+      }
     },
     parameters : {
       design: {
