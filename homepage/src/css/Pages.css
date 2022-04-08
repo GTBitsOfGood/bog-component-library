@@ -51,8 +51,8 @@
     height: 723px;
     width: 940px;
     margin-left: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC; 
 }
-
-
-
 
