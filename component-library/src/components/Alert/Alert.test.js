@@ -21,7 +21,7 @@ describe("Alert", () => {
 
     it('renders the button if set', () => {
         const {getByTestId} = render(<SuccessAlert hasButton={true}/>);
-        const button = getByTestId("alert-button");
+        const button = getByTestId('alert-button');
         expect(button).toBeInTheDocument();
     })
 
