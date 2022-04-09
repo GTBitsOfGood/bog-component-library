@@ -38,7 +38,7 @@ describe("Alert", () => {
 
     it('checks if the onCloseClick event handler works', () => {
         const mockOnClick = jest.fn()
-        const { getByTestId } = render(<SuccessAlert onCloseClick={mockOnClick()} />)
+        const { getByTestId } = render(<SuccessAlert onCloseClick={mockOnClick()} />);
         const clickIndicator = getByTestId('close-button');
         fireEvent.click(clickIndicator);
         expect(mockOnClick).toHaveBeenCalledTimes(1);

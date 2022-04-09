@@ -8,7 +8,7 @@ import './switch.css';
       <div className="switch-container">
         {hasLabel && <span className="labelText">{label}</span>}
         <label className="toggle-switch">
-            <input disabled={disabled} type="checkbox" />
+            <input disabled={disabled} type="checkbox" data-testid="switch"/>
             <span className="switch" />
         </label>
       </div>
