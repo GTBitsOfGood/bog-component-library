@@ -429,7 +429,7 @@ const verticalTabList = {
 const tag = {
     variants: {
         info: {background: colors.bluePalette[100]},
-        danger: {background: colors.redPalette[300]},
+        danger: {background: colors.redPalette[100]},
         success: {background: colors.greenPalette[100]},
         warning: {background: colors.yellowPalette[100]},
         archived: {background: colors.lightPalette[300]},
