@@ -9,11 +9,10 @@ export default {
   argTypes: {
     variant: {
       options: ['regular', 'leftIcon', 'rightIcon', 'doubleIcon', 'textArea'],
-      control: { type: 'radio' },
+      control: { type: 'select' },
     },
     isDisabled: {
-      options: [true, false],
-      control: { type: 'radio' },
+      control: { type: 'boolean' },
     },
     hasBottomText: {
       options: ['default', 'success', 'error'],

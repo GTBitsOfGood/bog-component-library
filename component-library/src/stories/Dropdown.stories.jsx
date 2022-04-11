@@ -12,12 +12,10 @@ export default {
       control: {type: 'select'},
     },
     isDisabled: {
-      options: [true, false],
-      control: {type: 'radio'},
+      control: {type: 'boolean'},
     },
     error: {
-        options: [true, false],
-        control: {type: 'radio'},
+        control: {type: 'boolean'},
     }
   },
   parameters : {
