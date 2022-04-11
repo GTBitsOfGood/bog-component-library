@@ -280,7 +280,29 @@ const typography = {
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
-    }
+    },
+    //alert
+    alert: {
+        header: {
+            fontFamily: fonts.main, 
+            fontWeight: fontWeights.extrabold,
+            fontSize: '12px',
+            lineHeight: '16.8px',
+        },
+        text: {
+            fontFamily: fonts.secondary, 
+            fontWeight: fontWeights.regular,
+            fontSize: '12px',
+            lineHeight: '16px',
+        },
+        buttonText: {
+            fontFamily: fonts.main, 
+            fontWeight: fontWeights.extrabold,
+            fontSize: '14px',
+            lineHeight: '16px',
+        },
+        
+    },
 };
 
 const button = {
@@ -436,6 +458,238 @@ const tag = {
             fontSize: '12px',
             lineHeight: '16px',
         },
+    },
+}
+const alert = {
+    default: (colorPalette) => ({
+        bg: {
+            default: colorPalette[500],
+            hover: colorPalette[500],
+            focussed: colorPalette[500],
+            disabled: colors.disabled
+        },
+        border: {
+            default: `1px solid transparent`,
+            hover: `1px solid transparent`,
+            focussed: `1px solid transparent`,
+            disabled: `1px solid transparent`,
+        },
+        textColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        headerColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        buttonColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        iconColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        }
+    }),
+    success: {
+        false: {
+            bg: {
+                default: colors.greenPalette[500],
+                hover: colors.greenPalette[500],
+                focussed: colors.greenPalette[500],
+                disabled: colors.greenPalette[500]
+            },
+        },
+        true: {
+            bg: {
+                default: colors.lightPalette[100],
+                hover: colors.lightPalette[100],
+                focussed: colors.lightPalette[100],
+                disabled: colors.lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${colors.greenPalette[500]}`,
+                hover: `1px solid ${colors.greenPalette[500]}`,
+                focussed: `1px solid ${colors.greenPalette[500]}`,
+                disabled: `1px solid ${colors.greenPalette[500]}`,
+            },
+            textColor: {
+                default: colors.darkPalette[500],
+                hover: colors.darkPalette[500],
+                focussed: colors.darkPalette[500],
+                disabled: colors.darkPalette[500],
+            },
+            headerColor: {
+                default: colors.greenPalette[500],
+                hover: colors.greenPalette[500],
+                focussed: colors.greenPalette[500],
+                disabled: colors.greenPalette[500],
+            },
+            buttonColor: {
+                default: colors.greenPalette[500],
+                hover: colors.greenPalette[500],
+                focussed: colors.greenPalette[500],
+                disabled: colors.greenPalette[500],
+            },
+            iconColor: {
+                default: colors.greenPalette[500],
+                hover: colors.greenPalette[500],
+                focussed: colors.greenPalette[500],
+                disabled: colors.greenPalette[500],
+            }
+        }
+    },
+    error: {
+        false: {
+            bg: {
+                default: colors.redPalette[700],
+                hover: colors.redPalette[700],
+                focussed: colors.redPalette[700],
+                disabled: colors.redPalette[700]
+            },
+        },
+        true: {
+            bg: {
+                default: colors.lightPalette[100],
+                hover: colors.lightPalette[100],
+                focussed: colors.lightPalette[100],
+                disabled: colors.lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${colors.redPalette[700]}`,
+                hover: `1px solid ${colors.redPalette[700]}`,
+                focussed: `1px solid ${colors.redPalette[700]}`,
+                disabled: `1px solid ${colors.redPalette[700]}`,
+            },
+            textColor: {
+                default: colors.darkPalette[500],
+                hover: colors.darkPalette[500],
+                focussed: colors.darkPalette[500],
+                disabled: colors.darkPalette[500],
+            },
+            headerColor: {
+                default: colors.redPalette[700],
+                hover: colors.redPalette[700],
+                focussed: colors.redPalette[700],
+                disabled: colors.redPalette[700],
+            },
+            buttonColor: {
+                default: colors.redPalette[700],
+                hover: colors.redPalette[700],
+                focussed: colors.redPalette[700],
+                disabled: colors.redPalette[700],
+            },
+            iconColor: {
+                default: colors.redPalette[700],
+                hover: colors.redPalette[700],
+                focussed: colors.redPalette[700],
+                disabled: colors.redPalette[700],
+            }
+        }
+    },
+    message: {
+        false: {
+            bg: {
+                default: colors.bluePalette[500],
+                hover: colors.bluePalette[500],
+                focussed: colors.bluePalette[500],
+                disabled: colors.bluePalette[500]
+            },
+        },
+        true: {
+            bg: {
+                default: colors.lightPalette[100],
+                hover: colors.lightPalette[100],
+                focussed: colors.lightPalette[100],
+                disabled: colors.lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${colors.bluePalette[500]}`,
+                hover: `1px solid ${colors.bluePalette[500]}`,
+                focussed: `1px solid ${colors.bluePalette[500]}`,
+                disabled: `1px solid ${colors.bluePalette[500]}`,
+            },
+            textColor: {
+                default: colors.darkPalette[500],
+                hover: colors.darkPalette[500],
+                focussed: colors.darkPalette[500],
+                disabled: colors.darkPalette[500],
+            },
+            headerColor: {
+                default: colors.bluePalette[500],
+                hover: colors.bluePalette[500],
+                focussed: colors.bluePalette[500],
+                disabled: colors.bluePalette[500],
+            },
+            buttonColor: {
+                default: colors.bluePalette[500],
+                hover: colors.bluePalette[500],
+                focussed: colors.bluePalette[500],
+                disabled:colors.bluePalette[500],
+            },
+            iconColor: {
+                default: colors.bluePalette[500],
+                hover: colors.bluePalette[500],
+                focussed: colors.bluePalette[500],
+                disabled: colors.bluePalette[500],
+            }
+        }
+    },
+    brand:{
+        false:{
+            bg: {
+                default: colors.midnightPalette[400],
+                hover: colors.midnightPalette[400],
+                focussed: colors.midnightPalette[400],
+                disabled: colors.midnightPalette[400]
+            },
+        },
+        true: {
+            bg: {
+                default: colors.lightPalette[100],
+                hover: colors.lightPalette[100],
+                focussed: colors.lightPalette[100],
+                disabled: colors.lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${colors.midnightPalette[400]}`,
+                hover: `1px solid ${colors.midnightPalette[400]}`,
+                focussed: `1px solid ${colors.midnightPalette[400]}`,
+                disabled: `1px solid ${colors.midnightPalette[400]}`,
+            },
+            textColor: {
+                default: colors.darkPalette[500],
+                hover: colors.darkPalette[500],
+                focussed: colors.darkPalette[500],
+                disabled: colors.darkPalette[500],
+            },
+            headerColor: {
+                default: colors.midnightPalette[400],
+                hover: colors.midnightPalette[400],
+                focussed: colors.midnightPalette[400],
+                disabled: colors.midnightPalette[400],
+            },
+            buttonColor: {
+                default: colors.midnightPalette[400],
+                hover: colors.midnightPalette[400],
+                focussed: colors.midnightPalette[400],
+                disabled: colors.midnightPalette[400],
+            },
+            iconColor: {
+                default: colors.midnightPalette[400],
+                hover: colors.midnightPalette[400],
+                focussed: colors.midnightPalette[400],
+                disabled: colors.midnightPalette[400],
+            }
+        }
     },
 }
 
