@@ -6,17 +6,18 @@ function fontStack(fonts) {
 }
 
 const baseColors = {
-    midnight: ['#5A50B3', '#473F91', '#36306E', '#2D285C', '#1C1938'],
+    midnight: ['#EAE6FF', '#5A50B3', '#473F91', '#36306E', '#2D285C', '#1C1938'],
     orange: ['#FEBF98', '#FD9F66', '#FD904C', '#FD8033', '#E25702'],
-    yellow: ['#FFE3B3', '#FFD17F', '#FFC766', '#FFBE4C', '#FFAB19'],
+    yellow: ['#FFE3B3', '#FFD17F', '#FFC766', '#FFBE4C', '#FFAB19', '#59431B'],
 };
 
 const midnightPalette = {
     100: baseColors.midnight[0],
-    300: baseColors.midnight[1],
-    400: baseColors.midnight[2],
-    500: baseColors.midnight[3],
-    700: baseColors.midnight[4],
+    200: baseColors.midnight[1],
+    300: baseColors.midnight[2],
+    400: baseColors.midnight[3],
+    500: baseColors.midnight[4],
+    700: baseColors.midnight[5],
 };
 
 const orangePalette = {
@@ -33,36 +34,46 @@ const yellowPalette = {
     400: baseColors.yellow[2],
     500: baseColors.yellow[3],
     700: baseColors.yellow[4],
+    900: baseColors.yellow[5],
 };
 
 const secondaryColors = {
-    green: ['#53ED9D', '#17D874', '#17D874', '#13B461', '#0F904D'],
-    red: ['#FF8E8E', '#FF7171', '#FF5555', '#FF3939', '#C63636'],
-    blue: ['#5698FF', '#3484FF', '#126FFF', '#005EEF', '#0051CC']
+    green: ['#E3FCEF', '#9BF4C6', '#77F0B1', '#53ED9D', '#17D874', '#13B461', '#0F904D', '#084C29'],
+    red: ['#FFE3E3', '#FFC6C6', '#FFAAAA', '#FF8E8E', '#FF5555', '#FF3939', '#C63636', '#592828'],
+    blue: ['#DEEBFF', '#9AC2FF', '#78ADFF', '#5698FF', '#126FFF', '#005EEF', '#0051CC', '#122E59']
 };
 
 const greenPalette = {
     100: secondaryColors.green[0],
-    300: secondaryColors.green[1],
-    400: secondaryColors.green[2],
-    500: secondaryColors.green[3],
-    700: secondaryColors.green[4],
+    200: secondaryColors.green[1],
+    300: secondaryColors.green[2],
+    400: secondaryColors.green[3],
+    600: secondaryColors.green[4],
+    700: secondaryColors.green[5],
+    800: secondaryColors.green[6],
+    900: secondaryColors.green[7],
 };
 
 const redPalette = {
     100: secondaryColors.red[0],
-    300: secondaryColors.red[1],
-    400: secondaryColors.red[2],
-    500: secondaryColors.red[3],
-    700: secondaryColors.red[4],
+    200: secondaryColors.red[1],
+    300: secondaryColors.red[2],
+    400: secondaryColors.red[3],
+    600: secondaryColors.red[4],
+    700: secondaryColors.red[5],
+    800: secondaryColors.red[6],
+    900: secondaryColors.red[7],
 };
 
 const bluePalette = {
     100: secondaryColors.blue[0],
-    300: secondaryColors.blue[1],
-    400: secondaryColors.blue[2],
-    500: secondaryColors.blue[3],
-    700: secondaryColors.blue[4],
+    200: secondaryColors.blue[1],
+    300: secondaryColors.blue[2],
+    400: secondaryColors.blue[3],
+    600: secondaryColors.blue[4],
+    700: secondaryColors.blue[5],
+    800: secondaryColors.blue[6],
+    900: secondaryColors.blue[7],
 };
 
 
