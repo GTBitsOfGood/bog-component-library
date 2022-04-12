@@ -422,7 +422,7 @@ const ScrollNavigation = {
         left: {
             borderColor: {
                 default: 'transparent',
-                hover: '#D9D9D9',
+                hover: lightPalette[500],
                 active: colorPalette[400],
             },
             fontColor: {
@@ -436,7 +436,7 @@ const ScrollNavigation = {
         right: {
             borderColor: {
                 default: 'transparent',
-                hover: '#D9D9D9',
+                hover: lightPalette[500],
                 active: colorPalette[400],
             },
             fontColor: {
@@ -449,7 +449,7 @@ const ScrollNavigation = {
     left: {
         borderColor: {
             default: 'transparent',
-            hover: '#D9D9D9',
+            hover: lightPalette[500],
             active: midnightPalette[400],
         },
         fontColor: {

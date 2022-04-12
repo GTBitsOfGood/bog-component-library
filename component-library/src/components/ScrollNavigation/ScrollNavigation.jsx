@@ -149,7 +149,7 @@ ScrollNavigation.propTypes = {
       {title:"How to use figma array 2", id:"array2"},
       {title:"How to use figma array 3", id:"array3"}],
     theme,
-    width: 240,
+    width: 245,
   };
   
   export default ScrollNavigation;
