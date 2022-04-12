@@ -292,6 +292,28 @@ const typography = {
         fontSize: '14px',
         lineHeight: '19px',
     },
+  
+    //alert
+    alert: {
+        header: {
+            fontFamily: fonts.main, 
+            fontWeight: fontWeights.extrabold,
+            fontSize: '12px',
+            lineHeight: '16.8px',
+        },
+        text: {
+            fontFamily: fonts.secondary, 
+            fontWeight: fontWeights.regular,
+            fontSize: '12px',
+            lineHeight: '16px',
+        },
+        buttonText: {
+            fontFamily: fonts.main, 
+            fontWeight: fontWeights.extrabold,
+            fontSize: '14px',
+            lineHeight: '16px',
+        },
+    },
 
     //Scrolling Table of Contents
     ScrollNavigation: {
@@ -515,6 +537,238 @@ const tag = {
         },
     },
 
+}
+const alert = {
+    default: (colorPalette) => ({
+        bg: {
+            default: colorPalette[700],
+            hover: colorPalette[700],
+            focussed: colorPalette[700],
+            disabled: colors.disabled
+        },
+        border: {
+            default: `1px solid transparent`,
+            hover: `1px solid transparent`,
+            focussed: `1px solid transparent`,
+            disabled: `1px solid transparent`,
+        },
+        textColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        headerColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        buttonColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        },
+        iconColor: {
+            default: colors.white,
+            hover: colors.white,
+            focussed: colors.white,
+            disabled: colors.white,
+        }
+    }),
+    success: {
+        false: {
+            bg: {
+                default: greenPalette[700],
+                hover: greenPalette[700],
+                focussed: greenPalette[700],
+                disabled: greenPalette[700]
+            },
+        },
+        true: {
+            bg: {
+                default: lightPalette[100],
+                hover: lightPalette[100],
+                focussed: lightPalette[100],
+                disabled: lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${greenPalette[700]}`,
+                hover: `1px solid ${greenPalette[700]}`,
+                focussed: `1px solid ${greenPalette[700]}`,
+                disabled: `1px solid ${greenPalette[700]}`,
+            },
+            textColor: {
+                default: darkPalette[500],
+                hover: darkPalette[500],
+                focussed: darkPalette[500],
+                disabled: darkPalette[500],
+            },
+            headerColor: {
+                default: greenPalette[700],
+                hover: greenPalette[700],
+                focussed: greenPalette[700],
+                disabled: greenPalette[700],
+            },
+            buttonColor: {
+                default: greenPalette[500],
+                hover: greenPalette[500],
+                focussed: greenPalette[500],
+                disabled: greenPalette[500],
+            },
+            iconColor: {
+                default: greenPalette[700],
+                hover: greenPalette[700],
+                focussed: greenPalette[700],
+                disabled: greenPalette[700],
+            }
+        }
+    },
+    error: {
+        false: {
+            bg: {
+                default: redPalette[800],
+                hover: redPalette[800],
+                focussed: redPalette[800],
+                disabled: redPalette[800]
+            },
+        },
+        true: {
+            bg: {
+                default: lightPalette[100],
+                hover: lightPalette[100],
+                focussed: lightPalette[100],
+                disabled: lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${redPalette[800]}`,
+                hover: `1px solid ${redPalette[800]}`,
+                focussed: `1px solid ${redPalette[800]}`,
+                disabled: `1px solid ${redPalette[800]}`,
+            },
+            textColor: {
+                default: darkPalette[500],
+                hover: darkPalette[500],
+                focussed: darkPalette[500],
+                disabled: darkPalette[500],
+            },
+            headerColor: {
+                default: redPalette[800],
+                hover: redPalette[800],
+                focussed: redPalette[800],
+                disabled: redPalette[800],
+            },
+            buttonColor: {
+                default: redPalette[800],
+                hover: redPalette[800],
+                focussed: redPalette[800],
+                disabled: redPalette[800],
+            },
+            iconColor: {
+                default: redPalette[800],
+                hover: redPalette[800],
+                focussed: redPalette[800],
+                disabled: redPalette[800],
+            }
+        }
+    },
+    message: {
+        false: {
+            bg: {
+                default: bluePalette[700],
+                hover: bluePalette[700],
+                focussed: bluePalette[700],
+                disabled: bluePalette[700]
+            },
+        },
+        true: {
+            bg: {
+                default: lightPalette[100],
+                hover: lightPalette[100],
+                focussed: lightPalette[100],
+                disabled: lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${bluePalette[700]}`,
+                hover: `1px solid ${bluePalette[700]}`,
+                focussed: `1px solid ${bluePalette[700]}`,
+                disabled: `1px solid ${bluePalette[700]}`,
+            },
+            textColor: {
+                default: darkPalette[500],
+                hover: darkPalette[500],
+                focussed: darkPalette[500],
+                disabled: darkPalette[500],
+            },
+            headerColor: {
+                default: bluePalette[700],
+                hover: bluePalette[700],
+                focussed: bluePalette[700],
+                disabled: bluePalette[700],
+            },
+            buttonColor: {
+                default: bluePalette[700],
+                hover: bluePalette[700],
+                focussed: bluePalette[700],
+                disabled:bluePalette[700],
+            },
+            iconColor: {
+                default: bluePalette[700],
+                hover: bluePalette[700],
+                focussed: bluePalette[700],
+                disabled: bluePalette[700],
+            }
+        }
+    },
+    brand:{
+        false:{
+            bg: {
+                default: midnightPalette[400],
+                hover: midnightPalette[400],
+                focussed: midnightPalette[400],
+                disabled: midnightPalette[400]
+            },
+        },
+        true: {
+            bg: {
+                default: lightPalette[100],
+                hover: lightPalette[100],
+                focussed: lightPalette[100],
+                disabled: lightPalette[100]
+            },
+            border: {
+                default: `1px solid ${midnightPalette[400]}`,
+                hover: `1px solid ${midnightPalette[400]}`,
+                focussed: `1px solid ${midnightPalette[400]}`,
+                disabled: `1px solid ${midnightPalette[400]}`,
+            },
+            textColor: {
+                default: darkPalette[500],
+                hover: darkPalette[500],
+                focussed: darkPalette[500],
+                disabled: darkPalette[500],
+            },
+            headerColor: {
+                default: midnightPalette[400],
+                hover: midnightPalette[400],
+                focussed: midnightPalette[400],
+                disabled: midnightPalette[400],
+            },
+            buttonColor: {
+                default: midnightPalette[400],
+                hover: midnightPalette[400],
+                focussed: midnightPalette[400],
+                disabled: midnightPalette[400],
+            },
+            iconColor: {
+                default: midnightPalette[400],
+                hover: midnightPalette[400],
+                focussed: midnightPalette[400],
+                disabled: midnightPalette[400],
+            }
+        }
+    },
 }
 
 const theme = {
