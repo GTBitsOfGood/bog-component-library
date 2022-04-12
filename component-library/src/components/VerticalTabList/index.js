@@ -1,3 +1,3 @@
-import VerticalTabList from "./VerticalTabList";
+import VerticalTabList from "./VerticalTabList.jsx";
 
 export default VerticalTabList;

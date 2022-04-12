@@ -1,5 +1,5 @@
 import { fontWeight } from 'styled-system';
-import './assets/global.css';
+// import './assets/global.css';
 
 function fontStack(fonts) {
     return fonts.map((font) => (font.includes(' ') ? `"${font}"` : font)).join(', ');

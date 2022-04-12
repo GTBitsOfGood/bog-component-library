@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../theme';
 import { COMMON } from '../../constants';
-import { Tab } from './Tab';
+import Tab from './Tab.jsx';
 
 const VerticalTabListBase = styled.ul`
     width: 332px;
