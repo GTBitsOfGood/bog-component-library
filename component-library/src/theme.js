@@ -313,6 +313,7 @@ const typography = {
             fontSize: '14px',
             lineHeight: '16px',
         },
+    },
 
     //Scrolling Table of Contents
     ScrollNavigation: {
