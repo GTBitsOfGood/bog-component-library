@@ -291,7 +291,15 @@ const typography = {
         fontWeight: fontWeights.extrabold,
         fontSize: '14px',
         lineHeight: '19px',
-    }
+    },
+
+    //Scrolling Table of Contents
+    ScrollNavigation: {
+        fontFamily: fonts.secondary, 
+        fontWeight: fontWeights.regular,
+        fontSize: '16px',
+        lineHeight: '24px',
+    },
 };
 
 const button = {
@@ -408,6 +416,64 @@ const button = {
     },
 }
 
+const ScrollNavigation = {
+
+    default: (colorPalette) => ({
+        left: {
+            borderColor: {
+                default: 'transparent',
+                hover: lightPalette[500],
+                active: colorPalette[400],
+            },
+            fontColor: {
+                default: '#1A1A1A',
+                hover: colorPalette[300],
+                active: colorPalette[300],
+            },
+            borderWidth:'0px 0px 0px 2px',
+        }
+        ,
+        right: {
+            borderColor: {
+                default: 'transparent',
+                hover: lightPalette[500],
+                active: colorPalette[400],
+            },
+            fontColor: {
+                default: '#1A1A1A',
+                hover: colorPalette[300],
+                active: colorPalette[300],
+            },
+            borderWidth: '0px 2px 0px 0px'},
+    }), 
+    left: {
+        borderColor: {
+            default: 'transparent',
+            hover: lightPalette[500],
+            active: midnightPalette[400],
+        },
+        fontColor: {
+            default: '#1A1A1A',
+            hover: midnightPalette[300],
+            active: midnightPalette[300],
+        },
+        borderWidth:'0px 0px 0px 2px',
+    }
+    ,
+    right: {
+        borderColor: {
+            default: 'transparent',
+            hover: '#D9D9D9',
+            active: midnightPalette[400],
+        },
+        fontColor: {
+            default: '#1A1A1A',
+            hover: midnightPalette[300],
+            active: midnightPalette[300],
+        },
+        borderWidth: '0px 2px 0px 0px'},
+    }
+
 const verticalTabList = {
     tabColor: {
         default: lightPalette[300],
@@ -448,6 +514,7 @@ const tag = {
             lineHeight: '16px',
         },
     },
+
 }
 
 const theme = {
@@ -456,6 +523,7 @@ const theme = {
     fontWeights,
     alert,
     button,
+    ScrollNavigation,
     letterSpacings,
     typography,
     verticalTabList,
