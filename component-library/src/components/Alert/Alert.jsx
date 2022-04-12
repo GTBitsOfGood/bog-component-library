@@ -199,7 +199,8 @@ const Alert = ({
               // variant="tertiary"
               className="storybook-alertButton"
               style={{color:lodashGet(alertTheme, 'buttonColor.default', alertDefaultTheme.buttonColor.default)}}
-              testId={"alert-button"}
+              //testId={"alert-button"}
+              data-testid="alert-button"
             >{buttonLabel}</button>
           </AlertButtonDiv>
         )}

@@ -1,9 +1,9 @@
-import LibraryDrawer from './LibraryDrawer.jsx';
-import Card from './Card.jsx';
-import TextDescription from './TextDescription.jsx';
-import FigmaButton from './FigmaButton';
-import '../css/LibraryComponents.css';
+import Card from '../components/Card.jsx';
+import TextDescription from '../components/TextDescription.jsx';
+import FigmaButton from '../components/FigmaButton';
+import '../css/DesignPatterns.css';
 import useImage from '../imageRendering/ImageContext';
+// import NavBar from '../components/NavBar.jsx';
 
 
 
@@ -24,20 +24,16 @@ function LibraryComponents(props) {
   
   return (
     <div className="library-container">
-        <div className="navbar-container">
-            <img className="components-logo" src={imageURLS["MAIN_LOGO"]} alt="homepage_main_image" onClick={() => props.handle(true)}/>
-        </div>
-        <div className="library-content-container">
-            <LibraryDrawer/>
-            <div className="components-container">
-              <TextDescription special={true} heading="Components" content="These components are the building blocks for our design system. Our designers work and Figma and so we tried to take full advantage of its features. Each component is flexible and can be adjusted to fit the specific branding of a non-profit partner."/>
-              <FigmaButton logo={imageURLS["FIGMA_LOGO"]}/>
-              <div className="component-cards">
-                {components.map(component => <Card key={component.id} img={component.img} heading={component.heading} content={component.content}/>)}
-              </div>
+      {/* <NavBar className="navbar-container">
+      </NavBar> */}
+
+      <div className="library-content-container">
+            <TextDescription special={true} heading="Design Patterns" content="These components are the building blocks for our design system. Our designers work and Figma and so we tried to take full advantage of its features. Each component is flexible and can be adjusted to fit the specific branding of a non-profit partner."/>
+            <FigmaButton className="figma-button" logo={imageURLS["FIGMA_LOGO"]}/>
+            <div className="component-cards">
+              {components.map(component => <Card key={component.id} img={component.img} heading={component.heading} content={component.content}/>)}
             </div>
-        </div>
-        <img src={imageURLS["WEBSITE_CAPY"]} alt="capy" className="capy"/>
+          </div>
     </div>
   );
 }
