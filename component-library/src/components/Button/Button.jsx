@@ -83,7 +83,7 @@ const Button = ({
     disabled: lodashGet(buttonTheme, 'fontColor.disabled', buttonDefaultTheme.fontColor.disabled),
   };
 
-  console.log(propTheme)
+  // console.log(propTheme)
 
   const styling = {
     background,
