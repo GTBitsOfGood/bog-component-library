@@ -6,13 +6,12 @@ import theme from '../../theme';
 import { get, lodashGet } from '../../utils';
 import { COMMON } from '../../constants';
 
-const ScrollingTableOfContentsBase = styled.div`
+const ScrollNavigationBase = styled.div`
   // Size & Typography
-  font-family: ${get('typography.scrollingTableOfContents.fontFamily')};
-  font-weight: ${get('typography.scrollingTableOfContents.fontWeight')};
-  font-size: ${get('typography.scrollingTableOfContents.fontSize')};
-  line-height: ${get('typography.scrollingTableOfContents.lineHeight')}; 
-
+  font-family: ${get('typography.ScrollNavigation.fontFamily')};
+  font-weight: ${get('typography.ScrollNavigation.fontWeight')};
+  font-size: ${get('typography.ScrollNavigation.fontSize')};
+  line-height: ${get('typography.ScrollNavigation.lineHeight')}; 
   display:flex;
   flex-direction:column;
   ${COMMON};
@@ -61,13 +60,13 @@ const Item = styled.div`
   }
   ${COMMON};
 `
-const ScrollingTableOfContents = ({ 
-  side, sections, theme: propTheme, ...props 
+const ScrollNavigation = ({ 
+  side, sections, theme: propTheme, width, ...props 
 }) => {
   
   const scrollColorPalette = propTheme.colors.variants['primary'];
-  const scrollTheme = propTheme.scrollingTableOfContents[side];
-  const scrollDefaultTheme = propTheme.scrollingTableOfContents.default(scrollColorPalette)[side];
+  const scrollTheme = propTheme.ScrollNavigation[side];
+  const scrollDefaultTheme = propTheme.ScrollNavigation.default(scrollColorPalette)[side];
 
   let border = {
     default: lodashGet(scrollTheme, 'borderWidth', scrollDefaultTheme[side]),
@@ -116,17 +115,18 @@ const listItems = () => {
 
 
   return (
-    <ScrollingTableOfContentsBase
+    <ScrollNavigationBase
       {...styling}
       theme={theme}
       {...props}
+      style = {{width: width}}
     >
       {listItems()}
-    </ScrollingTableOfContentsBase>
+    </ScrollNavigationBase>
   );
 };
 
-ScrollingTableOfContents.propTypes = {
+ScrollNavigation.propTypes = {
     /**
      * what side is the tracking bar on?
      */
@@ -138,16 +138,18 @@ ScrollingTableOfContents.propTypes = {
      */
     sections: PropTypes.array,
     theme: PropTypes.object,
+    width: PropTypes.number,
     ...COMMON.propTypes,
 };
   
-  ScrollingTableOfContents.defaultProps = {
+  ScrollNavigation.defaultProps = {
     side:'left',
     sections: [
       {title:"How to use figma array 1", id:"array1"}, 
       {title:"How to use figma array 2", id:"array2"},
       {title:"How to use figma array 3", id:"array3"}],
     theme,
+    width: 240,
   };
   
-  export default ScrollingTableOfContents;
+  export default ScrollNavigation;

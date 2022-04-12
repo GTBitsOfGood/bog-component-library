@@ -283,7 +283,7 @@ const typography = {
     },
 
     //Scrolling Table of Contents
-    scrollingTableOfContents: {
+    ScrollNavigation: {
         fontFamily: fonts.secondary, 
         fontWeight: fontWeights.regular,
         fontSize: '16px',
@@ -406,7 +406,7 @@ const button = {
 }
 
 
-const scrollingTableOfContents = {
+const ScrollNavigation = {
 
     default: (colorPalette) => ({
         left: {
@@ -496,7 +496,7 @@ const theme = {
     fontWeights,
     alert,
     button,
-    scrollingTableOfContents,
+    ScrollNavigation,
     letterSpacings,
     typography,
     tag

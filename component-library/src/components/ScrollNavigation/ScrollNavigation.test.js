@@ -6,17 +6,17 @@ import {
   fireEvent,
 } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
-import * as stories from '../../stories/ScrollingTableOfContents.stories';
+import * as stories from '../../stories/ScrollNavigation.stories';
 
 describe('Dropdown', () => {
   afterEach(() => {
     cleanup()
   })
-  const { RegularScrollingTableOfContents} = composeStories(stories)
+  const { RegularScrollNavigation} = composeStories(stories)
 
   //creating a Scrolling Table Of Contents
   it('should create a Scrolling Table Of Contents', () => {
-    const { getByText, getAllByRole} = render(<RegularScrollingTableOfContents />)
+    const { getByText, getAllByRole} = render(<RegularScrollNavigation />)
 
     expect(getByText('How to use figma array 1')).toBeInTheDocument()
     expect(getByText('How to use figma array 2')).toBeInTheDocument()
